@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/Logic/Logic.iml" filepath="$PROJECT_DIR$/Logic/Logic.iml" />
       <module fileurl="file://$PROJECT_DIR$/Main.iml" filepath="$PROJECT_DIR$/Main.iml" />
       <module fileurl="file://$PROJECT_DIR$/Model/Model.iml" filepath="$PROJECT_DIR$/Model/Model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Services/Services.iml" filepath="$PROJECT_DIR$/Services/Services.iml" />
     </modules>
   </component>
 </project>
