@@ -12,7 +12,7 @@ import com.example.portableGame.MyLibgdxGame;
  * To change this template use File | Settings | File Templates.
  */
 public class DesktopStarter {
-    public static void main(){
+    public static void main(String[] args) {
         LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
         cfg.title = "Title";
         cfg.useGL20 = true;
