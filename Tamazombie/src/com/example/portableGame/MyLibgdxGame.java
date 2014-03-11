@@ -14,5 +14,7 @@ public class MyLibgdxGame extends Game {
     @Override
     public void create() {
         // TODO : register Dependency Injection with PicoContainer
+
+        // TODO : use PicoContainer in modules (Android, Desktop)
     }
 }
