@@ -1,9 +1,12 @@
 package com.tamazombie.portableGame;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL20;
 import com.tamazombie.abstractModel.IPlayer;
 import com.tamazombie.portableIoC.IoC;
 import com.tamazombie.portableIoC.IoCType;
+import javafx.scene.paint.Color;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,10 +17,27 @@ import com.tamazombie.portableIoC.IoCType;
  */
 public class MyLibgdxGame extends Game {
     // Example of how to get a new object (or current object if existing like a singleton)
+    // TODO : remove this field and use Logic instead
     private IPlayer _player = IoC.GetInstance(IPlayer.class, IoCType.Singleton);
 
     @Override
     public void create() {
-        // TODO : use PicoContainer in modules (Logic, Services or here in Main)
+        // TODO : make instances of textures, sound, spriteBatch and other objects
+    }
+
+    @Override
+    public void render() {
+        // clear the screen with a CORNFLOWERBLUE color.
+        Gdx.gl.glClearColor((float)Color.CORNFLOWERBLUE.getRed(), (float)Color.CORNFLOWERBLUE.getGreen(), (float)Color.CORNFLOWERBLUE.getBlue(), 1);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
+        // TODO : UPDATE logic
+
+        // TODO : DRAW textures (images), play sound, ...
+    }
+
+    @Override
+    public void dispose() {
+        // TODO : dispose of all the native resources (spriteBatch, textures, sound, ...)
     }
 }
