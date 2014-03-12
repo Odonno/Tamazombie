@@ -1,6 +1,6 @@
 package com.tamazombie.abstractIoC;
 
-import com.tamazombie.portableIoC.IoCType;
+import com.tamazombie.concreteIoC.IoCType;
 
 /**
  * Created with IntelliJ IDEA.

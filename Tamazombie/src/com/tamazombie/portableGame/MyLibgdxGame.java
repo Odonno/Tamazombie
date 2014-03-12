@@ -4,8 +4,8 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.tamazombie.abstractModel.IPlayer;
-import com.tamazombie.portableIoC.IoC;
-import com.tamazombie.portableIoC.IoCType;
+import com.tamazombie.concreteIoC.IoC;
+import com.tamazombie.concreteIoC.IoCType;
 import javafx.scene.paint.Color;
 
 /**

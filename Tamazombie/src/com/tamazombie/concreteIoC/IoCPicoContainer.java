@@ -1,4 +1,4 @@
-package com.tamazombie.portableIoC;
+package com.tamazombie.concreteIoC;
 
 import com.tamazombie.abstractIoC.IIocContainer;
 import com.tamazombie.concreteLogic.ParkViewModel;

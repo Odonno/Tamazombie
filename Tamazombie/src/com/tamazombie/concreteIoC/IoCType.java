@@ -1,4 +1,4 @@
-package com.tamazombie.portableIoC;
+package com.tamazombie.concreteIoC;
 
 /**
  * Created with IntelliJ IDEA.
