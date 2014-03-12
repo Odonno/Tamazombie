@@ -1,12 +1,5 @@
 package com.tamazombie.portableIoC;
 
-import com.tamazombie.concreteLogic.ParkViewModel;
-import com.tamazombie.concreteModel.Player;
-import com.tamazombie.concreteServices.StorageService;
-import org.picocontainer.DefaultPicoContainer;
-import org.picocontainer.MutablePicoContainer;
-import org.picocontainer.behaviors.Caching;
-
 /**
  * Created with IntelliJ IDEA.
  * User: David Bottiau
@@ -16,54 +9,11 @@ import org.picocontainer.behaviors.Caching;
  */
 public class IoC {
     /**
-     * The IoC container to create Singletons
+     * IoCContainer used to create instances
      */
-    private static MutablePicoContainer _singletonPicoContainer;
-
-    /**
-     * The IoC container to create Factories
-     */
-    private static MutablePicoContainer _factoryPicoContainer;
-
+    private static IIocContainer _iocContainer = IoCPicoContainer.getInstance();
 
     private IoC() { }
-    static {
-        // Initialize Dependency Injection
-        InitializeContainers();
-        AddComponents();
-    }
-
-
-    /**
-     * Initialize IoC containers
-     */
-    private static void InitializeContainers() {
-        _factoryPicoContainer = new DefaultPicoContainer();
-        _singletonPicoContainer = new DefaultPicoContainer(new Caching());
-    }
-
-    /**
-     * Register Dependency Injection with PicoContainer
-     */
-    private static void AddComponents() {
-        // Register Model
-        _singletonPicoContainer.addComponent(Player.class);
-
-        // Register Logic (ViewModels)
-        _singletonPicoContainer.addComponent(ParkViewModel.class);
-
-        // Register Services
-        _singletonPicoContainer.addComponent(StorageService.class);
-    }
-
-    /**
-     * Get the PicoContainer that correspond to the IoCType expected
-     * @param type IoCType expected by the user (to create a new object)
-     * @return The PicoContainer expected
-     */
-    private static MutablePicoContainer GetPico(IoCType type) {
-         return (IoCType.Singleton == type) ? _singletonPicoContainer : _factoryPicoContainer;
-    }
 
     /**
      * Return an instance expected by the type of the object and the IoCType
@@ -72,7 +22,6 @@ public class IoC {
      * @return The instance expected
      */
     public static <T> T GetInstance(Class<T> type, IoCType ioCType) {
-        MutablePicoContainer pico = GetPico(ioCType);
-        return pico.getComponent(type);
+        return _iocContainer.GetInstance(type, ioCType);
     }
 }
