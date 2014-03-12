@@ -13,6 +13,9 @@
     <file path="/Player.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394575261462" ignored="false" />
     <file path="/StorageService.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394575297338" ignored="false" />
     <file path="/ParkViewModel.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394575463440" ignored="false" />
+    <file path="$PROJECT_DIR$/Android/gen/com/tamazombie/Android/R.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394583274949" ignored="false" />
+    <file path="$PROJECT_DIR$/Android/gen/com/tamazombie/Android/Manifest.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394583274949" ignored="false" />
+    <file path="$PROJECT_DIR$/Android/gen/com/tamazombie/Android/BuildConfig.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394583279593" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,9 +77,9 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="MyLibgdxGame.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/example/portableGame/MyLibgdxGame.java">
+        <entry file="file://$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="18" selection-start="955" selection-end="955" vertical-scroll-proportion="0.86558044">
+            <state line="35" column="18" selection-start="958" selection-end="958" vertical-scroll-proportion="0.86558044">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -85,9 +88,9 @@
         </entry>
       </file>
       <file leaf-file-name="DesktopStarter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Desktop/src/com/example/desktopGame/DesktopStarter.java">
+        <entry file="file://$PROJECT_DIR$/Desktop/src/com/tamazombie/desktopGame/DesktopStarter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="13" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
+            <state line="13" column="13" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -113,6 +116,7 @@
         <option value="$PROJECT_DIR$/Services/src/com/tamazombie/concreteServices/StorageService.java" />
         <option value="$PROJECT_DIR$/Logic/src/com/tamazombie/concreteLogic/ParkViewModel.java" />
         <option value="$PROJECT_DIR$/src/com/example/portableGame/MyLibgdxGame.java" />
+        <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java" />
       </list>
     </option>
   </component>
@@ -315,7 +319,7 @@
       <method />
     </configuration>
     <configuration default="false" name="DesktopStarter" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.desktopGame.DesktopStarter" />
+      <option name="MAIN_CLASS_NAME" value="com.tamazombie.desktopGame.DesktopStarter" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/Android/assets" />
@@ -479,7 +483,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="829" y="208" width="799" height="688" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -494,7 +498,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24863884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37313432" sideWeight="0.6716981" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37313432" sideWeight="0.6716981" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32706767" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -646,16 +650,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Android/src/com/example/Android/GameAndroidStarter.java">
+    <entry file="file://$PROJECT_DIR$/Android/src/com/tamazombie/Android/GameAndroidStarter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="13" selection-start="280" selection-end="280" vertical-scroll-proportion="0.14468086">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desktop/src/com/example/desktopGame/DesktopStarter.java">
+    <entry file="file://$PROJECT_DIR$/Desktop/src/com/tamazombie/desktopGame/DesktopStarter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
+        <state line="13" column="13" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -674,9 +678,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/portableGame/MyLibgdxGame.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="18" selection-start="955" selection-end="955" vertical-scroll-proportion="0.86558044">
+        <state line="35" column="18" selection-start="958" selection-end="958" vertical-scroll-proportion="0.86558044">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

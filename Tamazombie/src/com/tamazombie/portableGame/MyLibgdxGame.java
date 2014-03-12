@@ -1,4 +1,4 @@
-package com.example.portableGame;
+package com.tamazombie.portableGame;
 
 import com.badlogic.gdx.Game;
 import com.tamazombie.concreteLogic.ParkViewModel;

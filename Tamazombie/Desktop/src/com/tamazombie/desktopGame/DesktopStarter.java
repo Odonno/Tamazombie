@@ -1,8 +1,8 @@
-package com.example.desktopGame;
+package com.tamazombie.desktopGame;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.example.portableGame.MyLibgdxGame;
+import com.tamazombie.portableGame.MyLibgdxGame;
 
 /**
  * Created with IntelliJ IDEA.
