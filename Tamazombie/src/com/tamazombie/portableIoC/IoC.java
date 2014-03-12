@@ -26,6 +26,7 @@ public class IoC {
     private static MutablePicoContainer _factoryPicoContainer;
 
 
+    private IoC() { }
     static {
         // Initialize Dependency Injection
         InitializeContainers();
@@ -60,7 +61,18 @@ public class IoC {
      * @param type IoCType expected by the user (to create a new object)
      * @return The PicoContainer expected
      */
-    public static MutablePicoContainer GetPico(IoCType type) {
+    private static MutablePicoContainer GetPico(IoCType type) {
          return (IoCType.Singleton == type) ? _singletonPicoContainer : _factoryPicoContainer;
+    }
+
+    /**
+     * Return an instance expected by the type of the object and the IoCType
+     * @param type Type of the instance
+     * @param ioCType IoCType expected by the user (to create a new object)
+     * @return The instance expected
+     */
+    public static <T> T GetInstance(Class<T> type, IoCType ioCType) {
+        MutablePicoContainer pico = GetPico(ioCType);
+        return pico.getComponent(type);
     }
 }

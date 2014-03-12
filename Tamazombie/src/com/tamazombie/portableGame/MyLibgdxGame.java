@@ -14,7 +14,7 @@ import com.tamazombie.portableIoC.IoCType;
  */
 public class MyLibgdxGame extends Game {
     // Example of how to get a new object (or current object if existing like a singleton)
-    private IPlayer _player = IoC.GetPico(IoCType.Singleton).getComponent(IPlayer.class);
+    private IPlayer _player = IoC.GetInstance(IPlayer.class, IoCType.Singleton);
 
     @Override
     public void create() {
