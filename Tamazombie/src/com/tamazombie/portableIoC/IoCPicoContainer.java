@@ -15,7 +15,14 @@ import org.picocontainer.behaviors.Caching;
  * To change this template use File | Settings | File Templates.
  */
 class IoCPicoContainer implements IIocContainer {
-    private static IoCPicoContainer ourInstance = new IoCPicoContainer();
+    /**
+     *  Holder for the IoCPicoContainer singleton
+     */
+    private static class IoCPicoContainerHolder
+    {
+        // Unique instance non pre-initialized
+        private final static IoCPicoContainer instance = new IoCPicoContainer();
+    }
 
     private IoCPicoContainer() {
         // Initialize Dependency Injection
@@ -23,8 +30,12 @@ class IoCPicoContainer implements IIocContainer {
         AddComponents();
     }
 
+    /**
+     * Get the singleton of the current class
+     * @return The single instance of IoCPicoContainer
+     */
     public static IoCPicoContainer getInstance() {
-        return ourInstance;
+        return IoCPicoContainerHolder.instance;
     }
 
 
