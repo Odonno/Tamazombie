@@ -1,5 +1,6 @@
 package com.tamazombie.portableIoC;
 
+import com.tamazombie.abstractIoC.IIocContainer;
 import com.tamazombie.concreteLogic.ParkViewModel;
 import com.tamazombie.concreteModel.Player;
 import com.tamazombie.concreteServices.StorageService;

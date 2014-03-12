@@ -1,5 +1,7 @@
 package com.tamazombie.portableIoC;
 
+import com.tamazombie.abstractIoC.IIocContainer;
+
 /**
  * Created with IntelliJ IDEA.
  * User: David Bottiau
