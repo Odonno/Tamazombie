@@ -1,6 +1,7 @@
 package com.tamazombie.portableGame;
 
 import com.badlogic.gdx.Game;
+import com.tamazombie.abstractModel.IPlayer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,9 +10,9 @@ import com.badlogic.gdx.Game;
  * Time: 19:52
  * To change this template use File | Settings | File Templates.
  */
-
 public class MyLibgdxGame extends Game {
-    private IoCBootstrapper _iocBootstrapper = new IoCBootstrapper();
+    // Example of how to get a new object (or current object if existing like a singleton)
+    private IPlayer _player = IoC.GetPico(IoCType.Singleton).getComponent(IPlayer.class);
 
     @Override
     public void create() {

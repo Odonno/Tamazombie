@@ -5,6 +5,7 @@ import com.tamazombie.concreteModel.Player;
 import com.tamazombie.concreteServices.StorageService;
 import org.picocontainer.DefaultPicoContainer;
 import org.picocontainer.MutablePicoContainer;
+import org.picocontainer.behaviors.Cached;
 import org.picocontainer.behaviors.Caching;
 
 /**
@@ -14,28 +15,29 @@ import org.picocontainer.behaviors.Caching;
  * Time: 01:15
  * To change this template use File | Settings | File Templates.
  */
-public class IoCBootstrapper {
+public class IoC {
     /**
      * The IoC container to create Singletons
      */
-    private MutablePicoContainer _singletonPicoContainer;
+    private static MutablePicoContainer _singletonPicoContainer;
 
     /**
      * The IoC container to create Factories
      */
-    private MutablePicoContainer _factoryPicoContainer;
+    private static MutablePicoContainer _factoryPicoContainer;
 
 
-    public IoCBootstrapper(){
+    static {
         // Initialize Dependency Injection
         InitializeContainers();
         AddComponents();
     }
 
+
     /**
      * Initialize IoC containers
      */
-    private void InitializeContainers( ){
+    private static void InitializeContainers() {
         _factoryPicoContainer = new DefaultPicoContainer();
         _singletonPicoContainer = new DefaultPicoContainer(new Caching());
     }
@@ -43,7 +45,7 @@ public class IoCBootstrapper {
     /**
      * Register Dependency Injection with PicoContainer
      */
-    private void AddComponents() {
+    private static void AddComponents() {
         // Register Model
         _singletonPicoContainer.addComponent(Player.class);
 
@@ -52,5 +54,14 @@ public class IoCBootstrapper {
 
         // Register Services
         _singletonPicoContainer.addComponent(StorageService.class);
+    }
+
+    /**
+     * Get the PicoContainer that correspond to the IoCType expected
+     * @param type IoCType expected by the user (to create a new object)
+     * @return The PicoContainer expected
+     */
+    public static MutablePicoContainer GetPico(IoCType type) {
+         return (IoCType.Singleton == type) ? _singletonPicoContainer : _factoryPicoContainer;
     }
 }
