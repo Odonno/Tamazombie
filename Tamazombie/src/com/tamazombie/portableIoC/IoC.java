@@ -1,11 +1,10 @@
-package com.tamazombie.portableGame;
+package com.tamazombie.portableIoC;
 
 import com.tamazombie.concreteLogic.ParkViewModel;
 import com.tamazombie.concreteModel.Player;
 import com.tamazombie.concreteServices.StorageService;
 import org.picocontainer.DefaultPicoContainer;
 import org.picocontainer.MutablePicoContainer;
-import org.picocontainer.behaviors.Cached;
 import org.picocontainer.behaviors.Caching;
 
 /**

@@ -2,6 +2,8 @@ package com.tamazombie.portableGame;
 
 import com.badlogic.gdx.Game;
 import com.tamazombie.abstractModel.IPlayer;
+import com.tamazombie.portableIoC.IoC;
+import com.tamazombie.portableIoC.IoCType;
 
 /**
  * Created with IntelliJ IDEA.

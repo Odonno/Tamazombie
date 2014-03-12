@@ -1,4 +1,4 @@
-package com.tamazombie.portableGame;
+package com.tamazombie.portableIoC;
 
 /**
  * Created with IntelliJ IDEA.
