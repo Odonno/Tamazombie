@@ -52,4 +52,9 @@ public final class ZombiePlayer extends Player implements IZombiePlayer {
     public float GetDefense() {
         return _defense;
     }
+
+    @Override
+    public Boolean IsDead() {
+        return _health >= 200f;
+    }
 }

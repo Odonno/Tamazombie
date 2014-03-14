@@ -19,4 +19,6 @@ public interface IPlayer extends ISprite {
     public float GetMentality();
     public float GetDamages();
     public float GetDefense();
+
+    public Boolean IsDead();
 }
