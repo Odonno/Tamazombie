@@ -1,5 +1,7 @@
 package com.tamazombie.abstractView;
 
+import com.tamazombie.abstractLogic.IViewModel;
+
 /**
  * Created with IntelliJ IDEA.
  * User: David Bottiau
@@ -8,4 +10,5 @@ package com.tamazombie.abstractView;
  * To change this template use File | Settings | File Templates.
  */
 public interface IGameView {
+    public IViewModel GetViewModel();
 }
