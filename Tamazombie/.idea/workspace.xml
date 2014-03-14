@@ -20,7 +20,7 @@
     <file path="/Test.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394585475357" ignored="false" />
     <file path="/IoCType.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394587104408" ignored="false" />
     <file path="/IoC.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394797108244" ignored="false" />
-    <file path="/IoCPicoContainer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394625234931" ignored="false" />
+    <file path="/IoCPicoContainer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394804197864" ignored="false" />
     <file path="/IIocContainer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394619866935" ignored="false" />
     <file path="/ParkView.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394628510612" ignored="false" />
     <file path="/Gender.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394801641434" ignored="false" />
@@ -90,19 +90,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IZombiePlayer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IZombiePlayer.java">
+      <file leaf-file-name="IoCPicoContainer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="20" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
+            <state line="2" column="7" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZombiePlayer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IZombiePlayer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IZombiePlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="20" selection-start="249" selection-end="249" vertical-scroll-proportion="0.18640351">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZombiePlayer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/ZombiePlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="306" selection-end="306" vertical-scroll-proportion="0.2236842">
+            <state line="19" column="16" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/IoC.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/portableIoC/concrete/IoCPicoContainer.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/portableIoC/IIocContainer.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/portableIoC/IoC.java" />
@@ -156,6 +164,7 @@
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IGameModel.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/ZombiePlayer.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/GameModel.java" />
+        <option value="$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java" />
       </list>
     </option>
   </component>
@@ -206,6 +215,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Tamazombie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tamazombie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tamazombie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tamazombie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tamazombie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tamazombie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tamazombie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="concreteIoC" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -663,18 +712,6 @@
         <state line="9" column="17" selection-start="219" selection-end="219" vertical-scroll-proportion="0.2520593" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="49" selection-start="2081" selection-end="2081" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="40" selection-start="977" selection-end="977" vertical-scroll-proportion="0.5964912" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="16" selection-start="1388" selection-end="1388" vertical-scroll-proportion="0.6524123">
@@ -712,19 +749,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IZombiePlayer.java">
+    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/ZombiePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="20" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
+        <state line="19" column="16" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="40" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/ZombiePlayer.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="306" selection-end="306" vertical-scroll-proportion="0.2236842">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="2" column="7" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IZombiePlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="20" selection-start="249" selection-end="249" vertical-scroll-proportion="0.18640351">
+          <folding />
         </state>
       </provider>
     </entry>
