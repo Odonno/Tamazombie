@@ -1,5 +1,7 @@
 package com.tamazombie.abstractLogic;
 
+import com.tamazombie.abstractModel.IPlayer;
+
 /**
  * Created with IntelliJ IDEA.
  * User: David Bottiau
@@ -8,4 +10,5 @@ package com.tamazombie.abstractLogic;
  * To change this template use File | Settings | File Templates.
  */
 public interface IParkViewModel {
+    public IPlayer getPlayer();
 }
