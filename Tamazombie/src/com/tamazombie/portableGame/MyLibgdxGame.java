@@ -15,7 +15,7 @@ import javafx.scene.paint.Color;
  * Time: 19:52
  * To change this template use File | Settings | File Templates.
  */
-public class MyLibgdxGame extends Game {
+public final class MyLibgdxGame extends Game {
     // Example of how to get a new object (or current object if existing like a singleton)
     // TODO : remove this field and use Logic instead
     private IPlayer _player = IoC.GetInstance(IPlayer.class, IoCType.Singleton);

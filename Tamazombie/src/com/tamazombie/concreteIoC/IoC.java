@@ -9,7 +9,7 @@ import com.tamazombie.abstractIoC.IIocContainer;
  * Time: 01:15
  * To change this template use File | Settings | File Templates.
  */
-public class IoC {
+public final class IoC {
     /**
      * IoCContainer used to create instances
      */

@@ -15,7 +15,7 @@ import org.picocontainer.behaviors.Caching;
  * Time: 11:20
  * To change this template use File | Settings | File Templates.
  */
-class IoCPicoContainer implements IIocContainer {
+final class IoCPicoContainer implements IIocContainer {
     /**
      *  Holder for the IoCPicoContainer singleton
      */
