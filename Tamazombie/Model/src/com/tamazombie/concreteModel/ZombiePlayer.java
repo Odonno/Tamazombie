@@ -10,7 +10,7 @@ import com.tamazombie.commonModel.Gender;
  * Time: 14:17
  * To change this template use File | Settings | File Templates.
  */
-public class ZombiePlayer extends Player implements IZombiePlayer {
+public final class ZombiePlayer extends Player implements IZombiePlayer {
     @Override
     public String GetName() {
         return _name;

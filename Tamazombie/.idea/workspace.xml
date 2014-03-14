@@ -26,8 +26,10 @@
     <file path="/Gender.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394801641434" ignored="false" />
     <file path="/IPlayer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394801818398" ignored="false" />
     <file path="/GameMode.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394802491143" ignored="false" />
-    <file path="/ZombiePlayer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394803391550" ignored="false" />
+    <file path="/ZombiePlayer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394803645628" ignored="false" />
     <file path="/IZombiePlayer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394803063123" ignored="false" />
+    <file path="/IGameModel.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394803611865" ignored="false" />
+    <file path="/GameModel.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394803677749" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +93,7 @@
       <file leaf-file-name="IZombiePlayer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IZombiePlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="18" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
+            <state line="10" column="20" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -100,7 +102,7 @@
       <file leaf-file-name="ZombiePlayer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/ZombiePlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="23" selection-start="892" selection-end="892" vertical-scroll-proportion="0.8388158">
+            <state line="12" column="13" selection-start="306" selection-end="306" vertical-scroll-proportion="0.2236842">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,8 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/IoCType.java" />
-        <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/IoCBootstrapper.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/IoC.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/portableIoC/concrete/IoCPicoContainer.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/portableIoC/IIocContainer.java" />
@@ -153,7 +153,9 @@
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/commonModel/GameMode.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IZombiePlayer.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/Player.java" />
+        <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IGameModel.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/ZombiePlayer.java" />
+        <option value="$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/GameModel.java" />
       </list>
     </option>
   </component>
@@ -551,6 +553,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272921" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2249467" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -561,11 +564,10 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24863884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14674494" sideWeight="0.6748401" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14674494" sideWeight="0.6727079" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3251599" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272921" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272921" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -636,16 +638,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractIoC/IIocContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desktop/src/com/tamazombie/desktopGame/DesktopStarter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="10" selection-start="597" selection-end="597" vertical-scroll-proportion="0.44810542" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractView/IGameView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="26" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" />
@@ -690,23 +682,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/commonModel/GameMode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/commonModel/Gender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="32" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IZombiePlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="18" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -727,9 +705,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/commonModel/GameMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="35" selection-start="377" selection-end="377" vertical-scroll-proportion="0.2982456">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IZombiePlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="20" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/ZombiePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="23" selection-start="892" selection-end="892" vertical-scroll-proportion="0.8388158">
+        <state line="12" column="13" selection-start="306" selection-end="306" vertical-scroll-proportion="0.2236842">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
