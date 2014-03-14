@@ -16,6 +16,5 @@ public interface IParkViewModel {
     public void PlayerHungry(float deltaTime);
     public void PlayerEat(float deltaTime);
     public void PlayerDivert(float deltaTime);
-    public void PlayerDie(float deltaTime);
     public void GoToTown();
 }

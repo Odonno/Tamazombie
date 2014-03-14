@@ -14,6 +14,8 @@ public final class ParkViewModel implements IParkViewModel {
     private IPlayer _player;
     private float _hungryRatePerSecond = 0.5f;
     private float _hungryByMeal = 50f;
+    private float _healByMeal = 10f;
+    private float _damagePerSecond = 1f;
 
     public ParkViewModel(IPlayer player){
         _player = player;
@@ -26,32 +28,37 @@ public final class ParkViewModel implements IParkViewModel {
 
     @Override
     public void PlayerMove(float deltaTime) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        // TODO : update position of player
+
+        // Check if the player died and he received damages each time his hungry limit overcame
+        if (_player.GetGameMode() == GameMode.ZombieMode && _player.GetHungry() >= _player.GetHungryLimit())
+            _player.SetHealth(_player.GetHealth() + _damagePerSecond);
+        if (_player.GetGameMode() == GameMode.HumanMode && _player.GetHungry() <= _player.GetHungryLimit())
+            _player.SetHealth(_player.GetHealth() - _damagePerSecond);
+
+        return _player.GetHealth() <= 0;
     }
 
     @Override
     public void PlayerHungry(float deltaTime) {
-        /*if (_player.GetGameMode() == GameMode.ZombieMode)
+        if (_player.GetGameMode() == GameMode.ZombieMode)
             _player.SetHungry(_player.GetHungry() + (deltaTime * _hungryRatePerSecond));
         if (_player.GetGameMode() == GameMode.HumanMode)
-            _player.SetHungry(_player.GetHungry() - (deltaTime * _hungryRatePerSecond));*/
+            _player.SetHungry(_player.GetHungry() - (deltaTime * _hungryRatePerSecond));
     }
 
     @Override
     public void PlayerEat(float deltaTime) {
-        /*if (_player.GetGameMode() == GameMode.ZombieMode)
+        if (_player.GetGameMode() == GameMode.ZombieMode)
             _player.SetHungry(_player.GetHungry() - _hungryByMeal);
         if (_player.GetGameMode() == GameMode.HumanMode)
-            _player.SetHungry(_player.GetHungry() + _hungryByMeal);*/
+            _player.SetHungry(_player.GetHungry() + _hungryByMeal);
+
+        _player.SetHealth(_player.GetHealth() + _healByMeal);
     }
 
     @Override
     public void PlayerDivert(float deltaTime) {
-        //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    @Override
-    public void PlayerDie(float deltaTime) {
         //To change body of implemented methods use File | Settings | File Templates.
     }
 
