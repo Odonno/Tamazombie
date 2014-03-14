@@ -24,9 +24,9 @@
     <file path="/IIocContainer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394619866935" ignored="false" />
     <file path="/ParkView.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394628510612" ignored="false" />
     <file path="/Gender.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394801641434" ignored="false" />
-    <file path="/IPlayer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394806144915" ignored="false" />
+    <file path="/IPlayer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394810034558" ignored="false" />
     <file path="/GameMode.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394802491143" ignored="false" />
-    <file path="/ZombiePlayer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394805518954" ignored="false" />
+    <file path="/ZombiePlayer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394810071961" ignored="false" />
     <file path="/IZombiePlayer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394805243661" ignored="false" />
     <file path="/IGameModel.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394803611865" ignored="false" />
     <file path="/GameModel.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394803677749" ignored="false" />
@@ -46,6 +46,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -82,7 +83,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -95,30 +95,8 @@
       <file leaf-file-name="MyLibgdxGame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="19" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.0">
+            <state line="33" column="19" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ISprite.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/ISprite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="32" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpriteBase.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/SpriteBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="46" selection-start="581" selection-end="581" vertical-scroll-proportion="0.33552632">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -132,19 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IZombiePlayer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IZombiePlayer.java">
+      <file leaf-file-name="IPlayer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="94" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZombiePlayer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/ZombiePlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="45" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+            <state line="15" column="34" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -152,10 +121,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IPlayer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IPlayer.java">
+      <file leaf-file-name="ZombiePlayer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/ZombiePlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="32" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
+            <state line="27" column="35" selection-start="690" selection-end="690" vertical-scroll-proportion="0.4100877">
               <folding />
             </state>
           </provider>
@@ -164,10 +133,8 @@
       <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="74" selection-start="548" selection-end="578" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="15" column="32" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -191,13 +158,13 @@
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/GameModel.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IZombiePlayer.java" />
-        <option value="$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/ZombiePlayer.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java" />
-        <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IPlayer.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/SpriteBase1.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/SpriteBase.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/ISprite.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/Player.java" />
+        <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IPlayer.java" />
+        <option value="$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/ZombiePlayer.java" />
       </list>
     </option>
   </component>
@@ -233,6 +200,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -422,7 +390,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -440,12 +407,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -536,19 +503,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -574,6 +528,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -670,18 +637,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272921" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2249467" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272921" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24863884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -691,6 +656,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3251599" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272921" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272921" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -760,65 +727,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Services/src/com/tamazombie/abstractServices/IStorageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="219" selection-end="219" vertical-scroll-proportion="0.2520593" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/commonModel/Gender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="32" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/commonModel/GameMode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="377" selection-end="377" vertical-scroll-proportion="0.2982456">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="40" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/g2d/TextureRegion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="4" selection-start="1106" selection-end="1122" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/Color.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="13" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.18640351">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="19" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/ISprite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="32" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/g2d/Sprite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="527" column="4" selection-start="17784" selection-end="17784" vertical-scroll-proportion="0.3135965">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -830,44 +741,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IZombiePlayer.java">
+    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="94" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
+        <state line="11" column="32" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Services/src/com/tamazombie/abstractServices/IStorageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="17" selection-start="219" selection-end="219" vertical-scroll-proportion="0.2520593" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="40" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/g2d/TextureRegion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="4" selection-start="1106" selection-end="1122" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="13" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.18640351" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="19" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IPlayer.java">
+    <entry file="jar://$PROJECT_DIR$/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/g2d/Sprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="32" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
+        <state line="527" column="4" selection-start="17784" selection-end="17784" vertical-scroll-proportion="0.3135965" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="7" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/ISprite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="17" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="74" selection-start="548" selection-end="578" vertical-scroll-proportion="0.0">
+        <state line="15" column="32" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="34" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IZombiePlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="17" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/ZombiePlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="45" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/SpriteBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="46" selection-start="581" selection-end="581" vertical-scroll-proportion="0.33552632">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="27" column="35" selection-start="690" selection-end="690" vertical-scroll-proportion="0.4100877">
+          <folding />
         </state>
       </provider>
     </entry>

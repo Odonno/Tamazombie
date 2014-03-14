@@ -2,6 +2,7 @@ package com.tamazombie.concreteModel;
 
 import com.tamazombie.abstractModel.IZombiePlayer;
 import com.tamazombie.abstractModel.Player;
+import com.tamazombie.commonModel.GameMode;
 import com.tamazombie.commonModel.Gender;
 
 /**
@@ -20,6 +21,11 @@ public final class ZombiePlayer extends Player implements IZombiePlayer {
     @Override
     public Gender GetGender() {
         return _gender;
+    }
+
+    @Override
+    public GameMode GetGameMode() {
+        return GameMode.ZombieMode;
     }
 
     @Override
