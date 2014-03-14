@@ -11,4 +11,7 @@ import com.tamazombie.abstractLogic.IViewModel;
  */
 public interface IGameView {
     public IViewModel GetViewModel();
+
+    public void Update();
+    public void Draw();
 }

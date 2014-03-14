@@ -22,4 +22,14 @@ public class ParkView implements IGameView {
     public IViewModel GetViewModel() {
         return _parkViewModel;
     }
+
+    @Override
+    public void Update() {
+        // TODO : UPDATE logic
+    }
+
+    @Override
+    public void Draw() {
+        // TODO : DRAW textures (images), play sound, ...
+    }
 }

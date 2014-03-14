@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/Android/res/values/strings.xml" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394550973940" ignored="false" />
     <file path="$PROJECT_DIR$/Android/res/layout/main.xml" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394550975459" ignored="false" />
-    <file path="/MyLibgdxGame.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394802173689" ignored="false" />
+    <file path="/MyLibgdxGame.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394812044198" ignored="false" />
     <file path="/DesktopStarter.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394565815393" ignored="false" />
     <file path="/GameAndroidStarter.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394565021679" ignored="false" />
     <file path="/fragment.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394650191130" ignored="false" />
@@ -20,10 +20,11 @@
     <file path="/Test.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394585475357" ignored="false" />
     <file path="/IoCType.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394587104408" ignored="false" />
     <file path="/IoC.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394802159983" ignored="false" />
-    <file path="/IoCPicoContainer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394802166167" ignored="false" />
+    <file path="/IoCPicoContainer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394812171631" ignored="false" />
     <file path="/IIocContainer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394619866935" ignored="false" />
     <file path="/ParkView.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394811722995" ignored="false" />
     <file path="/IParkViewModel.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394809892725" ignored="false" />
+    <file path="/IGameView.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394811818966" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,10 +85,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyLibgdxGame.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="IoCPicoContainer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="61" selection-start="2226" selection-end="2226" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyLibgdxGame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="29" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0">
+            <state line="16" column="47" selection-start="481" selection-end="481" vertical-scroll-proportion="0.15121256">
               <folding />
             </state>
           </provider>
@@ -113,10 +123,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParkView.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ParkView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="30" selection-start="615" selection-end="615" vertical-scroll-proportion="0.4100877">
+            <state line="24" column="34" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,7 +137,7 @@
       <file leaf-file-name="IGameView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractView/IGameView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="26" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
+            <state line="15" column="23" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -143,7 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/example/portableGame/MyLibgdxGame.java" />
         <option value="$PROJECT_DIR$/Desktop/src/com/tamazombie/desktopGame/IoCBootstrapper.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/Test.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/IoCType.java" />
@@ -154,11 +163,12 @@
         <option value="$PROJECT_DIR$/src/com/tamazombie/portableIoC/IoC.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/portableIoC/IoCPicoContainer.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoC.java" />
-        <option value="$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java" />
-        <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java" />
         <option value="$PROJECT_DIR$/Logic/src/com/tamazombie/concreteLogic/ParkViewModel.java" />
         <option value="$PROJECT_DIR$/Logic/src/com/tamazombie/abstractLogic/IParkViewModel.java" />
+        <option value="$PROJECT_DIR$/src/com/tamazombie/abstractView/IGameView.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java" />
+        <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java" />
+        <option value="$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java" />
       </list>
     </option>
   </component>
@@ -641,21 +651,21 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2249467" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2249467" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272921" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24863884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14674494" sideWeight="0.6748401" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14674494" sideWeight="0.7750533" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3251599" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272921" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272921" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -737,7 +747,9 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/GLCommon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="16" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.50927246" />
+        <state line="36" column="16" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.50927246">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractIoC/IIocContainer.java">
@@ -747,7 +759,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Desktop/src/com/tamazombie/desktopGame/DesktopStarter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="10" selection-start="597" selection-end="597" vertical-scroll-proportion="0.44810542" />
+        <state line="18" column="10" selection-start="597" selection-end="597" vertical-scroll-proportion="0.44810542">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCType.java">
@@ -772,23 +786,9 @@
         <state line="9" column="29" selection-start="225" selection-end="225" vertical-scroll-proportion="0.2520593" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="6" selection-start="541" selection-end="541" vertical-scroll-proportion="0.20504385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="13" selection-start="260" selection-end="260" vertical-scroll-proportion="0.20504385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="29" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -802,6 +802,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="34" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="61" selection-start="2226" selection-end="2226" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractView/IGameView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="23" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Logic/src/com/tamazombie/abstractLogic/IParkViewModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="3" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
@@ -809,19 +832,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractView/IGameView.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="26" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
+        <state line="16" column="47" selection-start="481" selection-end="481" vertical-scroll-proportion="0.15121256">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="30" selection-start="615" selection-end="615" vertical-scroll-proportion="0.4100877">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
