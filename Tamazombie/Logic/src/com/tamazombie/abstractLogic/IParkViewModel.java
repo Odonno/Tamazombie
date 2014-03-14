@@ -10,5 +10,12 @@ import com.tamazombie.abstractModel.IPlayer;
  * To change this template use File | Settings | File Templates.
  */
 public interface IParkViewModel {
-    public IPlayer getPlayer();
+    public IPlayer GetPlayer();
+
+    public void PlayerMove();
+    public void PlayerHungry();
+    public void PlayerEat();
+    public void PlayerDivert();
+    public void PlayerDie();
+    public void GoToTown();
 }

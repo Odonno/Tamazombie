@@ -13,8 +13,42 @@ import com.tamazombie.abstractModel.IPlayer;
 public final class ParkViewModel implements IParkViewModel {
     private IPlayer _player;
 
+    public ParkViewModel(IPlayer player){
+        _player = player;
+    }
+
     @Override
-    public IPlayer getPlayer() {
+    public IPlayer GetPlayer() {
         return _player;
+    }
+
+    @Override
+    public void PlayerMove() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void PlayerHungry() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void PlayerEat() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void PlayerDivert() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void PlayerDie() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void GoToTown() {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 }
