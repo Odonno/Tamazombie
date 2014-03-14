@@ -9,8 +9,8 @@
     <file path="/MyLibgdxGame.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394628284038" ignored="false" />
     <file path="/DesktopStarter.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394565815393" ignored="false" />
     <file path="/GameAndroidStarter.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394565021679" ignored="false" />
-    <file path="/fragment.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394650191130" ignored="false" />
-    <file path="/Player.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394575261462" ignored="false" />
+    <file path="/fragment.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394801862707" ignored="false" />
+    <file path="/Player.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394801842271" ignored="false" />
     <file path="/StorageService.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394575297338" ignored="false" />
     <file path="/ParkViewModel.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394575463440" ignored="false" />
     <file path="$PROJECT_DIR$/Android/gen/com/tamazombie/Android/R.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394583274949" ignored="false" />
@@ -23,7 +23,8 @@
     <file path="/IoCPicoContainer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394625234931" ignored="false" />
     <file path="/IIocContainer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394619866935" ignored="false" />
     <file path="/ParkView.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394628510612" ignored="false" />
-    <file path="/Gender.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394801259119" ignored="false" />
+    <file path="/Gender.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394801641434" ignored="false" />
+    <file path="/IPlayer.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394801818398" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,19 +85,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IPlayer.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="IPlayer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="26" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
+            <state line="16" column="32" selection-start="421" selection-end="421" vertical-scroll-proportion="0.2982456">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gender.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="10" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gender.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/commonModel/Gender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="34" selection-start="351" selection-end="351" vertical-scroll-proportion="0.31688598">
+            <state line="9" column="6" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,8 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Services/src/com/tamazombie/concreteServices/StorageService.java" />
-        <option value="$PROJECT_DIR$/Logic/src/com/tamazombie/concreteLogic/ParkViewModel.java" />
         <option value="$PROJECT_DIR$/src/com/example/portableGame/MyLibgdxGame.java" />
         <option value="$PROJECT_DIR$/Desktop/src/com/tamazombie/desktopGame/IoCBootstrapper.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/Test.java" />
@@ -128,6 +136,8 @@
         <option value="$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoC.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/commonModel/Gender.java" />
+        <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IPlayer.java" />
+        <option value="$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/Player.java" />
       </list>
     </option>
   </component>
@@ -282,6 +292,7 @@
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="Android 4.4.2 Platform" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -619,11 +630,6 @@
         <state line="36" column="16" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.50927246" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="38" selection-start="283" selection-end="283" vertical-scroll-proportion="0.20504385" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Logic/src/com/tamazombie/concreteLogic/ParkViewModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.20504385" />
@@ -695,16 +701,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IPlayer.java">
+    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/commonModel/Gender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="26" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
+        <state line="9" column="6" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/commonModel/Gender.java">
+    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="34" selection-start="351" selection-end="351" vertical-scroll-proportion="0.31688598">
+        <state line="12" column="10" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="32" selection-start="421" selection-end="421" vertical-scroll-proportion="0.2982456">
           <folding />
         </state>
       </provider>

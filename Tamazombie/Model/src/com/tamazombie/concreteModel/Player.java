@@ -9,5 +9,5 @@ import com.tamazombie.abstractModel.IPlayer;
  * Time: 23:00
  * To change this template use File | Settings | File Templates.
  */
-public class Player implements IPlayer {
+public abstract class Player implements IPlayer {
 }
