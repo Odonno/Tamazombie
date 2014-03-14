@@ -12,10 +12,10 @@ import com.tamazombie.abstractModel.IPlayer;
 public interface IParkViewModel {
     public IPlayer GetPlayer();
 
-    public void PlayerMove();
-    public void PlayerHungry();
-    public void PlayerEat();
-    public void PlayerDivert();
-    public void PlayerDie();
+    public void PlayerMove(float deltaTime);
+    public void PlayerHungry(float deltaTime);
+    public void PlayerEat(float deltaTime);
+    public void PlayerDivert(float deltaTime);
+    public void PlayerDie(float deltaTime);
     public void GoToTown();
 }
