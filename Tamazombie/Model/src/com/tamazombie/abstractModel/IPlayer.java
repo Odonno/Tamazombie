@@ -9,7 +9,7 @@ import com.tamazombie.commonModel.Gender;
  * Time: 23:00
  * To change this template use File | Settings | File Templates.
  */
-public interface IPlayer {
+public interface IPlayer extends ISprite {
     public String GetName();
     public Gender GetGender();
     public float GetHealth();

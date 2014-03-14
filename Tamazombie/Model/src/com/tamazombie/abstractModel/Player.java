@@ -1,5 +1,6 @@
-package com.tamazombie.concreteModel;
+package com.tamazombie.abstractModel;
 
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.tamazombie.abstractModel.IPlayer;
 import com.tamazombie.commonModel.Gender;
 
@@ -10,7 +11,7 @@ import com.tamazombie.commonModel.Gender;
  * Time: 23:00
  * To change this template use File | Settings | File Templates.
  */
-public abstract class Player implements IPlayer {
+public abstract class Player extends SpriteBase implements IPlayer {
     protected String _name;
     protected Gender _gender;
     protected float _health;
