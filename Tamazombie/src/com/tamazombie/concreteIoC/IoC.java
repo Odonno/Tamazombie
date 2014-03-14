@@ -18,6 +18,15 @@ public class IoC {
     private IoC() { }
 
     /**
+     * Return an instance expected by the type of the object (with the factory pattern)
+     * @param type Type of the instance
+     * @return A new instance expected
+     */
+    public static <T> T GetInstance(Class<T> type) {
+        return _iocContainer.GetInstance(type, IoCType.Factory);
+    }
+
+    /**
      * Return an instance expected by the type of the object and the IoCType
      * @param type Type of the instance
      * @param ioCType IoCType expected by the user (to create a new object)
