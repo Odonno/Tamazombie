@@ -1,5 +1,8 @@
 package com.tamazombie.abstractModel;
 
+import com.tamazombie.commonModel.GameMode;
+import com.tamazombie.commonModel.Gender;
+
 /**
  * Created with IntelliJ IDEA.
  * User: David Bottiau
@@ -7,5 +10,13 @@ package com.tamazombie.abstractModel;
  * Time: 23:00
  * To change this template use File | Settings | File Templates.
  */
-public interface IPlayer {
+public interface IPlayer extends ISprite {
+    public String GetName();
+    public Gender GetGender();
+    public GameMode GetGameMode();
+    public float GetHealth();
+    public float GetHunger();
+    public float GetMentality();
+    public float GetDamages();
+    public float GetDefense();
 }
