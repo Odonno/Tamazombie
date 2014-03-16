@@ -14,7 +14,7 @@ import com.tamazombie.portableGame.MyLibgdxGame;
 public class DesktopStarter {
     public static void main(String[] args) {
         LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
-        cfg.title = "Title";
+        cfg.title = "Tamazombie";
         cfg.useGL20 = true;
         cfg.width = 800;
         cfg.height = 400;
