@@ -2,7 +2,7 @@ package com.tamazombie.concreteView;
 
 import com.tamazombie.abstractLogic.IParkViewModel;
 import com.tamazombie.abstractLogic.IViewModel;
-import com.tamazombie.abstractView.IGameView;
+import com.tamazombie.abstractView.IParkView;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,7 +11,7 @@ import com.tamazombie.abstractView.IGameView;
  * Time: 13:48
  * To change this template use File | Settings | File Templates.
  */
-public class ParkView implements IGameView {
+public class ParkView implements IParkView {
     private IParkViewModel _parkViewModel;
 
     public ParkView(IParkViewModel parkViewModel){
@@ -19,7 +19,7 @@ public class ParkView implements IGameView {
     }
 
     @Override
-    public IViewModel GetViewModel() {
+    public IParkViewModel GetParkViewModel() {
         return _parkViewModel;
     }
 
