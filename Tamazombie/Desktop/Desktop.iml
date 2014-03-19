@@ -7,11 +7,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Desktoplibs" level="project" />
-    <orderEntry type="module" module-name="Main" />
-    <orderEntry type="module" module-name="Model" />
-    <orderEntry type="module" module-name="Logic" />
-    <orderEntry type="module" module-name="Services" />
+    <orderEntry type="library" name="libs2" level="project" />
+    <orderEntry type="module" module-name="Tamazombie" />
   </component>
 </module>
 
