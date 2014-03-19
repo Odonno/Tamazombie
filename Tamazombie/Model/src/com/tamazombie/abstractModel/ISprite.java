@@ -23,8 +23,8 @@ public interface ISprite {
     float getScaleX();
     float getScaleY();
 
-    void draw (SpriteBatch spriteBatch);
-    void set (Sprite sprite);
+    void draw(SpriteBatch spriteBatch);
+    void set(Sprite sprite);
     void setBounds(float x, float y, float width, float height);
     void setSize(float width, float height);
     void setPosition(float x, float y);

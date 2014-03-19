@@ -1,5 +1,7 @@
 package com.tamazombie.abstractView;
 
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+
 /**
  * Created with IntelliJ IDEA.
  * User: David Bottiau
@@ -9,5 +11,5 @@ package com.tamazombie.abstractView;
  */
 public interface IGameView {
     public void Update();
-    public void Draw();
+    public void Draw(SpriteBatch spriteBatch);
 }

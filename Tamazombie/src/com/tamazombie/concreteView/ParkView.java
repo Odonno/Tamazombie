@@ -2,7 +2,6 @@ package com.tamazombie.concreteView;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.tamazombie.abstractLogic.IParkViewModel;
-import com.tamazombie.abstractLogic.IViewModel;
 import com.tamazombie.abstractView.IParkView;
 
 /**
@@ -30,7 +29,7 @@ public class ParkView implements IParkView {
     }
 
     @Override
-    public void Draw() {
+    public void Draw(SpriteBatch spriteBatch) {
         // TODO : DRAW textures (images), play sound, ...
     }
 }

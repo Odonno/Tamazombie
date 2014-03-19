@@ -3,6 +3,7 @@ package com.tamazombie.portableGame;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.tamazombie.abstractModel.IPlayer;
 import com.tamazombie.abstractView.IGameView;
 import com.tamazombie.concreteIoC.IoC;
@@ -20,10 +21,12 @@ public final class MyLibgdxGame extends Game {
     // Example of how to get a new object (or current object if existing like a singleton)
     // TODO : use navigation service
     private IGameView _view = IoC.GetInstance(IGameView.class, IoCType.Singleton);
+    private SpriteBatch _spriteBatch;
 
     @Override
     public void create() {
         // TODO : make instances of textures, sound, spriteBatch and other objects
+        _spriteBatch = new SpriteBatch();
     }
 
     @Override
@@ -36,7 +39,11 @@ public final class MyLibgdxGame extends Game {
         _view.Update();
 
         // TODO : Draw with a view object
-        _view.Draw();
+        _spriteBatch.begin();
+
+        _view.Draw(_spriteBatch);
+
+        _spriteBatch.end();
     }
 
     @Override
