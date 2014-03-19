@@ -49,5 +49,6 @@ public final class MyLibgdxGame extends Game {
     @Override
     public void dispose() {
         // TODO : dispose of all the native resources (spriteBatch, textures, sound, ...)
+        _spriteBatch.dispose();
     }
 }

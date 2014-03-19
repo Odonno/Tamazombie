@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/Android/res/values/strings.xml" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394550973940" ignored="false" />
     <file path="$PROJECT_DIR$/Android/res/layout/main.xml" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394550975459" ignored="false" />
-    <file path="/MyLibgdxGame.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1395262035131" ignored="false" />
+    <file path="/MyLibgdxGame.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1395262336851" ignored="false" />
     <file path="/DesktopStarter.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394565815393" ignored="false" />
     <file path="/GameAndroidStarter.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394565021679" ignored="false" />
     <file path="/fragment.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1394650191130" ignored="false" />
@@ -88,24 +88,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IoCPicoContainer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="69" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IParkViewModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Logic/src/com/tamazombie/abstractLogic/IParkViewModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="31" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="IGameView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractView/IGameView.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -115,58 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="47" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpriteBase.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/SpriteBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="11" selection-start="2887" selection-end="2887" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZombiePlayer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/ZombiePlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="19" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IPlayer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/IPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="2" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ISprite.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/ISprite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="13" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ParkView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="44" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="32" column="57" selection-start="831" selection-end="831" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,7 +109,7 @@
       <file leaf-file-name="MyLibgdxGame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="30" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.6524123">
+            <state line="51" column="31" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.80153507">
               <folding />
             </state>
           </provider>
@@ -203,9 +138,9 @@
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/Player.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/SpriteBase.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/ISprite.java" />
-        <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/abstractView/IGameView.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java" />
+        <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java" />
       </list>
     </option>
   </component>
@@ -242,6 +177,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -530,7 +466,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -548,12 +483,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -640,19 +575,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -678,6 +600,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -948,13 +883,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractView/IGameView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="44" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/ISprite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="13" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0">
@@ -962,18 +890,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractView/IGameView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="44" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="44" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="32" column="57" selection-start="831" selection-end="831" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="30" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.6524123">
+        <state line="51" column="31" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.80153507">
           <folding />
         </state>
       </provider>
