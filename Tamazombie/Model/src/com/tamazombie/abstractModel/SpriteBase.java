@@ -132,7 +132,7 @@ public abstract class SpriteBase implements ISprite {
 
     @Override
     public void draw (SpriteBatch spriteBatch) {
-        spriteBatch.draw(_texture, _x, _y);
+        spriteBatch.draw(_texture, _x, _y, _width / 2, _height / 2, _width, _height, _scaleX, _scaleY, _rotation, 0, 0, (int)_width, (int)_height, false, false);
     }
 
     /** Make this sprite a copy in every way of the specified sprite */
@@ -154,7 +154,7 @@ public abstract class SpriteBase implements ISprite {
 
     @Override
     public void setTexture(Texture texture){
-         _texture = texture;
+        _texture = texture;
         _width = texture.getWidth();
         _height = texture.getHeight();
     }
