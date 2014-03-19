@@ -31,5 +31,6 @@ public class ParkView implements IParkView {
     @Override
     public void Draw(SpriteBatch spriteBatch) {
         // TODO : DRAW textures (images), play sound, ...
+        _parkViewModel.getPlayer().draw(spriteBatch);
     }
 }
