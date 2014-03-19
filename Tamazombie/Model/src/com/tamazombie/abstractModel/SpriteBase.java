@@ -66,10 +66,6 @@ public abstract class SpriteBase implements ISprite {
     }
 
 
-    @Override
-    public void draw (SpriteBatch spriteBatch) {
-        spriteBatch.draw(_texture, _x, _y);
-    }
 
     /** Returns the color of this sprite. Changing the returned color will have no affect, {@link #setColor(Color)} or
      * {@link #setColor(float, float, float, float)} must be used. */
@@ -134,7 +130,10 @@ public abstract class SpriteBase implements ISprite {
 
 
 
-
+    @Override
+    public void draw (SpriteBatch spriteBatch) {
+        spriteBatch.draw(_texture, _x, _y);
+    }
 
     /** Make this sprite a copy in every way of the specified sprite */
     @Override
@@ -151,6 +150,13 @@ public abstract class SpriteBase implements ISprite {
         _scaleX = sprite.getScaleX();
         _scaleY = sprite.getScaleY();
         _color.set(sprite.getColor());
+    }
+
+    @Override
+    public void setTexture(Texture texture){
+         _texture = texture;
+        _width = texture.getWidth();
+        _height = texture.getHeight();
     }
 
     /** Sets the position and size of the sprite when drawn, before scaling and rotation are applied. If origin, rotation, or scale
