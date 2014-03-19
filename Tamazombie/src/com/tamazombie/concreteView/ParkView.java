@@ -24,6 +24,11 @@ public class ParkView implements IParkView {
     }
 
     @Override
+    public void Create() {
+
+    }
+
+    @Override
     public void Update() {
         // TODO : UPDATE logic
     }

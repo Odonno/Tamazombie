@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  * To change this template use File | Settings | File Templates.
  */
 public interface IGameView {
+    public void Create();
     public void Update();
     public void Draw(SpriteBatch spriteBatch);
 }
