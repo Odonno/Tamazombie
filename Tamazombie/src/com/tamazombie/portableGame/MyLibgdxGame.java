@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.GL20;
 import com.tamazombie.abstractModel.IPlayer;
 import com.tamazombie.concreteIoC.IoC;
 import com.tamazombie.concreteIoC.IoCType;
-import javafx.scene.paint.Color;
 
 /**
  * Created with IntelliJ IDEA.
@@ -28,7 +27,7 @@ public final class MyLibgdxGame extends Game {
     @Override
     public void render() {
         // clear the screen with a CORNFLOWERBLUE color.
-        Gdx.gl.glClearColor((float)Color.CORNFLOWERBLUE.getRed(), (float)Color.CORNFLOWERBLUE.getGreen(), (float)Color.CORNFLOWERBLUE.getBlue(), 1);
+        Gdx.gl.glClearColor((float)100, (float)149, (float)237, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         // TODO : UPDATE logic
