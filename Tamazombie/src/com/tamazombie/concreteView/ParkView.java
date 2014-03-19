@@ -28,7 +28,7 @@ public class ParkView implements IParkView {
 
     @Override
     public void Create() {
-        _parkViewModel.getPlayer().setTexture(new Texture(Gdx.files.internal("image.png")));
+        _parkViewModel.getPlayer().setTexture(new Texture(Gdx.files.internal("Walkers.png")));
     }
 
     @Override

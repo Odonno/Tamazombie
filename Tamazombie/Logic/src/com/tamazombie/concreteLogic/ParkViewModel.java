@@ -13,6 +13,10 @@ import com.tamazombie.abstractModel.IPlayer;
 public final class ParkViewModel implements IParkViewModel {
     private IPlayer _player;
 
+    public ParkViewModel(IPlayer player){
+        _player = player;
+    }
+
     @Override
     public IPlayer getPlayer() {
         return _player;

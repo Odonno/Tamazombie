@@ -27,6 +27,7 @@ public final class MyLibgdxGame extends Game {
     public void create() {
         // TODO : make instances of textures, sound, spriteBatch and other objects
         _spriteBatch = new SpriteBatch();
+        _view.Create();
     }
 
     @Override
