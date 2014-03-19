@@ -1,5 +1,6 @@
 package com.tamazombie.concreteView;
 
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.tamazombie.abstractLogic.IParkViewModel;
 import com.tamazombie.abstractLogic.IViewModel;
 import com.tamazombie.abstractView.IParkView;

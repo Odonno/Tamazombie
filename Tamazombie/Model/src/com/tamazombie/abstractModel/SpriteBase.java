@@ -3,6 +3,7 @@ package com.tamazombie.abstractModel;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 /**
@@ -65,8 +66,10 @@ public abstract class SpriteBase implements ISprite {
     }
 
 
-
-
+    @Override
+    public void draw (SpriteBatch spriteBatch) {
+        spriteBatch.draw(_texture, _x, _y);
+    }
 
     /** Returns the color of this sprite. Changing the returned color will have no affect, {@link #setColor(Color)} or
      * {@link #setColor(float, float, float, float)} must be used. */
