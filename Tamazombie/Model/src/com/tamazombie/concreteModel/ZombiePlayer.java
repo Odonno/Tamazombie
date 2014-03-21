@@ -2,6 +2,7 @@ package com.tamazombie.concreteModel;
 
 import com.tamazombie.abstractModel.IZombiePlayer;
 import com.tamazombie.abstractModel.Player;
+import com.tamazombie.commonModel.Direction;
 import com.tamazombie.commonModel.GameMode;
 import com.tamazombie.commonModel.Gender;
 
@@ -39,6 +40,11 @@ public final class ZombiePlayer extends Player implements IZombiePlayer {
     }
 
     @Override
+    public float GetHungerLimit() {
+        return 1000f;
+    }
+
+    @Override
     public float GetMentality() {
         return _mentality;
     }
@@ -51,6 +57,26 @@ public final class ZombiePlayer extends Player implements IZombiePlayer {
     @Override
     public float GetDefense() {
         return _defense;
+    }
+
+    @Override
+    public Direction GetDirection() {
+        return _direction;
+    }
+
+    @Override
+    public void SetHealth(float health) {
+        _health = health;
+    }
+
+    @Override
+    public void SetHunger(float hunger) {
+        _hunger = hunger;
+    }
+
+    @Override
+    public void SetDirection(Direction direction) {
+        _direction = direction;
     }
 
     @Override

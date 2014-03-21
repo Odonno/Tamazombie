@@ -1,5 +1,6 @@
 package com.tamazombie.abstractModel;
 
+import com.tamazombie.commonModel.Direction;
 import com.tamazombie.commonModel.GameMode;
 import com.tamazombie.commonModel.Gender;
 
@@ -10,15 +11,21 @@ import com.tamazombie.commonModel.Gender;
  * Time: 23:00
  * To change this template use File | Settings | File Templates.
  */
-public interface IPlayer extends ISprite,IFood {
+public interface IPlayer extends ISprite {
     public String GetName();
     public Gender GetGender();
     public GameMode GetGameMode();
     public float GetHealth();
     public float GetHunger();
+    public float GetHungerLimit();
     public float GetMentality();
     public float GetDamages();
     public float GetDefense();
+    public Direction GetDirection();
+
+    public void SetHealth(float health);
+    public void SetHunger(float hunger);
+    public void SetDirection(Direction direction);
 
     public Boolean IsDead();
 }
