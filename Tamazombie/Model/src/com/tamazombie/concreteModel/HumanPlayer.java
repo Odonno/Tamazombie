@@ -1,18 +1,16 @@
 package com.tamazombie.concreteModel;
 
-import com.tamazombie.abstractModel.IZombiePlayer;
+import com.tamazombie.abstractModel.IHumanPlayer;
 import com.tamazombie.abstractModel.Player;
 import com.tamazombie.commonModel.GameMode;
 import com.tamazombie.commonModel.Gender;
 
+
 /**
- * Created with IntelliJ IDEA.
- * User: David Bottiau
- * Date: 14/03/14
- * Time: 14:17
- * To change this template use File | Settings | File Templates.
+ * Created by Pierrick on 19/03/14.
  */
-public final class ZombiePlayer extends Player implements IZombiePlayer {
+public final class HumanPlayer extends Player implements IHumanPlayer
+{
     @Override
     public String GetName() {
         return _name;
@@ -25,7 +23,7 @@ public final class ZombiePlayer extends Player implements IZombiePlayer {
 
     @Override
     public GameMode GetGameMode() {
-        return GameMode.ZombieMode;
+        return GameMode.HumanMode;
     }
 
     @Override
@@ -55,6 +53,6 @@ public final class ZombiePlayer extends Player implements IZombiePlayer {
 
     @Override
     public Boolean IsDead() {
-        return _health >= 200f;
+        return _health >=1000f;
     }
 }

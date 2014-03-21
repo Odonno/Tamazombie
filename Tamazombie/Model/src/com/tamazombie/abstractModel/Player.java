@@ -11,7 +11,7 @@ import com.tamazombie.commonModel.Gender;
  * Time: 23:00
  * To change this template use File | Settings | File Templates.
  */
-public abstract class Player extends SpriteBase implements IPlayer {
+public abstract class Player extends SpriteBase implements IPlayer,IFood {
     protected String _name;
     protected Gender _gender;
     protected float _health;
