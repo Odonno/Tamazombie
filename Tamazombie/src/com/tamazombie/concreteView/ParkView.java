@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.tamazombie.abstractLogic.IParkViewModel;
+import com.tamazombie.abstractView.IBackground;
 import com.tamazombie.abstractView.IButton;
 import com.tamazombie.abstractView.IParkView;
 
@@ -21,10 +22,12 @@ public final class ParkView implements IParkView {
     private IParkViewModel _parkViewModel;
     // TODO : create buttons
     // TODO : create background
+    private IBackground _Background;
 
     public ParkView(IParkViewModel parkViewModel){
         _parkViewModel = parkViewModel;
         // TODO : initialize buttons/background with Injection (IoC)
+
     }
 
     @Override
@@ -37,7 +40,7 @@ public final class ParkView implements IParkView {
         _parkViewModel.getPlayer().setTexture(new Texture(Gdx.files.internal("Walkers.png")));
 
         // TODO : set textures to buttons / background
-
+        _Background.setTexture(new Texture(Gdx.files.internal("background.png"))); // *********** \\
         //xButton.setTexture(new Texture(Gdx.files.internal("Button.png")));
     }
 
