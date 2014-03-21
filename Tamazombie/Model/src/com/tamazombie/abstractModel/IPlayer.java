@@ -1,5 +1,6 @@
 package com.tamazombie.abstractModel;
 
+import com.tamazombie.commonModel.Direction;
 import com.tamazombie.commonModel.GameMode;
 import com.tamazombie.commonModel.Gender;
 
@@ -20,9 +21,11 @@ public interface IPlayer extends ISprite {
     public float GetMentality();
     public float GetDamages();
     public float GetDefense();
+    public Direction GetDirection();
 
     public void SetHealth(float health);
     public void SetHunger(float hunger);
+    public void SetDirection(Direction direction);
 
     public Boolean IsDead();
 }

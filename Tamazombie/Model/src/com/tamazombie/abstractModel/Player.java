@@ -1,5 +1,6 @@
 package com.tamazombie.abstractModel;
 
+import com.tamazombie.commonModel.Direction;
 import com.tamazombie.commonModel.Gender;
 
 /**
@@ -17,4 +18,5 @@ public abstract class Player extends SpriteBase implements IPlayer,IFood {
     protected float _mentality;
     protected float _damages;
     protected float _defense;
+    protected Direction _direction;
 }

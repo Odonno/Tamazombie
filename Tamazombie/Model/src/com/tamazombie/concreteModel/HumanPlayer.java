@@ -2,6 +2,7 @@ package com.tamazombie.concreteModel;
 
 import com.tamazombie.abstractModel.IHumanPlayer;
 import com.tamazombie.abstractModel.Player;
+import com.tamazombie.commonModel.Direction;
 import com.tamazombie.commonModel.GameMode;
 import com.tamazombie.commonModel.Gender;
 
@@ -57,6 +58,11 @@ public final class HumanPlayer extends Player implements IHumanPlayer
     }
 
     @Override
+    public Direction GetDirection() {
+        return  _direction;
+    }
+
+    @Override
     public void SetHealth(float health) {
         _health = health;
     }
@@ -64,6 +70,11 @@ public final class HumanPlayer extends Player implements IHumanPlayer
     @Override
     public void SetHunger(float hunger) {
         _hunger = hunger;
+    }
+
+    @Override
+    public void SetDirection(Direction direction) {
+        _direction = direction;
     }
 
     @Override
