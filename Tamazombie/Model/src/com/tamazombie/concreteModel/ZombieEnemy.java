@@ -7,11 +7,9 @@ import com.tamazombie.abstractModel.IZombieEnemy;
 /**
  * Created by Pierrick on 19/03/14.
  */
-public class ZombieEnemy extends Enemy implements IZombieEnemy
-{
-
-    public String GetName()
-    {
+public final class ZombieEnemy extends Enemy implements IZombieEnemy {
+    @Override
+    public String GetName() {
         return _name;
     }
     @Override
@@ -31,6 +29,6 @@ public class ZombieEnemy extends Enemy implements IZombieEnemy
 
     @Override
     public Boolean IsDead() {
-        return _health >=500f;
+        return _health >= 500f;
     }
 }

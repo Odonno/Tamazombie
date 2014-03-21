@@ -11,6 +11,7 @@ import com.tamazombie.commonModel.Gender;
  */
 public final class HumanPlayer extends Player implements IHumanPlayer
 {
+    @Override
     public String GetName() {
         return _name;
     }

@@ -7,12 +7,12 @@ import com.tamazombie.abstractModel.IHumanEnemy;
 /**
  * Created by Pierrick on 19/03/14.
  */
-public class HumanEnemy extends Enemy implements IHumanEnemy
-{
-    public String GetName()
-    {
+public final class HumanEnemy extends Enemy implements IHumanEnemy {
+    @Override
+    public String GetName() {
         return _name;
     }
+
     @Override
     public float GetHealth() {
         return _health;
@@ -30,6 +30,6 @@ public class HumanEnemy extends Enemy implements IHumanEnemy
 
     @Override
     public Boolean IsDead() {
-        return _health >=150f;
+        return _health >= 150f;
     }
 }
