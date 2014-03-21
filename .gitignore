@@ -4,4 +4,8 @@
 *.war
 *.ear
 
-Tamazombie/.idea/workspace.xml
+# Intellij
+Tamazombie/.idea/
+*.iml
+*.iws
+*.xml
