@@ -10,15 +10,19 @@ import com.tamazombie.commonModel.Gender;
  * Time: 23:00
  * To change this template use File | Settings | File Templates.
  */
-public interface IPlayer extends ISprite,IFood {
+public interface IPlayer extends ISprite {
     public String GetName();
     public Gender GetGender();
     public GameMode GetGameMode();
     public float GetHealth();
     public float GetHunger();
+    public float GetHungerLimit();
     public float GetMentality();
     public float GetDamages();
     public float GetDefense();
+
+    public void SetHealth(float health);
+    public void SetHunger(float hunger);
 
     public Boolean IsDead();
 }

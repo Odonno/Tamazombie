@@ -2,6 +2,7 @@ package com.tamazombie.concreteLogic;
 
 import com.tamazombie.abstractLogic.IParkViewModel;
 import com.tamazombie.abstractModel.IPlayer;
+import com.tamazombie.commonModel.GameMode;
 
 /**
  * Created with IntelliJ IDEA.
@@ -31,28 +32,26 @@ public final class ParkViewModel implements IParkViewModel {
         // TODO : update position of player
 
         // Check if the player died and he received damages each time his hungry limit overcame
-        if (_player.GetGameMode() == GameMode.ZombieMode && _player.GetHungry() >= _player.GetHungryLimit())
+        if (_player.GetGameMode() == GameMode.ZombieMode && _player.GetHunger() >= _player.GetHungerLimit())
             _player.SetHealth(_player.GetHealth() + _damagePerSecond);
-        if (_player.GetGameMode() == GameMode.HumanMode && _player.GetHungry() <= _player.GetHungryLimit())
+        if (_player.GetGameMode() == GameMode.HumanMode && _player.GetHunger() <= _player.GetHungerLimit())
             _player.SetHealth(_player.GetHealth() - _damagePerSecond);
-
-        return _player.GetHealth() <= 0;
     }
 
     @Override
     public void PlayerHungry(float deltaTime) {
         if (_player.GetGameMode() == GameMode.ZombieMode)
-            _player.SetHungry(_player.GetHungry() + (deltaTime * _hungryRatePerSecond));
+            _player.SetHunger(_player.GetHunger() + (deltaTime * _hungryRatePerSecond));
         if (_player.GetGameMode() == GameMode.HumanMode)
-            _player.SetHungry(_player.GetHungry() - (deltaTime * _hungryRatePerSecond));
+            _player.SetHunger(_player.GetHunger() - (deltaTime * _hungryRatePerSecond));
     }
 
     @Override
     public void PlayerEat(float deltaTime) {
         if (_player.GetGameMode() == GameMode.ZombieMode)
-            _player.SetHungry(_player.GetHungry() - _hungryByMeal);
+            _player.SetHunger(_player.GetHunger() - _hungryByMeal);
         if (_player.GetGameMode() == GameMode.HumanMode)
-            _player.SetHungry(_player.GetHungry() + _hungryByMeal);
+            _player.SetHunger(_player.GetHunger() + _hungryByMeal);
 
         _player.SetHealth(_player.GetHealth() + _healByMeal);
     }

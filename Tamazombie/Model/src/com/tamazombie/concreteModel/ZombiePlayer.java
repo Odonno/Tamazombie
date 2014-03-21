@@ -39,6 +39,11 @@ public final class ZombiePlayer extends Player implements IZombiePlayer {
     }
 
     @Override
+    public float GetHungerLimit() {
+        return 1000f;
+    }
+
+    @Override
     public float GetMentality() {
         return _mentality;
     }
@@ -51,6 +56,16 @@ public final class ZombiePlayer extends Player implements IZombiePlayer {
     @Override
     public float GetDefense() {
         return _defense;
+    }
+
+    @Override
+    public void SetHealth(float health) {
+        _health = health;
+    }
+
+    @Override
+    public void SetHunger(float hunger) {
+        _hunger = hunger;
     }
 
     @Override

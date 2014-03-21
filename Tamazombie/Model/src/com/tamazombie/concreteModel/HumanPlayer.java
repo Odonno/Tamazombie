@@ -37,6 +37,11 @@ public final class HumanPlayer extends Player implements IHumanPlayer
     }
 
     @Override
+    public float GetHungerLimit() {
+        return 0f;
+    }
+
+    @Override
     public float GetMentality() {
         return _mentality;
     }
@@ -49,6 +54,16 @@ public final class HumanPlayer extends Player implements IHumanPlayer
     @Override
     public float GetDefense() {
         return _defense;
+    }
+
+    @Override
+    public void SetHealth(float health) {
+        _health = health;
+    }
+
+    @Override
+    public void SetHunger(float hunger) {
+        _hunger = hunger;
     }
 
     @Override
