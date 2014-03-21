@@ -9,6 +9,17 @@ import com.tamazombie.abstractModel.IPlayer;
  * Time: 23:04
  * To change this template use File | Settings | File Templates.
  */
+<<<<<<< HEAD
 public interface IParkViewModel extends IViewModel {
     public IPlayer getPlayer();
+=======
+public interface IParkViewModel {
+    public IPlayer GetPlayer();
+
+    public void PlayerMove(float deltaTime);
+    public void PlayerHungry(float deltaTime);
+    public void PlayerEat(float deltaTime);
+    public void PlayerDivert(float deltaTime);
+    public void GoToTown();
+>>>>>>> feature-coreLogic
 }
