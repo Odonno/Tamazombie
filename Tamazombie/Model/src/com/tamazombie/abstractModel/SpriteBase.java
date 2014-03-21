@@ -3,6 +3,7 @@ package com.tamazombie.abstractModel;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 /**
@@ -63,8 +64,6 @@ public abstract class SpriteBase implements ISprite {
     public SpriteBase (Sprite sprite) {
         set(sprite);
     }
-
-
 
 
 
@@ -131,7 +130,10 @@ public abstract class SpriteBase implements ISprite {
 
 
 
-
+    @Override
+    public void draw (SpriteBatch spriteBatch) {
+        spriteBatch.draw(_texture, _x, _y, _width / 2, _height / 2, _width, _height, _scaleX, _scaleY, _rotation, 0, 0, (int)_width, (int)_height, false, false);
+    }
 
     /** Make this sprite a copy in every way of the specified sprite */
     @Override
@@ -148,6 +150,13 @@ public abstract class SpriteBase implements ISprite {
         _scaleX = sprite.getScaleX();
         _scaleY = sprite.getScaleY();
         _color.set(sprite.getColor());
+    }
+
+    @Override
+    public void setTexture(Texture texture){
+        _texture = texture;
+        _width = texture.getWidth();
+        _height = texture.getHeight();
     }
 
     /** Sets the position and size of the sprite when drawn, before scaling and rotation are applied. If origin, rotation, or scale

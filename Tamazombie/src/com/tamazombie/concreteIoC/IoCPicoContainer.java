@@ -4,9 +4,17 @@ import com.tamazombie.abstractIoC.IIocContainer;
 import com.tamazombie.concreteLogic.ParkViewModel;
 import com.tamazombie.concreteModel.ZombiePlayer;
 import com.tamazombie.concreteServices.StorageService;
+import com.tamazombie.concreteView.Background;
+import com.tamazombie.concreteView.Button;
+import com.tamazombie.concreteView.ParkView;
+import org.picocontainer.Characteristics;
 import org.picocontainer.DefaultPicoContainer;
 import org.picocontainer.MutablePicoContainer;
+import org.picocontainer.annotations.Cache;
 import org.picocontainer.behaviors.Caching;
+import org.picocontainer.behaviors.OptInCaching;
+
+import java.util.Properties;
 
 /**
  * Created with IntelliJ IDEA.
@@ -42,22 +50,16 @@ final class IoCPicoContainer implements IIocContainer {
 
 
     /**
-     * The IoC container to create Singletons
+     * The IoC container to create Singletons or Factories
      */
-    private MutablePicoContainer _singletonPicoContainer;
-
-    /**
-     * The IoC container to create Factories
-     */
-    private MutablePicoContainer _factoryPicoContainer;
+    private MutablePicoContainer _picoContainer;
 
 
     /**
      * Initialize IoC containers
      */
     private void InitializeContainers() {
-        _factoryPicoContainer = new DefaultPicoContainer();
-        _singletonPicoContainer = new DefaultPicoContainer(new Caching());
+        _picoContainer = new DefaultPicoContainer(new OptInCaching());
     }
 
     /**
@@ -65,13 +67,20 @@ final class IoCPicoContainer implements IIocContainer {
      */
     private void AddComponents() {
         // Register Model
-        _singletonPicoContainer.addComponent(ZombiePlayer.class);
+        _picoContainer.as(Characteristics.CACHE).addComponent(ZombiePlayer.class);
 
         // Register Logic (ViewModels)
-        _singletonPicoContainer.addComponent(ParkViewModel.class);
+        _picoContainer.as(Characteristics.CACHE).addComponent(ParkViewModel.class);
 
         // Register Services
-        _singletonPicoContainer.addComponent(StorageService.class);
+        _picoContainer.as(Characteristics.CACHE).addComponent(StorageService.class);
+
+        // Register View
+        _picoContainer.as(Characteristics.CACHE).addComponent(ParkView.class);
+
+        // Register View objects
+        _picoContainer.addComponent(Button.class);
+        _picoContainer.addComponent(Background.class);
     }
 
     /**
@@ -80,7 +89,7 @@ final class IoCPicoContainer implements IIocContainer {
      * @return The PicoContainer expected
      */
     private MutablePicoContainer GetPico(IoCType type) {
-        return (IoCType.Singleton == type) ? _singletonPicoContainer : _factoryPicoContainer;
+        return _picoContainer;
     }
 
     /**

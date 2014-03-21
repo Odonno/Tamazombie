@@ -14,10 +14,10 @@ import com.tamazombie.portableGame.MyLibgdxGame;
 public class DesktopStarter {
     public static void main(String[] args) {
         LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
-        cfg.title = "Tamazombie";
+        cfg.title = "TamaZombie";
         cfg.useGL20 = true;
-        cfg.width = 800;
-        cfg.height = 400;
+        cfg.width = 1152;
+        cfg.height = 648;
 
         new LwjglApplication(new MyLibgdxGame(), cfg);
     }
