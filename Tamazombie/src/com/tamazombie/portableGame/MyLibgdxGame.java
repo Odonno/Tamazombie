@@ -27,7 +27,7 @@ public final class MyLibgdxGame extends Game {
     @Override
     public void render() {
         // clear the screen with a CORNFLOWERBLUE color.
-        Gdx.gl.glClearColor((float)100, (float)149, (float)237, 1);
+        Gdx.gl.glClearColor((float)100/255, (float)149/255, (float)237/255, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         // TODO : UPDATE logic
