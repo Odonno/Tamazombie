@@ -17,11 +17,14 @@ import com.tamazombie.abstractView.IParkView;
  * Time: 13:48
  * To change this template use File | Settings | File Templates.
  */
-public class ParkView implements IParkView {
+public final class ParkView implements IParkView {
     private IParkViewModel _parkViewModel;
+    // TODO : create buttons
+    // TODO : create background
 
     public ParkView(IParkViewModel parkViewModel){
         _parkViewModel = parkViewModel;
+        // TODO : initialize buttons/background with Injection (IoC)
     }
 
     @Override
@@ -32,18 +35,24 @@ public class ParkView implements IParkView {
     @Override
     public void Create() {
         _parkViewModel.getPlayer().setTexture(new Texture(Gdx.files.internal("Walkers.png")));
-        //_parkViewModel.getButton().setTexture(new Texture(Gdx.files.internal("Button.png")));
 
+        // TODO : set textures to buttons / background
+
+        //xButton.setTexture(new Texture(Gdx.files.internal("Button.png")));
     }
 
     @Override
     public void Update() {
         // TODO : UPDATE logic
+
+        // TODO : Get Click position and check the user click the button
     }
 
     @Override
     public void Draw(SpriteBatch spriteBatch) {
-        // TODO : DRAW textures (images), play sound, ...
+        // TODO : Draw textures (images), play sound, ...
         _parkViewModel.getPlayer().draw(spriteBatch);
+
+        // TODO : draw texture (buttons / background)
     }
 }

@@ -4,6 +4,9 @@
     <list default="true" id="b741d93a-9cd0-461f-adb3-5ccaf6e31152" name="Default" comment="" />
     <ignored path="Tamazombie.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="/ParkView.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1395417032425" ignored="false" />
+    <file path="/IButton.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1395416978865" ignored="false" />
+    <file path="/Button.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1395417211492" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,39 +67,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ParkView.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ParkView.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IBackground.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractView/IBackground.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Background.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/Background.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="0.18640351">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyLibgdxGame.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.0">
+            <state line="19" column="12" selection-start="621" selection-end="621" vertical-scroll-proportion="0.20504385">
               <folding />
             </state>
           </provider>
@@ -111,28 +85,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZombiePlayer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/ZombiePlayer.java">
+      <file leaf-file-name="MyLibgdxGame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="19" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0">
+            <state line="37" column="0" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpriteBase.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/SpriteBase.java">
+      <file leaf-file-name="IButton.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractView/IButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="114" selection-start="4619" selection-end="4619" vertical-scroll-proportion="0.0">
+            <state line="10" column="62" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DesktopStarter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Desktop/src/com/tamazombie/desktopGame/DesktopStarter.java">
+      <file leaf-file-name="Button.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/Button.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="28" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0">
+            <state line="15" column="90" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,11 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/IoC.java" />
-        <option value="$PROJECT_DIR$/src/com/tamazombie/portableIoC/concrete/IoCPicoContainer.java" />
-        <option value="$PROJECT_DIR$/src/com/tamazombie/portableIoC/IIocContainer.java" />
-        <option value="$PROJECT_DIR$/src/com/tamazombie/portableIoC/IoC.java" />
-        <option value="$PROJECT_DIR$/src/com/tamazombie/portableIoC/IoCPicoContainer.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoC.java" />
         <option value="$PROJECT_DIR$/Logic/src/com/tamazombie/abstractLogic/IParkViewModel.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java" />
@@ -163,11 +132,12 @@
         <option value="$PROJECT_DIR$/Logic/src/com/tamazombie/concreteLogic/ParkViewModel.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/SpriteBase.java" />
         <option value="$PROJECT_DIR$/Desktop/src/com/tamazombie/desktopGame/DesktopStarter.java" />
-        <option value="$PROJECT_DIR$/src/com/tamazombie/abstractView/IButton.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java" />
-        <option value="$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/abstractView/IBackground.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/concreteView/Background.java" />
+        <option value="$PROJECT_DIR$/src/com/tamazombie/abstractView/IButton.java" />
+        <option value="$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java" />
+        <option value="$PROJECT_DIR$/src/com/tamazombie/concreteView/Button.java" />
       </list>
     </option>
   </component>
@@ -204,6 +174,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -366,7 +337,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -384,12 +354,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -477,19 +447,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -515,6 +472,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -611,7 +581,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="334" y="-8" width="1594" height="1096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -626,7 +596,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24863884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1605744" sideWeight="0.6748401" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15992168" sideWeight="0.6748401" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32446808" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -711,21 +681,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Logic/src/com/tamazombie/concreteLogic/ParkViewModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="24" selection-start="454" selection-end="454" vertical-scroll-proportion="0.36324787" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/g2d/SpriteBatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="605" column="0" selection-start="21212" selection-end="21212" vertical-scroll-proportion="0.47863248" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logic/src/com/tamazombie/abstractLogic/IParkViewModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="31" selection-start="329" selection-end="329" vertical-scroll-proportion="0.2905983" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="51" selection-start="1919" selection-end="1919" vertical-scroll-proportion="0.5156695">
@@ -787,9 +742,18 @@
         <state line="21" column="1" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/Background.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.0">
+        <state line="10" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="0.18640351">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractView/IBackground.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="122" selection-end="122" vertical-scroll-proportion="0.13048245">
           <folding />
         </state>
       </provider>
@@ -801,19 +765,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractView/IBackground.java">
+    <entry file="file://$PROJECT_DIR$/Android/assets/background.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractView/IButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
+        <state line="10" column="62" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/Background.java">
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/Button.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="0.18640351">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="15" column="90" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="12" selection-start="621" selection-end="621" vertical-scroll-proportion="0.20504385">
+          <folding />
         </state>
       </provider>
     </entry>
