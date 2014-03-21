@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.tamazombie.abstractLogic.IParkViewModel;
+import com.tamazombie.abstractView.IButton;
 import com.tamazombie.abstractView.IParkView;
 
 /**
