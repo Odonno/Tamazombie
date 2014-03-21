@@ -2,6 +2,7 @@ package com.tamazombie.concreteLogic;
 
 import com.tamazombie.abstractLogic.IParkViewModel;
 import com.tamazombie.abstractModel.IPlayer;
+import com.tamazombie.commonModel.Direction;
 import com.tamazombie.commonModel.GameMode;
 
 /**
@@ -17,9 +18,11 @@ public final class ParkViewModel implements IParkViewModel {
     private float _hungryByMeal = 50f;
     private float _healByMeal = 10f;
     private float _damagePerSecond = 1f;
+    private float _nextTimeDirection;
 
     public ParkViewModel(IPlayer player){
         _player = player;
+        CalculateNextTimeDirection();
     }
 
     @Override
@@ -29,7 +32,11 @@ public final class ParkViewModel implements IParkViewModel {
 
     @Override
     public void PlayerMove(float deltaTime) {
-        // TODO : update position of player
+        // update position of player
+        _player.setPosition(_player.getX() + (deltaTime * _player.GetDirection().GetX()), _player.getY() + (deltaTime * _player.GetDirection().GetY()));
+
+        _nextTimeDirection -= deltaTime;
+        CalculateNextTimeDirection();
 
         // Check if the player died and he received damages each time his hungry limit overcame
         if (_player.GetGameMode() == GameMode.ZombieMode && _player.GetHunger() >= _player.GetHungerLimit())
@@ -64,5 +71,17 @@ public final class ParkViewModel implements IParkViewModel {
     @Override
     public void GoToTown() {
         //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+
+    private void CalculateNextTimeDirection() {
+        if (_nextTimeDirection <= 0f) {
+            _nextTimeDirection = (float)(Math.random() * 10 + 2);
+
+            // Set a new direction for the player
+            int newDirectionIndex = (int)Math.floor(Math.random() * Direction.values().length);
+            Direction newDirection = Direction.values()[newDirectionIndex];
+            _player.SetDirection(newDirection);
+        }
     }
 }
