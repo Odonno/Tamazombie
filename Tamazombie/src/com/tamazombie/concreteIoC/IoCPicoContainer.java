@@ -80,8 +80,9 @@ final class IoCPicoContainer implements IIocContainer {
         _singletonPicoContainer.addComponent(ParkView.class);
 
         // Register View objects
-        _factoryPicoContainer.addComponent(Button.class);
-        _factoryPicoContainer.addComponent(Background.class);
+        // TODO : use them as Factory
+        _singletonPicoContainer.addComponent(Button.class);
+        _singletonPicoContainer.addComponent(Background.class);
     }
 
     /**
