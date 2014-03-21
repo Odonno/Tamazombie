@@ -2,8 +2,10 @@ package com.tamazombie.concreteView;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.NinePatch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.tamazombie.abstractLogic.IParkViewModel;
 import com.tamazombie.abstractView.IParkView;
 
@@ -29,6 +31,7 @@ public class ParkView implements IParkView {
     @Override
     public void Create() {
         _parkViewModel.getPlayer().setTexture(new Texture(Gdx.files.internal("Walkers.png")));
+        //_parkViewModel.getButton().setTexture(new Texture(Gdx.files.internal("Button.png")));
     }
 
     @Override
