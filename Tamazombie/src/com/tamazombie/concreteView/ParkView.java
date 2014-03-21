@@ -36,10 +36,13 @@ public final class ParkView implements IParkView {
 
     @Override
     public void Create() {
-        _parkViewModel.getPlayer().setTexture(new Texture(Gdx.files.internal("Walkers.png")));
+        _parkViewModel.getPlayer().setTexture(new Texture(Gdx.files.internal("zombie.png")));
+        _parkViewModel.getPlayer().setScale(0.15f);
 
         // TODO : set textures to buttons
         _background.setTexture(new Texture(Gdx.files.internal("background.png")));
+
+
         //xButton.setTexture(new Texture(Gdx.files.internal("Button.png")));
     }
 
