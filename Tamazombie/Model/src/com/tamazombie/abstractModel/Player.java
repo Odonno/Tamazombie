@@ -1,7 +1,5 @@
 package com.tamazombie.abstractModel;
 
-import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.tamazombie.abstractModel.IPlayer;
 import com.tamazombie.commonModel.Gender;
 
 /**

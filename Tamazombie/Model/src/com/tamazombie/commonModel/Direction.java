@@ -1,4 +1,4 @@
-package com.tamazombie.commonLogic;
+package com.tamazombie.commonModel;
 
 /**
  * Created with IntelliJ IDEA.
