@@ -4,7 +4,8 @@
 *.war
 *.ear
 
+# Intellij
+Tamazombie/.idea/
+*.iml
+*.iws
 *.xml
-
-Tamazombie/.idea/workspace.xml
-Tamazombie/Android/gen/com/tamazombie/Android/BuildConfig.java
