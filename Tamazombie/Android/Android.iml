@@ -15,8 +15,8 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 19 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="Tamazombie" />
     <orderEntry type="library" name="Androidlibs" level="project" />
+    <orderEntry type="module" module-name="Main" />
   </component>
 </module>
 
