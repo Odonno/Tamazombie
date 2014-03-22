@@ -37,13 +37,14 @@ public final class ParkView implements IParkView {
 
     @Override
     public void Create() {
+        // set texture to player
         _parkViewModel.getPlayer().setTexture(new Texture(Gdx.files.internal("zombie.png")));
         _parkViewModel.getPlayer().setScale(0.15f);
 
-        // TODO : set textures to background
+        // set texture to background
         _background.setTexture(new Texture(Gdx.files.internal("background.png")));
 
-        //TODO : set texture to button
+        // set textures to buttons
         _buttonFeed.setTexture(new Texture(Gdx.files.internal("ButtonFeed.png")));
         _buttonFeed.setPosition(-150, 120);
 
@@ -57,14 +58,16 @@ public final class ParkView implements IParkView {
     @Override
     public void Update() {
         // TODO : UPDATE logic
-
-        // TODO : Get Click position and check the user click the button
         int x = Gdx.input.getX();
         int y = Gdx.input.getY();
+
+        // TODO : Update buttons
 
         _buttonFeed.IsHover(x, y);
         _buttonAmuse.IsHover(x, y);
         _buttonTown.IsHover(x, y);
+
+        // TODO : Check the user click a button
     }
 
     @Override

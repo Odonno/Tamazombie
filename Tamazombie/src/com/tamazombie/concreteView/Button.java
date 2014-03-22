@@ -16,8 +16,7 @@ public final class Button extends SpriteBase implements IButton {
      * @param y Y position of the mouse
      * @return
      */
-    @Override
-    public boolean IsClickable(int x, int y) {
+    private boolean IsClickable(int x, int y) {
         // TODO : check if the pixel (x, y) is inside the button => use IsHover
         // TODO : check if the click is now 'clickable' (in regard of the click frequency)
         return false;  //To change body of implemented methods use File | Settings | File Templates.
@@ -26,7 +25,7 @@ public final class Button extends SpriteBase implements IButton {
     /**
      * Inform if the button is hovered by the mouse
      * @param x X position of the mouse
-     * @param y
+     * @param y Y position of the mouse
      * @return
      */
     @Override
@@ -39,6 +38,15 @@ public final class Button extends SpriteBase implements IButton {
             setColor(1f, 1f, 1f, 1f);
             return false;
         }
+    }
+
+    /**
+     * Update buttons paramaters
+     * @param deltaTime
+     */
+    @Override
+    public void Update(float deltaTime) {
+        _lastTimeClick -= deltaTime;
     }
 
     /**
