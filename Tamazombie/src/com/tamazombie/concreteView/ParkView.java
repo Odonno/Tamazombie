@@ -22,11 +22,15 @@ public final class ParkView implements IParkView {
     private IParkViewModel _parkViewModel;
     // TODO : create buttons
     private IBackground _background;
+    private IButton _buttonFeed;
+    private IButton _buttonAmuse;
 
-    public ParkView(IParkViewModel parkViewModel, IBackground background){
+    public ParkView(IParkViewModel parkViewModel, IBackground background, IButton buttonFeed, IButton buttonAmuse){
         _parkViewModel = parkViewModel;
         // TODO : initialize buttons with Injection (IoC)
         _background = background;
+        _buttonFeed = buttonFeed;
+        _buttonAmuse = buttonAmuse;
     }
 
     @Override
@@ -38,8 +42,14 @@ public final class ParkView implements IParkView {
     public void Create() {
         _parkViewModel.getPlayer().setTexture(new Texture(Gdx.files.internal("Walkers.png")));
 
-        // TODO : set textures to buttons
+        // TODO : set textures to background
         _background.setTexture(new Texture(Gdx.files.internal("background.png")));
+        //TODO : set texture to button
+        _buttonFeed.setTexture(new Texture(Gdx.files.internal("ButtonFeed.png")));
+        _buttonFeed.setPosition(-160, -120);
+
+        _buttonAmuse.setTexture(new Texture(Gdx.files.internal("ButtonAmuse.png")));
+        //_buttonAmuse.setPosition(-160, -200);
         //xButton.setTexture(new Texture(Gdx.files.internal("Button.png")));
     }
 
@@ -54,6 +64,8 @@ public final class ParkView implements IParkView {
     public void Draw(SpriteBatch spriteBatch) {
         // TODO : Draw textures (images), play sound, ...
         _background.draw(spriteBatch);
+        _buttonFeed.draw(spriteBatch);
+        //_buttonAmuse.draw(spriteBatch);
 
         _parkViewModel.getPlayer().draw(spriteBatch);
 
