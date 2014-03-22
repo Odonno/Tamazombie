@@ -2,10 +2,7 @@ package com.tamazombie.concreteView;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.NinePatch;
-import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.tamazombie.abstractLogic.IParkViewModel;
 import com.tamazombie.abstractView.IBackground;
 import com.tamazombie.abstractView.IButton;
@@ -20,7 +17,6 @@ import com.tamazombie.abstractView.IParkView;
  */
 public final class ParkView implements IParkView {
     private IParkViewModel _parkViewModel;
-    // TODO : create buttons
     private IBackground _background;
     private IButton _buttonFeed;
     private IButton _buttonAmuse;
@@ -28,7 +24,6 @@ public final class ParkView implements IParkView {
 
     public ParkView(IParkViewModel parkViewModel, IBackground background, IButton buttonFeed, IButton buttonAmuse, IButton buttonTown){
         _parkViewModel = parkViewModel;
-        // TODO : initialize buttons with Injection (IoC)
         _background = background;
         _buttonFeed = buttonFeed;
         _buttonAmuse = buttonAmuse;
@@ -47,7 +42,7 @@ public final class ParkView implements IParkView {
 
         // TODO : set textures to background
         _background.setTexture(new Texture(Gdx.files.internal("background.png")));
-//<<<<<<< HEAD
+
         //TODO : set texture to button
         _buttonFeed.setTexture(new Texture(Gdx.files.internal("ButtonFeed.png")));
         _buttonFeed.setPosition(-150, 120);
@@ -57,11 +52,6 @@ public final class ParkView implements IParkView {
 
         _buttonTown.setTexture(new Texture(Gdx.files.internal("ButtonTown.png")));
         _buttonTown.setPosition(230, 120);
-//=======
-
-
-//>>>>>>> FETCH_HEAD
-        //xButton.setTexture(new Texture(Gdx.files.internal("Button.png")));
     }
 
     @Override
@@ -75,12 +65,11 @@ public final class ParkView implements IParkView {
     public void Draw(SpriteBatch spriteBatch) {
         // TODO : Draw textures (images), play sound, ...
         _background.draw(spriteBatch);
+
         _buttonFeed.draw(spriteBatch);
         _buttonAmuse.draw(spriteBatch);
         _buttonTown.draw(spriteBatch);
 
         _parkViewModel.getPlayer().draw(spriteBatch);
-
-        // TODO : draw texture (buttons)
     }
 }

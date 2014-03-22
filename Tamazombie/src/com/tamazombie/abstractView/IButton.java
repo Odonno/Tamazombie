@@ -7,4 +7,5 @@ import com.tamazombie.abstractModel.ISprite;
  */
 public interface IButton extends ISprite {
     public boolean IsClicked(int x, int y);
+    public boolean IsHover(int x, int y);
 }
