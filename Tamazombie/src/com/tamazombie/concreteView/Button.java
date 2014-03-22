@@ -31,8 +31,14 @@ public final class Button extends SpriteBase implements IButton {
      */
     @Override
     public boolean IsHover(int x, int y) {
-        // TODO : check if the pixel (x, y) is inside the button
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+        if (x > getX() && x < getX() + getWidth() && y > getY() && y < getY() + getHeight()) {
+            setColor(1f, 1f, 1f, 0.8f);
+            return true;
+        }
+        else {
+            setColor(1f, 1f, 1f, 1f);
+            return false;
+        }
     }
 
     /**

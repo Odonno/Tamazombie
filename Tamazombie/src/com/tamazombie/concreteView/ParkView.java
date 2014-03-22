@@ -59,6 +59,12 @@ public final class ParkView implements IParkView {
         // TODO : UPDATE logic
 
         // TODO : Get Click position and check the user click the button
+        int x = Gdx.input.getX();
+        int y = Gdx.input.getY();
+
+        _buttonFeed.IsHover(x, y);
+        _buttonAmuse.IsHover(x, y);
+        _buttonTown.IsHover(x, y);
     }
 
     @Override

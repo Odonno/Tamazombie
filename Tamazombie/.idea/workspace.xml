@@ -4,8 +4,10 @@
     <list default="true" id="b741d93a-9cd0-461f-adb3-5ccaf6e31152" name="Default" comment="" />
     <ignored path="Tamazombie.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Button.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1395497804274" ignored="false" />
+    <file path="/Button.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1395499995588" ignored="false" />
     <file path="/IButton.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1395497560064" ignored="false" />
+    <file path="/ParkView.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1395500086713" ignored="false" />
+    <file path="/SpriteBase.java" changelist="b741d93a-9cd0-461f-adb3-5ccaf6e31152" time="1395499519243" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,10 +68,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ParkView.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ParkView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="63" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.31907895">
+            <state line="66" column="19" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -84,10 +86,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Button.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Button.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/Button.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="24" selection-start="1369" selection-end="1374" vertical-scroll-proportion="0.0">
+            <state line="32" column="42" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.8639344">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpriteBase.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/SpriteBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="100" column="17" selection-start="3553" selection-end="3553" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -110,14 +121,14 @@
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/ISprite.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/abstractView/IGameView.java" />
         <option value="$PROJECT_DIR$/Logic/src/com/tamazombie/concreteLogic/ParkViewModel.java" />
-        <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/SpriteBase.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/abstractView/IBackground.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/concreteView/Background.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java" />
         <option value="$PROJECT_DIR$/Desktop/src/com/tamazombie/desktopGame/DesktopStarter.java" />
-        <option value="$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/abstractView/IButton.java" />
+        <option value="$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/SpriteBase.java" />
+        <option value="$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/concreteView/Button.java" />
       </list>
     </option>
@@ -310,6 +321,36 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tamazombie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tamazombie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tamazombie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tamazombie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="abstractModel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -424,24 +465,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tamazombie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tamazombie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -709,7 +732,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19210246" sideWeight="0.67803836" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3219616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3219616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -792,30 +815,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/Background.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="19" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractView/IParkView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="45" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/libs/picocontainer-2.14.jar!/org/picocontainer/DefaultPicoContainer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="228" column="0" selection-start="14202" selection-end="14202" vertical-scroll-proportion="7.0163636" />
@@ -871,9 +870,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/Button.java">
+    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/ISprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="24" selection-start="1369" selection-end="1374" vertical-scroll-proportion="0.0">
+        <state line="14" column="17" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/g2d/SpriteBatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1030" column="16" selection-start="32042" selection-end="32042" vertical-scroll-proportion="0.042674255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logic/src/com/tamazombie/abstractLogic/IParkViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="17" selection-start="262" selection-end="262" vertical-scroll-proportion="0.3065574">
           <folding />
         </state>
       </provider>
@@ -887,7 +900,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="63" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.31907895">
+        <state line="66" column="19" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/src/com/tamazombie/abstractModel/SpriteBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="17" selection-start="3553" selection-end="3553" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/Button.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="42" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.8639344">
           <folding />
         </state>
       </provider>
