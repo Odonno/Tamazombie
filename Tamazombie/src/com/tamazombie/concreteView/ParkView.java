@@ -40,16 +40,22 @@ public final class ParkView implements IParkView {
 
     @Override
     public void Create() {
-        _parkViewModel.getPlayer().setTexture(new Texture(Gdx.files.internal("Walkers.png")));
+        _parkViewModel.getPlayer().setTexture(new Texture(Gdx.files.internal("zombie.png")));
+        _parkViewModel.getPlayer().setScale(0.15f);
 
         // TODO : set textures to background
         _background.setTexture(new Texture(Gdx.files.internal("background.png")));
+<<<<<<< HEAD
         //TODO : set texture to button
         _buttonFeed.setTexture(new Texture(Gdx.files.internal("ButtonFeed.png")));
         _buttonFeed.setPosition(-160, -120);
 
         _buttonAmuse.setTexture(new Texture(Gdx.files.internal("ButtonAmuse.png")));
-        //_buttonAmuse.setPosition(-160, -200);
+        _buttonAmuse.setPosition(-160, -200);
+=======
+
+
+>>>>>>> FETCH_HEAD
         //xButton.setTexture(new Texture(Gdx.files.internal("Button.png")));
     }
 
@@ -65,7 +71,7 @@ public final class ParkView implements IParkView {
         // TODO : Draw textures (images), play sound, ...
         _background.draw(spriteBatch);
         _buttonFeed.draw(spriteBatch);
-        //_buttonAmuse.draw(spriteBatch);
+        _buttonAmuse.draw(spriteBatch);
 
         _parkViewModel.getPlayer().draw(spriteBatch);
 
