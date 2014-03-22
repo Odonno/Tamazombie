@@ -24,13 +24,15 @@ public final class ParkView implements IParkView {
     private IBackground _background;
     private IButton _buttonFeed;
     private IButton _buttonAmuse;
+    private IButton _buttonTown;
 
-    public ParkView(IParkViewModel parkViewModel, IBackground background, IButton buttonFeed, IButton buttonAmuse){
+    public ParkView(IParkViewModel parkViewModel, IBackground background, IButton buttonFeed, IButton buttonAmuse, IButton buttonTown){
         _parkViewModel = parkViewModel;
         // TODO : initialize buttons with Injection (IoC)
         _background = background;
         _buttonFeed = buttonFeed;
         _buttonAmuse = buttonAmuse;
+        _buttonTown = buttonTown;
     }
 
     @Override
@@ -45,17 +47,20 @@ public final class ParkView implements IParkView {
 
         // TODO : set textures to background
         _background.setTexture(new Texture(Gdx.files.internal("background.png")));
-<<<<<<< HEAD
+//<<<<<<< HEAD
         //TODO : set texture to button
         _buttonFeed.setTexture(new Texture(Gdx.files.internal("ButtonFeed.png")));
-        _buttonFeed.setPosition(-160, -120);
+        _buttonFeed.setPosition(-150, 120);
 
         _buttonAmuse.setTexture(new Texture(Gdx.files.internal("ButtonAmuse.png")));
-        _buttonAmuse.setPosition(-160, -200);
-=======
+        _buttonAmuse.setPosition(40, 120);
+
+        _buttonTown.setTexture(new Texture(Gdx.files.internal("ButtonTown.png")));
+        _buttonTown.setPosition(230, 120);
+//=======
 
 
->>>>>>> FETCH_HEAD
+//>>>>>>> FETCH_HEAD
         //xButton.setTexture(new Texture(Gdx.files.internal("Button.png")));
     }
 
@@ -72,6 +77,7 @@ public final class ParkView implements IParkView {
         _background.draw(spriteBatch);
         _buttonFeed.draw(spriteBatch);
         _buttonAmuse.draw(spriteBatch);
+        _buttonTown.draw(spriteBatch);
 
         _parkViewModel.getPlayer().draw(spriteBatch);
 
