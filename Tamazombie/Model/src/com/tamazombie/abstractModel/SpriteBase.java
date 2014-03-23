@@ -132,7 +132,9 @@ public abstract class SpriteBase implements ISprite {
 
     @Override
     public void draw (SpriteBatch spriteBatch) {
+        spriteBatch.setColor(_color);
         spriteBatch.draw(_texture, _x, _y, _width / 2, _height / 2, _width, _height, _scaleX, _scaleY, _rotation, 0, 0, (int)_width, (int)_height, false, false);
+        spriteBatch.setColor(Color.WHITE);
     }
 
     /** Make this sprite a copy in every way of the specified sprite */
@@ -213,7 +215,7 @@ public abstract class SpriteBase implements ISprite {
      * @see {@link #setColor(float, float, float, float)}. */
     @Override
     public void setColor(float r, float g, float b, float a) {
-        _color = new Color(1, 1, 1, 1);
+        _color = new Color(r, g, b, a);
     }
 
     /** Set the color
