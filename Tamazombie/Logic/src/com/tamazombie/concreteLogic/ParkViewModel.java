@@ -25,10 +25,6 @@ public final class ParkViewModel implements IParkViewModel {
         CalculateNextTimeDirection();
     }
 
-    public ParkViewModel(IPlayer player){
-        _player = player;
-    }
-
     @Override
     public IPlayer GetPlayer() {
         return _player;
