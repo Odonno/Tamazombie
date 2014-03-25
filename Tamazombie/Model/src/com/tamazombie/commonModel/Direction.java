@@ -10,8 +10,8 @@ package com.tamazombie.commonModel;
 public enum Direction {
     Left("Left", -1, 0),
     Right("Right", 1, 0),
-    Top("Top", 0, 1),
-    Down("Down", 0, -1);
+    Top("Top", 0, -1),
+    Down("Down", 0, 1);
 
     private String _direction = "";
     private int _x;

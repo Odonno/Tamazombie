@@ -19,6 +19,7 @@ public final class ParkViewModel implements IParkViewModel {
     private float _healByMeal = 10f;
     private float _damagePerSecond = 1f;
     private float _nextTimeDirection;
+    private float _speed = 20f;
 
     public ParkViewModel(IPlayer player){
         _player = player;
@@ -33,7 +34,7 @@ public final class ParkViewModel implements IParkViewModel {
     @Override
     public void PlayerMove(float deltaTime) {
         // update position of player
-        _player.setPosition(_player.getX() + (deltaTime * _player.GetDirection().GetX()), _player.getY() + (deltaTime * _player.GetDirection().GetY()));
+        _player.setPosition(_player.getX() + (deltaTime * _speed * _player.GetDirection().GetX()), _player.getY() + (deltaTime * _speed * _player.GetDirection().GetY()));
 
         _nextTimeDirection -= deltaTime;
         CalculateNextTimeDirection();
@@ -75,13 +76,24 @@ public final class ParkViewModel implements IParkViewModel {
 
 
     private void CalculateNextTimeDirection() {
+        // Give a new direction after each timer ended
         if (_nextTimeDirection <= 0f) {
-            _nextTimeDirection = (float)(Math.random() * 10 + 2);
+            _nextTimeDirection = (float)(Math.random() * 4 + 1);
 
             // Set a new direction for the player
             int newDirectionIndex = (int)Math.floor(Math.random() * Direction.values().length);
             Direction newDirection = Direction.values()[newDirectionIndex];
             _player.SetDirection(newDirection);
         }
+
+        // Give a good direction if the player will be out of the screen
+        if (_player.getX() < 0)
+            _player.SetDirection(Direction.Right);
+        if (_player.getY() < 0)
+            _player.SetDirection(Direction.Down);
+        if (_player.getX() >= 800)
+            _player.SetDirection(Direction.Left);
+        if (_player.getY() >= 480)
+            _player.SetDirection(Direction.Top);
     }
 }
