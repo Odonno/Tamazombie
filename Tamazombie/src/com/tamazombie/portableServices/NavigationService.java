@@ -17,14 +17,13 @@ import java.util.Stack;
 public class NavigationService implements INavigationService {
     private Stack<IGameView> _views;
 
-    public NavigationService(IParkView parkView){
+    public NavigationService(){
         _views = new Stack<IGameView>();
-        _views.push(parkView);
     }
 
     @Override
     public IGameView GetView() {
-        return _views.get(_views.size() - 1);
+        return _views.peek();
     }
 
     @Override
@@ -34,7 +33,7 @@ public class NavigationService implements INavigationService {
         _views.push((IGameView) _view);
 
         // Create the view
-        _views.lastElement().Create();
+        _views.peek().Create();
     }
 
     @Override
@@ -43,9 +42,11 @@ public class NavigationService implements INavigationService {
         if (_views.size() <= 1)
             return;
 
-        // set the previous view
+        // dispose components of the view
+        //GetView().Dispose();
 
-        // and remove actual view
+        // remove actual view
+        _views.pop();
     }
 
     @Override

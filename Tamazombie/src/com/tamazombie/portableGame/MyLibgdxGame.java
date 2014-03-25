@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.tamazombie.abstractModel.IPlayer;
 import com.tamazombie.abstractView.IGameView;
+import com.tamazombie.abstractView.IParkView;
 import com.tamazombie.concreteIoC.IoC;
 import com.tamazombie.concreteIoC.IoCType;
 import com.tamazombie.portableServices.INavigationService;
@@ -20,14 +21,16 @@ import com.tamazombie.portableServices.INavigationService;
 public final class MyLibgdxGame extends Game {
     // Example of how to get a new object (or current object if existing like a singleton)
     // using navigation service
-    private INavigationService _navigationService = IoC.GetInstance(INavigationService.class, IoCType.Singleton);
+    private INavigationService _navigationService = IoC.GetInstance(INavigationService.class);
     private SpriteBatch _spriteBatch;
 
     @Override
     public void create() {
         // make instances of textures, sound, spriteBatch and other objects
         _spriteBatch = new SpriteBatch();
-        _navigationService.GetView().Create();
+
+        // Setup navigation
+        _navigationService.Navigate(IParkView.class);
     }
 
     @Override
