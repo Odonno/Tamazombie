@@ -2,6 +2,9 @@ package com.tamazombie.portableServices;
 
 import com.tamazombie.abstractView.IGameView;
 import com.tamazombie.abstractView.IParkView;
+import com.tamazombie.concreteIoC.IoC;
+import com.tamazombie.concreteIoC.IoCType;
+
 import java.util.Stack;
 
 /**
@@ -26,7 +29,12 @@ public class NavigationService implements INavigationService {
 
     @Override
     public <T> void Navigate(Class<T> type) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        // Get the view and add it
+        T _view = IoC.GetInstance(type);
+        _views.push((IGameView) _view);
+
+        // Create the view
+        _views.lastElement().Create();
     }
 
     @Override
