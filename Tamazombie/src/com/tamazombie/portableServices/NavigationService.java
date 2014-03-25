@@ -14,7 +14,7 @@ import java.util.Stack;
  * Time: 09:54
  * To change this template use File | Settings | File Templates.
  */
-public class NavigationService implements INavigationService {
+public final class NavigationService implements INavigationService {
     private Stack<IGameView> _views;
 
     public NavigationService(){
@@ -42,15 +42,23 @@ public class NavigationService implements INavigationService {
         if (_views.size() <= 1)
             return;
 
-        // dispose components of the view
-        //GetView().Dispose();
-
-        // remove actual view
-        _views.pop();
+        // remove actual view and dispose components of the view
+        DisposeView(_views.pop());
     }
 
     @Override
     public void Close() {
         //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void Dispose() {
+        while (!_views.empty()){
+            DisposeView(_views.pop());
+        }
+    }
+
+    private void DisposeView(IGameView view){
+         //view.Dispose();
     }
 }

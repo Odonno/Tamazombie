@@ -54,5 +54,8 @@ public final class MyLibgdxGame extends Game {
     public void dispose() {
         // dispose of all the native resources (spriteBatch, textures, sound, ...)
         _spriteBatch.dispose();
+
+        // dispose navigation and all views inside
+        _navigationService.Dispose();
     }
 }

@@ -15,4 +15,5 @@ public interface INavigationService {
     public <T> void Navigate(Class<T> type);
     public void GoBack();
     public void Close();
+    public void Dispose();
 }
