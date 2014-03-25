@@ -12,7 +12,7 @@ import com.tamazombie.abstractView.IGameView;
 public interface INavigationService {
     IGameView GetView();
 
-    void Navigate();
-    void GoBack();
-    void Close();
+    public <T> void Navigate(Class<T> type);
+    public void GoBack();
+    public void Close();
 }

@@ -8,6 +8,7 @@ import com.tamazombie.abstractModel.IPlayer;
 import com.tamazombie.abstractView.IGameView;
 import com.tamazombie.concreteIoC.IoC;
 import com.tamazombie.concreteIoC.IoCType;
+import com.tamazombie.portableServices.INavigationService;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,15 +19,15 @@ import com.tamazombie.concreteIoC.IoCType;
  */
 public final class MyLibgdxGame extends Game {
     // Example of how to get a new object (or current object if existing like a singleton)
-    // TODO : use navigation service
-    private IGameView _view = IoC.GetInstance(IGameView.class, IoCType.Singleton);
+    // using navigation service
+    private INavigationService _navigationService = IoC.GetInstance(INavigationService.class, IoCType.Singleton);
     private SpriteBatch _spriteBatch;
 
     @Override
     public void create() {
-        // TODO : make instances of textures, sound, spriteBatch and other objects
+        // make instances of textures, sound, spriteBatch and other objects
         _spriteBatch = new SpriteBatch();
-        _view.Create();
+        _navigationService.GetView().Create();
     }
 
     @Override
@@ -35,20 +36,20 @@ public final class MyLibgdxGame extends Game {
         Gdx.gl.glClearColor((float)100/255, (float)149/255, (float)237/255, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        // TODO : Update with a view object
-        _view.Update();
+        // Update with a view object
+        _navigationService.GetView().Update();
 
-        // TODO : Draw with a view object
+        // Draw with a view object
         _spriteBatch.begin();
 
-        _view.Draw(_spriteBatch);
+        _navigationService.GetView().Draw(_spriteBatch);
 
         _spriteBatch.end();
     }
 
     @Override
     public void dispose() {
-        // TODO : dispose of all the native resources (spriteBatch, textures, sound, ...)
+        // dispose of all the native resources (spriteBatch, textures, sound, ...)
         _spriteBatch.dispose();
     }
 }
