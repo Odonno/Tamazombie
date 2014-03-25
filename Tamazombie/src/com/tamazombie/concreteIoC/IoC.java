@@ -23,16 +23,6 @@ public final class IoC {
      * @return A new instance expected
      */
     public static <T> T GetInstance(Class<T> type) {
-        return _iocContainer.GetInstance(type, IoCType.Factory);
-    }
-
-    /**
-     * Return an instance expected by the type of the object and the IoCType
-     * @param type Type of the instance
-     * @param ioCType IoCType expected by the user (to create a new object)
-     * @return The instance expected
-     */
-    public static <T> T GetInstance(Class<T> type, IoCType ioCType) {
-        return _iocContainer.GetInstance(type, ioCType);
+        return _iocContainer.GetInstance(type);
     }
 }

@@ -4,10 +4,8 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.tamazombie.abstractModel.IPlayer;
 import com.tamazombie.abstractView.IGameView;
 import com.tamazombie.concreteIoC.IoC;
-import com.tamazombie.concreteIoC.IoCType;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,7 +17,7 @@ import com.tamazombie.concreteIoC.IoCType;
 public final class MyLibgdxGame extends Game {
     // Example of how to get a new object (or current object if existing like a singleton)
     // TODO : use navigation service
-    private IGameView _view = IoC.GetInstance(IGameView.class, IoCType.Singleton);
+    private IGameView _view = IoC.GetInstance(IGameView.class);
     private SpriteBatch _spriteBatch;
 
     @Override

@@ -1,7 +1,5 @@
 package com.tamazombie.abstractIoC;
 
-import com.tamazombie.concreteIoC.IoCType;
-
 /**
  * Created with IntelliJ IDEA.
  * User: David Bottiau
@@ -10,5 +8,5 @@ import com.tamazombie.concreteIoC.IoCType;
  * To change this template use File | Settings | File Templates.
  */
 public interface IIocContainer {
-    public <T> T GetInstance(Class<T> type, IoCType ioCType);
+    public <T> T GetInstance(Class<T> type);
 }

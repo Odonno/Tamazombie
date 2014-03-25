@@ -84,22 +84,20 @@ final class IoCPicoContainer implements IIocContainer {
     }
 
     /**
-     * Get the PicoContainer that correspond to the IoCType expected
-     * @param type IoCType expected by the user (to create a new object)
+     * Get the PicoContainer
      * @return The PicoContainer expected
      */
-    private MutablePicoContainer GetPico(IoCType type) {
+    private MutablePicoContainer GetPico() {
         return _picoContainer;
     }
 
     /**
-     * Return an instance expected by the type of the object and the IoCType
+     * Return an instance expected by the type of the object
      * @param type Type of the instance
-     * @param ioCType IoCType expected by the user (to create a new object)
      * @return The instance expected
      */
-    public <T> T GetInstance(Class<T> type, IoCType ioCType) {
-        MutablePicoContainer pico = GetPico(ioCType);
+    public <T> T GetInstance(Class<T> type) {
+        MutablePicoContainer pico = GetPico();
         return pico.getComponent(type);
     }
 }
