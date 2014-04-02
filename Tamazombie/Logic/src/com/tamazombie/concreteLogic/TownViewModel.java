@@ -24,16 +24,16 @@ public class TownViewModel implements ITownViewModel {
 
     @Override
     public void AddEnemy() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        // TODO : Add an enemy in the town (zombie or player)
     }
 
     @Override
     public void Fight() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        // TODO : Fight the player against the enemies
     }
 
     @Override
     public void Reply() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        // TODO : go back using Navigation Service
     }
 }

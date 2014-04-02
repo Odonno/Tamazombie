@@ -66,12 +66,12 @@ public final class ParkViewModel implements IParkViewModel {
 
     @Override
     public void PlayerDivert(float deltaTime) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        // TODO : modify the mentality of the player
     }
 
     @Override
     public void GoToTown() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        // TODO : Go to ITownView using Navigation Service
     }
 
 
