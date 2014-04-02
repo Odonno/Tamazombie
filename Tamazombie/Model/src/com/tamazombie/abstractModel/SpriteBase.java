@@ -13,7 +13,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
  * Time: 14:55
  * To change this template use File | Settings | File Templates.
  */
-public abstract class SpriteBase implements ISprite {
+public abstract class SpriteBase extends Sprite implements ISprite {
     protected Texture _texture;
     protected Color _color = new Color(1, 1, 1, 1);
     protected float _x, _y;
@@ -292,5 +292,19 @@ public abstract class SpriteBase implements ISprite {
     public void scale(float amount) {
         _scaleX += amount;
         _scaleY += amount;
+    }
+
+    /**
+     * Check if the pixel (x, y) is inside the Sprite
+     * @param x X value of pixel
+     * @param y Y value of pixel
+     * @return Return true if the pixel is inside the Sprite
+     */
+    @Override
+    public boolean intersect(int x, int y){
+        float _scaleWidth = getWidth() * _scaleX;
+        float _scaleHeight = getHeight() * _scaleY;
+
+        return (x > getX() && x < getX() + _scaleWidth && y > getY() && y < getY() + _scaleHeight);
     }
 }

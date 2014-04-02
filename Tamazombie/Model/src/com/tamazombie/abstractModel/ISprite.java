@@ -13,35 +13,37 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  * To change this template use File | Settings | File Templates.
  */
 public interface ISprite {
-    Color getColor();
-    float getRotation();
-    float getX();
-    float getY();
-    float getWidth();
-    float getHeight();
-    float getOriginX();
-    float getOriginY();
-    float getScaleX();
-    float getScaleY();
+    public Color getColor();
+    public float getRotation();
+    public float getX();
+    public float getY();
+    public float getWidth();
+    public float getHeight();
+    public float getOriginX();
+    public float getOriginY();
+    public float getScaleX();
+    public float getScaleY();
 
-    void draw(SpriteBatch spriteBatch);
-    void set(Sprite sprite);
-    void setTexture(Texture texture);
-    void setBounds(float x, float y, float width, float height);
-    void setSize(float width, float height);
-    void setPosition(float x, float y);
-    void setX(float x);
-    void setY(float y);
-    void setColor(Color tint);
-    void setColor(float r, float g, float b, float a);
-    void setColor(float color);
-    void translateX(float xAmount);
-    void translateY(float yAmount);
-    void translate(float xAmount, float yAmount);
-    void setOrigin(float originX, float originY);
-    void setRotation(float degrees);
-    void rotate(float degrees);
-    void setScale(float scaleXY);
-    void setScale(float scaleX, float scaleY);
-    void scale(float amount);
+    public void draw(SpriteBatch spriteBatch);
+    public void set(Sprite sprite);
+    public void setTexture(Texture texture);
+    public void setBounds(float x, float y, float width, float height);
+    public void setSize(float width, float height);
+    public void setPosition(float x, float y);
+    public void setX(float x);
+    public void setY(float y);
+    public void setColor(Color tint);
+    public void setColor(float r, float g, float b, float a);
+    public void setColor(float color);
+    public void translateX(float xAmount);
+    public void translateY(float yAmount);
+    public void translate(float xAmount, float yAmount);
+    public void setOrigin(float originX, float originY);
+    public void setRotation(float degrees);
+    public void rotate(float degrees);
+    public void setScale(float scaleXY);
+    public void setScale(float scaleX, float scaleY);
+    public void scale(float amount);
+
+    public boolean intersect(int x, int y);
 }

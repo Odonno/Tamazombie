@@ -30,7 +30,7 @@ public final class Button extends SpriteBase implements IButton {
      */
     @Override
     public boolean IsHover(int x, int y) {
-        if (x > getX() && x < getX() + getWidth() && y > getY() && y < getY() + getHeight()) {
+        if (intersect(x, y)) {
             setColor(1f, 1f, 1f, 0.8f);
             return true;
         }
