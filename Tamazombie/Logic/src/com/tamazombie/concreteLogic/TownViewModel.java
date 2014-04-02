@@ -1,7 +1,11 @@
 package com.tamazombie.concreteLogic;
 
 import com.tamazombie.abstractLogic.ITownViewModel;
+import com.tamazombie.abstractModel.IEnemy;
 import com.tamazombie.abstractModel.IPlayer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,14 +16,21 @@ import com.tamazombie.abstractModel.IPlayer;
  */
 public class TownViewModel implements ITownViewModel {
     private IPlayer _player;
+    private ArrayList<IEnemy> _enemies;
 
     public TownViewModel(IPlayer player){
         _player = player;
+        _enemies = new ArrayList<IEnemy>();
     }
 
     @Override
     public IPlayer GetPlayer() {
         return _player;
+    }
+
+    @Override
+    public List<IEnemy> GetEnemies() {
+        return _enemies;
     }
 
     @Override

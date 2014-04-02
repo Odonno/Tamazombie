@@ -1,6 +1,8 @@
 package com.tamazombie.abstractLogic;
 
+import com.tamazombie.abstractModel.IEnemy;
 import com.tamazombie.abstractModel.IPlayer;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,6 +13,7 @@ import com.tamazombie.abstractModel.IPlayer;
  */
 public interface ITownViewModel extends IViewModel {
     public IPlayer GetPlayer();
+    public List<IEnemy> GetEnemies();
 
     public void AddEnemy();
     public void Fight();
