@@ -62,13 +62,16 @@ public final class ParkView implements IParkView {
 
         // set textures to buttons
         _buttonFeed.setTexture(_buttonFeedTexture);
-        _buttonFeed.setPosition(-150, 120);
+        _buttonFeed.setScale(0.40f);
+        _buttonFeed.setPosition(-80,490);
 
         _buttonAmuse.setTexture(_buttonAmuseTexture);
-        _buttonAmuse.setPosition(40, 120);
+        _buttonAmuse.setScale(0.40f);
+        _buttonAmuse.setPosition(80,490);
 
         _buttonTown.setTexture(_buttonTownTexture);
-        _buttonTown.setPosition(230, 120);
+        _buttonTown.setScale(0.40f);
+        _buttonTown.setPosition(240,490);
     }
 
     @Override
