@@ -3,6 +3,7 @@ package com.tamazombie.concreteIoC;
 import com.tamazombie.abstractIoC.IIocContainer;
 import com.tamazombie.concreteLogic.ParkViewModel;
 import com.tamazombie.concreteModel.ZombiePlayer;
+import com.tamazombie.portableServices.NavigationService;
 import com.tamazombie.concreteServices.StorageService;
 import com.tamazombie.concreteView.Background;
 import com.tamazombie.concreteView.Button;
@@ -10,11 +11,7 @@ import com.tamazombie.concreteView.ParkView;
 import org.picocontainer.Characteristics;
 import org.picocontainer.DefaultPicoContainer;
 import org.picocontainer.MutablePicoContainer;
-import org.picocontainer.annotations.Cache;
-import org.picocontainer.behaviors.Caching;
 import org.picocontainer.behaviors.OptInCaching;
-
-import java.util.Properties;
 
 /**
  * Created with IntelliJ IDEA.
@@ -74,6 +71,7 @@ final class IoCPicoContainer implements IIocContainer {
 
         // Register Services
         _picoContainer.as(Characteristics.CACHE).addComponent(StorageService.class);
+        _picoContainer.as(Characteristics.CACHE).addComponent(NavigationService.class);
 
         // Register View
         _picoContainer.as(Characteristics.CACHE).addComponent(ParkView.class);
