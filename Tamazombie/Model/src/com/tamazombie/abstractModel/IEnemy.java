@@ -6,12 +6,12 @@ package com.tamazombie.abstractModel;
  */
 public interface IEnemy extends ISprite
 {
-
     public String GetName();
     public float GetHealth();
     public float GetDamages();
     public float GetDefense();
 
-    public Boolean IsDead();
+    public void SetHealth(float health);
 
+    public Boolean IsDead();
 }

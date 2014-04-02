@@ -3,7 +3,6 @@ package com.tamazombie.concreteLogic;
 import com.tamazombie.abstractLogic.ITownViewModel;
 import com.tamazombie.abstractModel.IEnemy;
 import com.tamazombie.abstractModel.IPlayer;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +39,23 @@ public class TownViewModel implements ITownViewModel {
 
     @Override
     public void Fight() {
-        // TODO : Fight the player against the enemies
+        // Fight the player against the enemies
+        // TODO : Add some random (missing shoots, lucky shoots, variable damages / defenses, ...)
+        // TODO : show damages in the view ?
+
+        // player turn
+        for(IEnemy enemy : _enemies) {
+            enemy.SetHealth(_player.GetDamages() - enemy.GetDefense());
+
+            // remove dying enemies
+            if (enemy.IsDead())
+                _enemies.remove(enemy);
+        }
+
+        // enemies turn
+        for(IEnemy enemy : _enemies) {
+            _player.SetHealth(enemy.GetDamages() - _player.GetDefense());
+        }
     }
 
     @Override
