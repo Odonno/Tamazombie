@@ -9,7 +9,7 @@ import com.tamazombie.abstractModel.IPlayer;
  * Time: 13:31
  * To change this template use File | Settings | File Templates.
  */
-public interface ITownViewModel {
+public interface ITownViewModel extends IViewModel {
     public IPlayer GetPlayer();
 
     public void AddEnemy();

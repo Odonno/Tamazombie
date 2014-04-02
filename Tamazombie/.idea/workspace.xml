@@ -7,7 +7,8 @@
     <file path="/fragment.java" changelist="c76366ba-4251-471c-989b-31c339122aa6" time="1395616292984" ignored="false" />
     <file path="/ParkView.java" changelist="c76366ba-4251-471c-989b-31c339122aa6" time="1395763971796" ignored="false" />
     <file path="/ParkViewModel.java" changelist="c76366ba-4251-471c-989b-31c339122aa6" time="1395765033758" ignored="false" />
-    <file path="/ITownViewModel.java" changelist="c76366ba-4251-471c-989b-31c339122aa6" time="1396438528405" ignored="false" />
+    <file path="/ITownViewModel.java" changelist="c76366ba-4251-471c-989b-31c339122aa6" time="1396456467091" ignored="false" />
+    <file path="/TownViewModel.java" changelist="c76366ba-4251-471c-989b-31c339122aa6" time="1396456513418" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,10 +69,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ITownViewModel.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TownViewModel.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Logic/src/com/tamazombie/concreteLogic/TownViewModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="456" selection-end="456" vertical-scroll-proportion="0.33552632">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ITownViewModel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Logic/src/com/tamazombie/abstractLogic/ITownViewModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="24" selection-start="364" selection-end="364" vertical-scroll-proportion="0.27960527">
+            <state line="11" column="50" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,7 +92,7 @@
       <file leaf-file-name="ParkViewModel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Logic/src/com/tamazombie/concreteLogic/ParkViewModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="66" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.0">
+            <state line="23" column="3" selection-start="714" selection-end="822" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -131,6 +143,7 @@
         <option value="$PROJECT_DIR$/src/com/tamazombie/concreteView/ParkView.java" />
         <option value="$PROJECT_DIR$/Logic/src/com/tamazombie/concreteLogic/ParkViewModel.java" />
         <option value="$PROJECT_DIR$/Logic/src/com/tamazombie/abstractLogic/ITownViewModel.java" />
+        <option value="$PROJECT_DIR$/Logic/src/com/tamazombie/concreteLogic/TownViewModel.java" />
       </list>
     </option>
   </component>
@@ -447,6 +460,7 @@
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
@@ -702,13 +716,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteIoC/IoCPicoContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="60" selection-start="2757" selection-end="2757" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tamazombie/portableGame/MyLibgdxGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="43" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.0">
@@ -791,9 +798,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Logic/src/com/tamazombie/concreteLogic/ParkViewModel.java">
+    <entry file="file://$PROJECT_DIR$/Logic/src/com/tamazombie/abstractLogic/ITownViewModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="66" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.0">
+        <state line="11" column="50" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -805,10 +812,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Logic/src/com/tamazombie/abstractLogic/ITownViewModel.java">
+    <entry file="file://$PROJECT_DIR$/Logic/src/com/tamazombie/concreteLogic/ParkViewModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="24" selection-start="364" selection-end="364" vertical-scroll-proportion="0.27960527">
+        <state line="23" column="3" selection-start="714" selection-end="822" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logic/src/com/tamazombie/concreteLogic/TownViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="456" selection-end="456" vertical-scroll-proportion="0.33552632">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
