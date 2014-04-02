@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import sun.security.ssl.Debug;
 
 /**
  * Created with IntelliJ IDEA.
@@ -30,6 +31,7 @@ public abstract class SpriteBase extends Sprite implements ISprite {
     /** Creates a sprite with width, height, and texture region equal to the size of the texture. */
     public SpriteBase (Texture texture) {
         this(texture, texture.getWidth(), texture.getHeight());
+        setOrigin(_width / 2, _height / 2);
     }
 
     /** Creates a sprite with width, height, and texture region equal to the specified size.
@@ -159,6 +161,7 @@ public abstract class SpriteBase extends Sprite implements ISprite {
         _texture = texture;
         _width = texture.getWidth();
         _height = texture.getHeight();
+        setOrigin(_width / 2, _height / 2);
     }
 
     /** Sets the position and size of the sprite when drawn, before scaling and rotation are applied. If origin, rotation, or scale
@@ -302,9 +305,12 @@ public abstract class SpriteBase extends Sprite implements ISprite {
      */
     @Override
     public boolean intersect(int x, int y){
-        float _scaleWidth = getWidth() * _scaleX;
-        float _scaleHeight = getHeight() * _scaleY;
+        float scaleWidth = getWidth() * _scaleX;
+        float scaleHeight = getHeight() * _scaleY;
 
-        return (x > getX() && x < getX() + _scaleWidth && y > getY() && y < getY() + _scaleHeight);
+        float scaleX = _x + scaleWidth - (_originX * _scaleX / 2);
+        float scaleY = _y + scaleHeight - (_originY * _scaleY / 2);
+
+        return (x > scaleX && x < scaleX + scaleWidth && y > scaleY && y < scaleY + scaleHeight);
     }
 }

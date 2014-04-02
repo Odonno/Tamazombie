@@ -80,6 +80,9 @@ public final class ParkView implements IParkView {
         int x = Gdx.input.getX();
         int y = Gdx.input.getY();
 
+        // Redefine y to calcule correct position
+        y = Math.abs(Gdx.graphics.getHeight() - y);
+
         // Update buttons
         _buttonFeed.IsHover(x, y);
         _buttonAmuse.IsHover(x, y);
