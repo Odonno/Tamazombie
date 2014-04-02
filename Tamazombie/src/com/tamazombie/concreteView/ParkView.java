@@ -76,7 +76,9 @@ public final class ParkView implements IParkView {
 
     @Override
     public void Update() {
-        // TODO : UPDATE logic
+        // UPDATE logic
+        float deltatime = Gdx.graphics.getDeltaTime();
+
         int x = Gdx.input.getX();
         int y = Gdx.input.getY();
 
@@ -84,16 +86,31 @@ public final class ParkView implements IParkView {
         y = Math.abs(Gdx.graphics.getHeight() - y);
 
         // Update buttons
-        _buttonFeed.IsHover(x, y);
-        _buttonAmuse.IsHover(x, y);
-        _buttonTown.IsHover(x, y);
+        _buttonFeed.Update(deltatime);
+        _buttonAmuse.Update(deltatime);
+        _buttonTown.Update(deltatime);
 
-        // TODO : Check the user click a button
+        // Check the user click a button
+        if (_buttonFeed.IsHover(x, y)) {
+            if (_buttonFeed.Click(x, y)) {
+                // TODO : Update ViewModel
+            }
+        }
+        if (_buttonAmuse.IsHover(x, y)) {
+            if (_buttonAmuse.Click(x, y)) {
+                // TODO : Update ViewModel
+            }
+        }
+        if (_buttonTown.IsHover(x, y)) {
+            if (_buttonTown.Click(x, y)) {
+                // TODO : Update ViewModel
+            }
+        }
     }
 
     @Override
     public void Draw(SpriteBatch spriteBatch) {
-        // Draw textures (images), play sound, ...
+        // DRAW textures (images), play sound, ...
         _background.draw(spriteBatch);
 
         _buttonFeed.draw(spriteBatch);
