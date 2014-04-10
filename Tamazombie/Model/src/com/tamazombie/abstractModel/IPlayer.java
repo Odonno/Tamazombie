@@ -25,6 +25,7 @@ public interface IPlayer extends ISprite {
 
     public void SetHealth(float health);
     public void SetHunger(float hunger);
+    public void SetMentality(float mentality);
     public void SetDirection(Direction direction);
 
     public Boolean IsDead();

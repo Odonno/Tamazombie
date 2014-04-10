@@ -18,6 +18,9 @@ public final class ParkViewModel implements IParkViewModel {
     private float _hungryByMeal = 50f;
     private float _healByMeal = 10f;
     private float _damagePerSecond = 1f;
+    private float _mentalityRatePerSecond = 0.6f;
+    private float _activity = 20;
+    //private float _activity2 = 30;
     private float _nextTimeDirection;
 
     public ParkViewModel(IPlayer player){
@@ -63,9 +66,21 @@ public final class ParkViewModel implements IParkViewModel {
         _player.SetHealth(_player.GetHealth() + _healByMeal);
     }
 
+    public void PlayerMentality(float deltaTime)
+    {
+        _player.SetMentality(_player.GetMentality() - (deltaTime * _mentalityRatePerSecond));
+    }
+
     @Override
     public void PlayerDivert(float deltaTime) {
         //To change body of implemented methods use File | Settings | File Templates.
+        //if
+        _player.SetMentality(_player.GetMentality() + _activity);
+        if (_player.GetMentality()>100)
+        {
+            _player.SetMentality(100);
+        }
+
     }
 
     @Override

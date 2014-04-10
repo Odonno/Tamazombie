@@ -16,5 +16,6 @@ public interface IParkViewModel extends IViewModel {
     public void PlayerHungry(float deltaTime);
     public void PlayerEat(float deltaTime);
     public void PlayerDivert(float deltaTime);
+    public void PlayerMentality(float deltaTime);
     public void GoToTown();
 }
