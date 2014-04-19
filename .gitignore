@@ -1,6 +1,11 @@
 *.class
 
 # Package Files #
-*.jar
 *.war
 *.ear
+
+# Intellij
+Tamazombie/.idea/
+*.iml
+*.iws
+*.xml
