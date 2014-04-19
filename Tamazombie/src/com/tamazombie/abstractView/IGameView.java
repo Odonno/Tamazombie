@@ -13,4 +13,5 @@ public interface IGameView {
     public void Create();
     public void Update();
     public void Draw(SpriteBatch spriteBatch);
+    public void Dispose();
 }

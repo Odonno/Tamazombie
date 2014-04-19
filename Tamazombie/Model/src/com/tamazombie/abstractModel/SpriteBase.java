@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import sun.security.ssl.Debug;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,7 +14,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
  * Time: 14:55
  * To change this template use File | Settings | File Templates.
  */
-public abstract class SpriteBase implements ISprite {
+public abstract class SpriteBase extends Sprite implements ISprite {
     protected Texture _texture;
     protected Color _color = new Color(1, 1, 1, 1);
     protected float _x, _y;
@@ -30,6 +31,7 @@ public abstract class SpriteBase implements ISprite {
     /** Creates a sprite with width, height, and texture region equal to the size of the texture. */
     public SpriteBase (Texture texture) {
         this(texture, texture.getWidth(), texture.getHeight());
+        setOrigin(_width / 2, _height / 2);
     }
 
     /** Creates a sprite with width, height, and texture region equal to the specified size.
@@ -159,6 +161,7 @@ public abstract class SpriteBase implements ISprite {
         _texture = texture;
         _width = texture.getWidth();
         _height = texture.getHeight();
+        setOrigin(_width / 2, _height / 2);
     }
 
     /** Sets the position and size of the sprite when drawn, before scaling and rotation are applied. If origin, rotation, or scale
@@ -292,5 +295,22 @@ public abstract class SpriteBase implements ISprite {
     public void scale(float amount) {
         _scaleX += amount;
         _scaleY += amount;
+    }
+
+    /**
+     * Check if the pixel (x, y) is inside the Sprite
+     * @param x X value of pixel
+     * @param y Y value of pixel
+     * @return Return true if the pixel is inside the Sprite
+     */
+    @Override
+    public boolean intersect(int x, int y){
+        float scaleWidth = getWidth() * _scaleX;
+        float scaleHeight = getHeight() * _scaleY;
+
+        float scaleX = _x + scaleWidth - (_originX * _scaleX / 2);
+        float scaleY = _y + scaleHeight - (_originY * _scaleY / 2);
+
+        return (x > scaleX && x < scaleX + scaleWidth && y > scaleY && y < scaleY + scaleHeight);
     }
 }
