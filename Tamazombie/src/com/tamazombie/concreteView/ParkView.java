@@ -60,6 +60,8 @@ public final class ParkView implements IParkView {
     @Override
     public void Update() {
         // TODO : UPDATE logic
+        _parkViewModel.PlayerMove(Gdx.graphics.getDeltaTime());
+
         int x = Gdx.input.getX();
         int y = Gdx.input.getY();
 

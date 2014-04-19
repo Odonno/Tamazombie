@@ -28,6 +28,11 @@ public final class ZombieEnemy extends Enemy implements IZombieEnemy {
     }
 
     @Override
+    public void SetHealth(float health) {
+        _health = health;
+    }
+
+    @Override
     public Boolean IsDead() {
         return _health >= 500f;
     }

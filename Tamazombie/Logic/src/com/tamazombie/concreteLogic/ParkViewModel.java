@@ -20,10 +20,10 @@ public final class ParkViewModel implements IParkViewModel {
     private float _damagePerSecond = 1f;
     private float _mentalityRatePerSecond = 0.6f;
     private float _activity = 20;
-    //private float _activity2 = 30;
     private float _nextTimeDirection;
+    private float _speed = 20f;
 
-    public ParkViewModel(IPlayer player){
+    public ParkViewModel(IPlayer player) {
         _player = player;
         CalculateNextTimeDirection();
     }
@@ -36,7 +36,7 @@ public final class ParkViewModel implements IParkViewModel {
     @Override
     public void PlayerMove(float deltaTime) {
         // update position of player
-        _player.setPosition(_player.getX() + (deltaTime * _player.GetDirection().GetX()), _player.getY() + (deltaTime * _player.GetDirection().GetY()));
+        _player.setPosition(_player.getX() + (deltaTime * _speed * _player.GetDirection().GetX()), _player.getY() + (deltaTime * _speed * _player.GetDirection().GetY()));
 
         _nextTimeDirection -= deltaTime;
         CalculateNextTimeDirection();
@@ -66,37 +66,42 @@ public final class ParkViewModel implements IParkViewModel {
         _player.SetHealth(_player.GetHealth() + _healByMeal);
     }
 
-    public void PlayerMentality(float deltaTime)
-    {
+    public void PlayerMentality(float deltaTime) {
         _player.SetMentality(_player.GetMentality() - (deltaTime * _mentalityRatePerSecond));
     }
 
     @Override
     public void PlayerDivert(float deltaTime) {
-        //To change body of implemented methods use File | Settings | File Templates.
-        //if
         _player.SetMentality(_player.GetMentality() + _activity);
-        if (_player.GetMentality()>100)
-        {
+        if (_player.GetMentality() > 100)
             _player.SetMentality(100);
-        }
-
     }
 
     @Override
     public void GoToTown() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        // TODO : Go to ITownView using Navigation Service
     }
 
 
     private void CalculateNextTimeDirection() {
+        // Give a new direction after each timer ended
         if (_nextTimeDirection <= 0f) {
-            _nextTimeDirection = (float)(Math.random() * 10 + 2);
+            _nextTimeDirection = (float) (Math.random() * 4 + 1);
 
             // Set a new direction for the player
-            int newDirectionIndex = (int)Math.floor(Math.random() * Direction.values().length);
+            int newDirectionIndex = (int) Math.floor(Math.random() * Direction.values().length);
             Direction newDirection = Direction.values()[newDirectionIndex];
             _player.SetDirection(newDirection);
         }
+
+        // Give a good direction if the player will be out of the screen
+        if (_player.getX() < 0)
+            _player.SetDirection(Direction.Right);
+        if (_player.getY() < 0)
+            _player.SetDirection(Direction.Down);
+        if (_player.getX() >= 800)
+            _player.SetDirection(Direction.Left);
+        if (_player.getY() >= 480)
+            _player.SetDirection(Direction.Top);
     }
 }

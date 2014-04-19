@@ -29,6 +29,11 @@ public final class HumanEnemy extends Enemy implements IHumanEnemy {
     }
 
     @Override
+    public void SetHealth(float health) {
+        _health = health;
+    }
+
+    @Override
     public Boolean IsDead() {
         return _health >= 150f;
     }
