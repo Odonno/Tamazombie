@@ -3,6 +3,7 @@ package com.tamazombie.concreteIoC;
 import com.tamazombie.abstractIoC.IIocContainer;
 import com.tamazombie.concreteLogic.ParkViewModel;
 import com.tamazombie.concreteModel.ZombiePlayer;
+import com.tamazombie.concreteView.TownView;
 import com.tamazombie.portableServices.NavigationService;
 import com.tamazombie.concreteServices.StorageService;
 import com.tamazombie.concreteView.Background;
@@ -75,6 +76,7 @@ final class IoCPicoContainer implements IIocContainer {
 
         // Register View
         _picoContainer.as(Characteristics.CACHE).addComponent(ParkView.class);
+        _picoContainer.as(Characteristics.CACHE).addComponent(TownView.class);
 
         // Register View objects
         _picoContainer.addComponent(Button.class);
