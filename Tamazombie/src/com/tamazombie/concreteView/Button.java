@@ -17,9 +17,12 @@ public final class Button extends SpriteBase implements IButton {
      * @return
      */
     private boolean IsClickable(int x, int y) {
-        // TODO : check if the pixel (x, y) is inside the button => use IsHover
-        // TODO : check if the click is now 'clickable' (in regard of the click frequency)
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+        // check if the click is now 'clickable' (in regard of the click frequency)
+        if (_lastTimeClick > 0f)
+            return false;
+
+        // check if the pixel (x, y) is inside the button => use IsHover
+        return intersect(x, y);
     }
 
     /**

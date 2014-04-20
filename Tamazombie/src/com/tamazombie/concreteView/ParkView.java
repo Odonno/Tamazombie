@@ -1,12 +1,15 @@
 package com.tamazombie.concreteView;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.tamazombie.abstractLogic.IParkViewModel;
 import com.tamazombie.abstractView.IBackground;
 import com.tamazombie.abstractView.IButton;
 import com.tamazombie.abstractView.IParkView;
+import com.tamazombie.abstractView.ITownView;
+import com.tamazombie.portableServices.INavigationService;
 
 
 /**
@@ -20,6 +23,8 @@ import com.tamazombie.abstractView.IParkView;
 public final class ParkView implements IParkView {
     private IParkViewModel _parkViewModel;
 
+    private INavigationService _navigationService;
+
     private IBackground _background;
     private IButton _buttonFeed;
     private IButton _buttonAmuse;
@@ -31,8 +36,9 @@ public final class ParkView implements IParkView {
     private Texture _buttonAmuseTexture;
     private Texture _buttonTownTexture;
 
-    public ParkView(IParkViewModel parkViewModel, IBackground background, IButton buttonFeed, IButton buttonAmuse, IButton buttonTown) {
+    public ParkView(IParkViewModel parkViewModel, IBackground background, IButton buttonFeed, IButton buttonAmuse, IButton buttonTown, INavigationService navigationService) {
         _parkViewModel = parkViewModel;
+        _navigationService = navigationService;
         _background = background;
         _buttonFeed = buttonFeed;
         _buttonAmuse = buttonAmuse;
@@ -97,18 +103,18 @@ public final class ParkView implements IParkView {
 
         // Check the user click a button
         if (_buttonFeed.IsHover(x, y)) {
-            if (_buttonFeed.Click(x, y)) {
+            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonFeed.Click(x, y)) {
                 // TODO : Update ViewModel
             }
         }
         if (_buttonAmuse.IsHover(x, y)) {
-            if (_buttonAmuse.Click(x, y)) {
+            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonAmuse.Click(x, y)) {
                 // TODO : Update ViewModel
             }
         }
         if (_buttonTown.IsHover(x, y)) {
-            if (_buttonTown.Click(x, y)) {
-                // TODO : Update ViewModel
+            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonTown.Click(x, y)) {
+                _navigationService.Navigate(ITownView.class);
             }
         }
     }
