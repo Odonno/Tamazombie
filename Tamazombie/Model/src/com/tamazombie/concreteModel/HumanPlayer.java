@@ -73,6 +73,11 @@ public final class HumanPlayer extends Player implements IHumanPlayer
     }
 
     @Override
+    public void SetMentality(float mentality) {
+        _mentality = mentality;
+    }
+
+    @Override
     public void SetDirection(Direction direction) {
         _direction = direction;
     }
