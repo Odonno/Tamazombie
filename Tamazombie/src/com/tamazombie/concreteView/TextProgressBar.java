@@ -16,9 +16,7 @@ import com.tamazombie.portableGame.MyLibgdxGame;
  * To change this template use File | Settings | File Templates.
  */
 public final class TextProgressBar implements ITextProgressBar {
-    private Label _labelName;
-    private Label _labelValue;
-    private boolean _valueVisible = true;
+    private Label _label;
     private String _text;
     private int _min;
     private int _max;
@@ -32,24 +30,18 @@ public final class TextProgressBar implements ITextProgressBar {
         _text = "";
 
         Label.LabelStyle labelStyle = new Label.LabelStyle(MyLibgdxGame.Font, Color.BLACK);
-
-        _labelName = new Label(_text, labelStyle);
-        _labelValue = new Label(_min + "/" + _max, labelStyle);
+        _label = new Label(_text + _min + "/" + _max, labelStyle);
     }
 
 
-    private void refreshText() {
-        _labelName.setText(_text);
-    }
-
-    private void refreshValue(){
-        _labelValue.setText(_value + "/" + _max);
+    private void refreshLabel(){
+        _label.setText(_text + _min + "/" + _max);
     }
 
     @Override
     public void setText(String text) {
         _text = text;
-        refreshText();
+        refreshLabel();
     }
 
     @Override
@@ -57,7 +49,7 @@ public final class TextProgressBar implements ITextProgressBar {
         if (_max <= min)
             return;
         _min = min;
-        refreshValue();
+        refreshLabel();
     }
 
     @Override
@@ -65,7 +57,7 @@ public final class TextProgressBar implements ITextProgressBar {
         if (max <= _min)
             return;
         _max = max;
-        refreshValue();
+        refreshLabel();
     }
 
     @Override
@@ -77,13 +69,12 @@ public final class TextProgressBar implements ITextProgressBar {
         else
             _value = value;
 
-        refreshValue();
+        refreshLabel();
     }
 
     @Override
     public void setPosition(Vector2 position) {
-        _labelName.setPosition(position.x, position.y);
-        _labelValue.setPosition(_labelName.getX() + _labelName.getWidth(), position.y);
+        _label.setPosition(position.x, position.y);
     }
 
     @Override
@@ -93,7 +84,6 @@ public final class TextProgressBar implements ITextProgressBar {
 
     @Override
     public void Draw(SpriteBatch spriteBatch) {
-        _labelName.draw(spriteBatch, 1f);
-        _labelValue.draw(spriteBatch, 1f);
+        _label.draw(spriteBatch, 1f);
     }
 }

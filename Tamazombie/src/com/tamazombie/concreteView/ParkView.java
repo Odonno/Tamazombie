@@ -91,11 +91,23 @@ public final class ParkView implements IParkView {
         _buttonTown.setPosition(240, 490);
 
         // set text and position to progress bars
-        _healthProgressBar.setText("Health :");
+        _healthProgressBar.setText("Health : ");
         _healthProgressBar.setMin(0);
         _healthProgressBar.setMax(100);
         _healthProgressBar.setValue(0);
-        _healthProgressBar.setPosition(100, 100);
+        _healthProgressBar.setPosition(40, 70);
+
+        _hungryProgressBar.setText("Hungry : \t");
+        _hungryProgressBar.setMin(0);
+        _hungryProgressBar.setMax(100);
+        _hungryProgressBar.setValue(0);
+        _hungryProgressBar.setPosition(40, 40);
+
+        _mentalityProgressBar.setText("Mentality : \t");
+        _mentalityProgressBar.setMin(0);
+        _mentalityProgressBar.setMax(100);
+        _mentalityProgressBar.setValue(0);
+        _mentalityProgressBar.setPosition(40, 10);
     }
 
     @Override
@@ -144,6 +156,8 @@ public final class ParkView implements IParkView {
         _buttonTown.draw(spriteBatch);
 
         _healthProgressBar.Draw(spriteBatch);
+        _hungryProgressBar.Draw(spriteBatch);
+        _mentalityProgressBar.Draw(spriteBatch);
 
         _parkViewModel.GetPlayer().draw(spriteBatch);
     }
