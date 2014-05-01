@@ -1,6 +1,7 @@
 package com.tamazombie.concreteView;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.tamazombie.abstractView.ITextProgressBar;
 
@@ -67,20 +68,41 @@ public final class TextProgressBar implements ITextProgressBar {
 
     @Override
     public void setMin(int min) {
+        if (_max <= min)
+            return;
         _min = min;
         refreshValue();
     }
 
     @Override
     public void setMax(int max) {
+        if (max <= _min)
+            return;
         _max = max;
         refreshValue();
     }
 
     @Override
     public void setValue(int value) {
-        _value = value;
+        if (value < _min)
+            _value = _min;
+        else if (value > _max)
+            _value = _max;
+        else
+            _value = value;
+
         refreshValue();
+    }
+
+    @Override
+    public void setPosition(Vector2 position) {
+        _labelName.setPosition(position.x, position.y);
+        _labelValue.setPosition(_labelName.getX() + _labelName.getWidth(), position.y);
+    }
+
+    @Override
+    public void setPosition(int x, int y) {
+        setPosition(new Vector2(x, y));
     }
 
     @Override

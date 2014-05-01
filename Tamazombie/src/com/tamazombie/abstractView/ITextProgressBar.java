@@ -1,6 +1,7 @@
 package com.tamazombie.abstractView;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Vector2;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,6 +15,8 @@ public interface ITextProgressBar {
     public void setMin(int min);
     public void setMax(int max);
     public void setValue(int value);
+    public void setPosition(Vector2 position);
+    public void setPosition(int x, int y);
 
     public void Draw(SpriteBatch spriteBatch);
 }
