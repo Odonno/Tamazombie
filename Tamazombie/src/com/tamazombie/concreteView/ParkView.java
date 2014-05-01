@@ -5,10 +5,7 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.tamazombie.abstractLogic.IParkViewModel;
-import com.tamazombie.abstractView.IBackground;
-import com.tamazombie.abstractView.IButton;
-import com.tamazombie.abstractView.IParkView;
-import com.tamazombie.abstractView.ITownView;
+import com.tamazombie.abstractView.*;
 import com.tamazombie.portableServices.INavigationService;
 
 
@@ -26,9 +23,14 @@ public final class ParkView implements IParkView {
     private INavigationService _navigationService;
 
     private IBackground _background;
+
     private IButton _buttonFeed;
     private IButton _buttonAmuse;
     private IButton _buttonTown;
+
+    private ITextProgressBar _healthProgressBar;
+    private ITextProgressBar _hungryProgressBar;
+    private ITextProgressBar _mentalityProgressBar;
 
     private Texture _zombieTexture;
     private Texture _backgroundTexture;
@@ -36,13 +38,20 @@ public final class ParkView implements IParkView {
     private Texture _buttonAmuseTexture;
     private Texture _buttonTownTexture;
 
-    public ParkView(IParkViewModel parkViewModel, IBackground background, IButton buttonFeed, IButton buttonAmuse, IButton buttonTown, INavigationService navigationService) {
+
+    public ParkView(IParkViewModel parkViewModel, IBackground background,
+                    IButton buttonFeed, IButton buttonAmuse, IButton buttonTown,
+                    ITextProgressBar healthProgressBar, ITextProgressBar hungryProgressBar, ITextProgressBar mentalityProgressBar,
+                    INavigationService navigationService) {
         _parkViewModel = parkViewModel;
         _navigationService = navigationService;
         _background = background;
         _buttonFeed = buttonFeed;
         _buttonAmuse = buttonAmuse;
         _buttonTown = buttonTown;
+        _healthProgressBar = healthProgressBar;
+        _hungryProgressBar = hungryProgressBar;
+        _mentalityProgressBar = mentalityProgressBar;
     }
 
     @Override
@@ -65,7 +74,6 @@ public final class ParkView implements IParkView {
         _parkViewModel.GetPlayer().setTexture(_zombieTexture);
         _parkViewModel.GetPlayer().setScale(0.15f);
 
-
         // set texture to background
         _background.setTexture(_backgroundTexture);
 
@@ -81,6 +89,13 @@ public final class ParkView implements IParkView {
         _buttonTown.setTexture(_buttonTownTexture);
         _buttonTown.setScale(0.40f);
         _buttonTown.setPosition(240, 490);
+
+        // set text and position to progress bars
+        _healthProgressBar.setText("Health :");
+        _healthProgressBar.setMin(0);
+        _healthProgressBar.setMax(100);
+        _healthProgressBar.setValue(0);
+        _healthProgressBar.setPosition(100, 100);
     }
 
     @Override
@@ -127,6 +142,8 @@ public final class ParkView implements IParkView {
         _buttonFeed.draw(spriteBatch);
         _buttonAmuse.draw(spriteBatch);
         _buttonTown.draw(spriteBatch);
+
+        _healthProgressBar.Draw(spriteBatch);
 
         _parkViewModel.GetPlayer().draw(spriteBatch);
     }

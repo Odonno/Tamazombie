@@ -3,7 +3,10 @@ package com.tamazombie.portableGame;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.tamazombie.abstractView.IParkView;
 import com.tamazombie.concreteIoC.IoC;
 import com.tamazombie.portableServices.INavigationService;
@@ -21,10 +24,18 @@ public final class MyLibgdxGame extends Game {
     private INavigationService _navigationService = IoC.GetInstance(INavigationService.class);
     private SpriteBatch _spriteBatch;
 
+    public static BitmapFont Font;
+
     @Override
     public void create() {
         // make instances of textures, sound, spriteBatch and other objects
         _spriteBatch = new SpriteBatch();
+
+        // Setup fonts
+        Texture texture = new Texture(Gdx.files.internal("fonts/segoe-ui-font.png"));
+        texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+
+        Font = new BitmapFont(Gdx.files.internal("fonts/segoe-ui-font.fnt"), new TextureRegion(texture), false);
 
         // Setup navigation
         _navigationService.Navigate(IParkView.class);

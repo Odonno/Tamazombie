@@ -1,14 +1,12 @@
 package com.tamazombie.concreteIoC;
 
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.tamazombie.abstractIoC.IIocContainer;
 import com.tamazombie.concreteLogic.ParkViewModel;
 import com.tamazombie.concreteModel.ZombiePlayer;
-import com.tamazombie.concreteView.TownView;
+import com.tamazombie.concreteView.*;
 import com.tamazombie.portableServices.NavigationService;
 import com.tamazombie.concreteServices.StorageService;
-import com.tamazombie.concreteView.Background;
-import com.tamazombie.concreteView.Button;
-import com.tamazombie.concreteView.ParkView;
 import org.picocontainer.Characteristics;
 import org.picocontainer.DefaultPicoContainer;
 import org.picocontainer.MutablePicoContainer;
@@ -81,6 +79,7 @@ final class IoCPicoContainer implements IIocContainer {
         // Register View objects
         _picoContainer.addComponent(Button.class);
         _picoContainer.addComponent(Background.class);
+        _picoContainer.addComponent(TextProgressBar.class);
     }
 
     /**

@@ -1,9 +1,12 @@
 package com.tamazombie.concreteView;
 
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.tamazombie.abstractView.ITextProgressBar;
+import com.tamazombie.portableGame.MyLibgdxGame;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,34 +24,17 @@ public final class TextProgressBar implements ITextProgressBar {
     private int _max;
     private int _value;
 
-    public TextProgressBar(String text) {
+
+    public TextProgressBar() {
         _min = 0;
         _max = 100;
         _value = _min;
-        _text = text;
+        _text = "";
 
-        _labelName = new Label(_text, new Label.LabelStyle());
-        _labelValue = new Label(_min + "/" + _max, new Label.LabelStyle());
-    }
+        Label.LabelStyle labelStyle = new Label.LabelStyle(MyLibgdxGame.Font, Color.BLACK);
 
-    public TextProgressBar(String text, int min, int max) {
-        _min = min;
-        _max = max;
-        _value = _min;
-        _text = text;
-
-        _labelName = new Label(_text, new Label.LabelStyle());
-        _labelValue = new Label(_min + "/" + _max, new Label.LabelStyle());
-    }
-
-    public TextProgressBar(String text, int min, int max, int value) {
-        _min = min;
-        _max = max;
-        _value = value;
-        _text = text;
-
-        _labelName = new Label(_text, new Label.LabelStyle());
-        _labelValue = new Label(_value + "/" + _max, new Label.LabelStyle());
+        _labelName = new Label(_text, labelStyle);
+        _labelValue = new Label(_min + "/" + _max, labelStyle);
     }
 
 
