@@ -60,6 +60,30 @@ public final class TextProgressBar implements ITextProgressBar {
     }
 
     @Override
+    public void setText(String text) {
+        _text = text;
+        refreshText();
+    }
+
+    @Override
+    public void setMin(int min) {
+        _min = min;
+        refreshValue();
+    }
+
+    @Override
+    public void setMax(int max) {
+        _max = max;
+        refreshValue();
+    }
+
+    @Override
+    public void setValue(int value) {
+        _value = value;
+        refreshValue();
+    }
+
+    @Override
     public void Draw(SpriteBatch spriteBatch) {
         _labelName.draw(spriteBatch, 1f);
         _labelValue.draw(spriteBatch, 1f);

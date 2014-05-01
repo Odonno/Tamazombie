@@ -10,5 +10,10 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  * To change this template use File | Settings | File Templates.
  */
 public interface ITextProgressBar {
+    public void setText(String text);
+    public void setMin(int min);
+    public void setMax(int max);
+    public void setValue(int value);
+
     public void Draw(SpriteBatch spriteBatch);
 }

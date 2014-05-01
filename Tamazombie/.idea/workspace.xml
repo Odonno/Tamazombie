@@ -6,8 +6,9 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/HumanPlayer.java" changelist="c76366ba-4251-471c-989b-31c339122aa6" time="1397996806295" ignored="false" />
     <file path="/ZombiePlayer.java" changelist="c76366ba-4251-471c-989b-31c339122aa6" time="1397996839322" ignored="false" />
-    <file path="/TextProgressBar.java" changelist="c76366ba-4251-471c-989b-31c339122aa6" time="1398961262169" ignored="false" />
+    <file path="/TextProgressBar.java" changelist="c76366ba-4251-471c-989b-31c339122aa6" time="1398961914337" ignored="false" />
     <file path="/Background.java" changelist="c76366ba-4251-471c-989b-31c339122aa6" time="1398961400481" ignored="false" />
+    <file path="/ITextProgressBar.java" changelist="c76366ba-4251-471c-989b-31c339122aa6" time="1398961864308" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +72,7 @@
       <file leaf-file-name="ITextProgressBar.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractView/ITextProgressBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="37" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
+            <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,7 +81,7 @@
       <file leaf-file-name="TextProgressBar.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/TextProgressBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="45" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.4240654">
+            <state line="83" column="21" selection-start="2058" selection-end="2058" vertical-scroll-proportion="1.0724299">
               <folding />
             </state>
           </provider>
@@ -107,9 +108,9 @@
         <option value="$PROJECT_DIR$/Logic/src/com/tamazombie/concreteLogic/ParkViewModel.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/HumanPlayer.java" />
         <option value="$PROJECT_DIR$/Model/src/com/tamazombie/concreteModel/ZombiePlayer.java" />
+        <option value="$PROJECT_DIR$/src/com/tamazombie/concreteView/Background.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/abstractView/ITextProgressBar.java" />
         <option value="$PROJECT_DIR$/src/com/tamazombie/concreteView/TextProgressBar.java" />
-        <option value="$PROJECT_DIR$/src/com/tamazombie/concreteView/Background.java" />
       </list>
     </option>
   </component>
@@ -459,7 +460,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="454" y="30" width="1206" height="1040" extended-state="1" />
+    <frame x="454" y="30" width="1206" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -640,14 +641,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tamazombie/abstractView/ITextProgressBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="37" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
+        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tamazombie/concreteView/TextProgressBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="45" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.4240654">
+        <state line="83" column="21" selection-start="2058" selection-end="2058" vertical-scroll-proportion="1.0724299">
           <folding />
         </state>
       </provider>
