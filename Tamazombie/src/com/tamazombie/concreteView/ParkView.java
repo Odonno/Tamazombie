@@ -97,14 +97,14 @@ public final class ParkView implements IParkView {
         _healthProgressBar.setValue(0);
         _healthProgressBar.setPosition(40, 70);
 
-        _hungryProgressBar.setText("Hungry : \t");
-        _hungryProgressBar.setMin(0);
+        _hungryProgressBar.setText("Hungry : ");
+        _hungryProgressBar.setMin(-50);
         _hungryProgressBar.setMax(100);
         _hungryProgressBar.setValue(0);
         _hungryProgressBar.setPosition(40, 40);
 
-        _mentalityProgressBar.setText("Mentality : \t");
-        _mentalityProgressBar.setMin(0);
+        _mentalityProgressBar.setText("Mentality : ");
+        _mentalityProgressBar.setMin(-100);
         _mentalityProgressBar.setMax(100);
         _mentalityProgressBar.setValue(0);
         _mentalityProgressBar.setPosition(40, 10);
@@ -115,7 +115,9 @@ public final class ParkView implements IParkView {
         // UPDATE logic
         float deltatime = Gdx.graphics.getDeltaTime();
 
-        _parkViewModel.PlayerMove(Gdx.graphics.getDeltaTime());
+        _parkViewModel.PlayerMove(deltatime);
+        _parkViewModel.PlayerHungry(deltatime);
+        _parkViewModel.PlayerMentality(deltatime);
 
         int x = Gdx.input.getX();
         int y = Gdx.input.getY();
@@ -144,6 +146,11 @@ public final class ParkView implements IParkView {
                 _navigationService.Navigate(ITownView.class);
             }
         }
+
+        // Update progress bar values
+        _healthProgressBar.setValue((int)(100 * _parkViewModel.GetPlayer().GetHealth() / 100));
+        _hungryProgressBar.setValue((int)(100 * _parkViewModel.GetPlayer().GetHunger() / _parkViewModel.GetPlayer().GetHungerLimit()));
+        _mentalityProgressBar.setValue((int)(100 * _parkViewModel.GetPlayer().GetMentality() / 100));
     }
 
     @Override

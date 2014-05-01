@@ -30,12 +30,12 @@ public final class TextProgressBar implements ITextProgressBar {
         _text = "";
 
         Label.LabelStyle labelStyle = new Label.LabelStyle(MyLibgdxGame.Font, Color.BLACK);
-        _label = new Label(_text + _min + "/" + _max, labelStyle);
+        _label = new Label(_text + _value + "/" + _max, labelStyle);
     }
 
 
     private void refreshLabel(){
-        _label.setText(_text + _min + "/" + _max);
+        _label.setText(_text + _value + "/" + _max);
     }
 
     @Override
