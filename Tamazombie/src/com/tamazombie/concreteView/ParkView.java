@@ -103,19 +103,19 @@ public final class ParkView implements IParkView {
         _buttonMusic.setPosition(1050, 540);
 
         // set text and position to progress bars
-        _healthProgressBar.setText("Health : ");
+        _healthProgressBar.setText("Vie : ");
         _healthProgressBar.setMin(0);
         _healthProgressBar.setMax(100);
         _healthProgressBar.setValue(0);
         _healthProgressBar.setPosition(40, 70);
 
-        _hungryProgressBar.setText("Hungry : ");
+        _hungryProgressBar.setText("Faim : ");
         _hungryProgressBar.setMin(-50);
         _hungryProgressBar.setMax(100);
         _hungryProgressBar.setValue(0);
         _hungryProgressBar.setPosition(40, 40);
 
-        _mentalityProgressBar.setText("Mentality : ");
+        _mentalityProgressBar.setText("Mentale : ");
         _mentalityProgressBar.setMin(-100);
         _mentalityProgressBar.setMax(100);
         _mentalityProgressBar.setValue(0);
