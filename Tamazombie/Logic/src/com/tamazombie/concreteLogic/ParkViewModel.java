@@ -98,5 +98,11 @@ public final class ParkViewModel implements IParkViewModel {
             _player.SetDirection(Direction.Left);
         if (_player.getY() >= 480)
             _player.SetDirection(Direction.Top);
+
+        // Change orientation of player
+        if (_player.GetDirection() == Direction.Left)
+            _player.setScale(-Math.abs(_player.getScaleX()), _player.getScaleY());
+        else if (_player.GetDirection() == Direction.Right)
+            _player.setScale(Math.abs(_player.getScaleX()), _player.getScaleY());
     }
 }

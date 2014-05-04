@@ -24,8 +24,6 @@ import java.util.Random;
 
 public final class ParkView implements IParkView {
     private IParkViewModel _parkViewModel;
-    private IPlayer _player;
-    private ZombiePlayer _zombieplayer;
 
     private INavigationService _navigationService;
 
@@ -46,7 +44,6 @@ public final class ParkView implements IParkView {
     private Texture _buttonAmuseTexture;
     private Texture _buttonTownTexture;
     private Texture _buttonMusicTexture;
-
 
 
     public ParkView(IParkViewModel parkViewModel, IBackground background,
@@ -130,7 +127,7 @@ public final class ParkView implements IParkView {
     }
 
     @Override
-    public void Update()  {
+    public void Update() {
         // UPDATE logic
         float deltatime = Gdx.graphics.getDeltaTime();
 
@@ -151,10 +148,8 @@ public final class ParkView implements IParkView {
         _buttonMusic.Update(deltatime);
 
         // Check the user click a button
-        if (_buttonFeed.IsHover(x, y))
-        {
-            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonFeed.Click(x, y))
-            {
+        if (_buttonFeed.IsHover(x, y)) {
+            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonFeed.Click(x, y)) {
                 // TODO : Update ViewModel
                 /*_player.SetHunger(_player.GetHunger()+ 20);
                  if (_player.GetHunger() > 100)
@@ -173,10 +168,8 @@ public final class ParkView implements IParkView {
                 }*/
             }
         }
-        if (_buttonAmuse.IsHover(x, y))
-        {
-            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonAmuse.Click(x, y))
-            {
+        if (_buttonAmuse.IsHover(x, y)) {
+            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonAmuse.Click(x, y)) {
                 // TODO : Update ViewModel
                 /*_zombieplayer.SetMentality(_zombieplayer.GetMentality() + 20);
                 if (_zombieplayer.GetMentality() > 100)
@@ -190,10 +183,8 @@ public final class ParkView implements IParkView {
                 }*/
             }
         }
-        if (_buttonTown.IsHover(x, y))
-        {
-            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonTown.Click(x, y))
-            {
+        if (_buttonTown.IsHover(x, y)) {
+            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonTown.Click(x, y)) {
                 //_navigationService.Navigate(ITownView.class);
 
                 Object[] result = goTown();
@@ -203,37 +194,31 @@ public final class ParkView implements IParkView {
                 _parkViewModel.GetPlayer().SetHealth(Health); //->set la vie
                 _parkViewModel.GetPlayer().SetHunger(Hunger); // ->set la faim
 
-                if(Health <= 0)
-                {
+                if (Health <= 0) {
                     JOptionPane jop = new JOptionPane();
                     ImageIcon img = new ImageIcon("other/Dead.png");
                     jop.showMessageDialog(null, "Perdu !", "LOSE", JOptionPane.ERROR_MESSAGE, img);
-                }
-                else
-                {
+                } else {
                     JOptionPane jop = new JOptionPane();
                     ImageIcon img = new ImageIcon("other/miam.png");
-                    jop.showMessageDialog(null, "Il vous reste "+ Health +" PV! \nVous une faim de "+Hunger+"/100!", "Town Party", JOptionPane.ERROR_MESSAGE, img);
+                    jop.showMessageDialog(null, "Il vous reste " + Health + " PV! \nVous une faim de " + Hunger + "/100!", "Town Party", JOptionPane.ERROR_MESSAGE, img);
                 }
 
             }
         }
-        if (_buttonMusic.IsHover(x, y))
-        {
-            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonMusic.Click(x, y))
-            {
+        if (_buttonMusic.IsHover(x, y)) {
+            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonMusic.Click(x, y)) {
                 //recuperer le msound qui est dans  DesktopStarter et faire msound.dispose();
             }
         }
 
         // Update progress bar values
-        _healthProgressBar.setValue((int)(100 * _parkViewModel.GetPlayer().GetHealth() / 100));
-        _hungryProgressBar.setValue((int)(100 * _parkViewModel.GetPlayer().GetHunger() / _parkViewModel.GetPlayer().GetHungerLimit()));
-        _mentalityProgressBar.setValue((int)(100 * _parkViewModel.GetPlayer().GetMentality() / 100));
+        _healthProgressBar.setValue((int) (100 * _parkViewModel.GetPlayer().GetHealth() / 100));
+        _hungryProgressBar.setValue((int) (100 * _parkViewModel.GetPlayer().GetHunger() / _parkViewModel.GetPlayer().GetHungerLimit()));
+        _mentalityProgressBar.setValue((int) (100 * _parkViewModel.GetPlayer().GetMentality() / 100));
     }
 
-    public Object[] goTown()
-    {
+    public Object[] goTown() {
         Random rand = new Random();
         int maxHealthLeft = 30;
         int HealthLeft = rand.nextInt(maxHealthLeft); // on soustraira ce resultat à la vie actuelle du zombie
@@ -247,8 +232,7 @@ public final class ParkView implements IParkView {
         float Health = actualHealth - HealthLeft;
         float Hunger = actualHunger - HungerLeft;
 
-        if(Hunger <= 0)
-        {
+        if (Hunger <= 0) {
             Hunger = 0;
         }
 
