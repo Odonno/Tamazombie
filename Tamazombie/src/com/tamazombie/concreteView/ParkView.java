@@ -247,6 +247,11 @@ public final class ParkView implements IParkView {
         float Health = actualHealth - HealthLeft;
         float Hunger = actualHunger - HungerLeft;
 
+        if(Hunger <= 0)
+        {
+            Hunger = 0;
+        }
+
         return new Object[]{Health, Hunger};
 
     }
