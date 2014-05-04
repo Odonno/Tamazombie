@@ -213,7 +213,7 @@ public final class ParkView implements IParkView {
                 {
                     JOptionPane jop = new JOptionPane();
                     ImageIcon img = new ImageIcon("other/miam.png");
-                    jop.showMessageDialog(null, "Il vous reste "+ Health +" PV", "Town Party", JOptionPane.ERROR_MESSAGE, img);
+                    jop.showMessageDialog(null, "Il vous reste "+ Health +" PV! \nVous une faim de "+Hunger+"/100!", "Town Party", JOptionPane.ERROR_MESSAGE, img);
                 }
 
             }
