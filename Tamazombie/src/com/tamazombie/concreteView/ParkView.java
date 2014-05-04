@@ -196,10 +196,25 @@ public final class ParkView implements IParkView {
             {
                 //_navigationService.Navigate(ITownView.class);
 
-                // goTown(); // fonction aller en ville
-                //_parkViewModel.GetPlayer().SetHealth(Health); //->set la vie
-               // _parkViewModel.GetPlayer().SetHunger(Hunger); // ->set la faim
+                Object[] result = goTown();
+                float Health = (Float) result[0];
+                float Hunger = (Float) result[1];
 
+                _parkViewModel.GetPlayer().SetHealth(Health); //->set la vie
+                _parkViewModel.GetPlayer().SetHunger(Hunger); // ->set la faim
+
+                if(Health <= 0)
+                {
+                    JOptionPane jop = new JOptionPane();
+                    ImageIcon img = new ImageIcon("other/Dead.png");
+                    jop.showMessageDialog(null, "Perdu !", "LOSE", JOptionPane.ERROR_MESSAGE, img);
+                }
+                else
+                {
+                    JOptionPane jop = new JOptionPane();
+                    ImageIcon img = new ImageIcon("other/miam.png");
+                    jop.showMessageDialog(null, "Il vous reste "+ Health +" PV", "Town Party", JOptionPane.ERROR_MESSAGE, img);
+                }
 
             }
         }
