@@ -115,7 +115,7 @@ public final class ParkView implements IParkView {
         _hungryProgressBar.setValue(0);
         _hungryProgressBar.setPosition(40, 40);
 
-        _mentalityProgressBar.setText("Mentale : ");
+        _mentalityProgressBar.setText("Mental : ");
         _mentalityProgressBar.setMin(-100);
         _mentalityProgressBar.setMax(100);
         _mentalityProgressBar.setValue(0);
