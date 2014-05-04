@@ -150,37 +150,12 @@ public final class ParkView implements IParkView {
         // Check the user click a button
         if (_buttonFeed.IsHover(x, y)) {
             if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonFeed.Click(x, y)) {
-                // TODO : Update ViewModel
-                /*_player.SetHunger(_player.GetHunger()+ 20);
-                 if (_player.GetHunger() > 100)
-                 {
-                      _player.SetHunger(100);
-                 }*/
-                /*_zombieplayer.SetHunger(_zombieplayer.GetHunger()+ 20);
-                if (_zombieplayer.GetHunger() > 100)
-                {
-                    _zombieplayer.SetHunger(100);
-                }
-                _zombieplayer.SetHealth(_zombieplayer.GetHealth()+ 15);
-                if (_zombieplayer.GetHealth() > 100)
-                {
-                    _zombieplayer.SetHealth(100);
-                }*/
+                _parkViewModel.PlayerEat(deltatime);
             }
         }
         if (_buttonAmuse.IsHover(x, y)) {
             if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonAmuse.Click(x, y)) {
-                // TODO : Update ViewModel
-                /*_zombieplayer.SetMentality(_zombieplayer.GetMentality() + 20);
-                if (_zombieplayer.GetMentality() > 100)
-                {
-                    _zombieplayer.SetMentality(100);
-                }
-                _zombieplayer.SetHunger(_zombieplayer.GetHunger()- 8);
-                if (_zombieplayer.GetHunger() < 0)
-                {
-                    _zombieplayer.SetHunger(0);
-                }*/
+                _parkViewModel.PlayerDivert(deltatime);
             }
         }
         if (_buttonTown.IsHover(x, y)) {
