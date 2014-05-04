@@ -8,8 +8,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.tamazombie.abstractLogic.IParkViewModel;
 import com.tamazombie.abstractView.*;
 import com.tamazombie.portableServices.INavigationService;
-import com.tamazombie.abstractModel.IPlayer;
-import com.tamazombie.concreteModel.ZombiePlayer;
 
 import javax.swing.*;
 import java.util.Random;
@@ -172,24 +170,7 @@ public final class ParkView implements IParkView {
         if (_buttonTown.IsHover(x, y)) {
             if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonTown.Click(x, y)) {
                 //_navigationService.Navigate(ITownView.class);
-
-                Object[] result = goTown();
-                float Health = (Float) result[0];
-                float Hunger = (Float) result[1];
-
-                _parkViewModel.GetPlayer().SetHealth(Health); //->set la vie
-                _parkViewModel.GetPlayer().SetHunger(Hunger); // ->set la faim
-
-                if (Health <= 0) {
-                    JOptionPane jop = new JOptionPane();
-                    ImageIcon img = new ImageIcon("other/Dead.png");
-                    jop.showMessageDialog(null, "Perdu !", "LOSE", JOptionPane.ERROR_MESSAGE, img);
-                } else {
-                    JOptionPane jop = new JOptionPane();
-                    ImageIcon img = new ImageIcon("other/miam.png");
-                    jop.showMessageDialog(null, "Il vous reste " + Health + " PV! \nVous une faim de " + Hunger + "/100!", "Town Party", JOptionPane.ERROR_MESSAGE, img);
-                }
-
+                GoToTown();
             }
         }
         if (_buttonMusic.IsHover(x, y)) {
@@ -211,25 +192,35 @@ public final class ParkView implements IParkView {
         _mentalityProgressBar.setValue((int) (100 * _parkViewModel.GetPlayer().GetMentality() / 100));
     }
 
-    public Object[] goTown() {
+    private void GoToTown() {
         Random rand = new Random();
         int maxHealthLeft = 30;
-        int HealthLeft = rand.nextInt(maxHealthLeft); // on soustraira ce resultat à la vie actuelle du zombie
+        int healthLeft = rand.nextInt(maxHealthLeft);
 
         int maxHungerLeft = 40;
-        int HungerLeft = rand.nextInt(maxHungerLeft);
+        int hungerLeft = rand.nextInt(maxHungerLeft);
 
-        float actualHealth = _parkViewModel.GetPlayer().GetHealth();
-        float actualHunger = _parkViewModel.GetPlayer().GetHunger();
+        _parkViewModel.GetPlayer().SetHealth(_parkViewModel.GetPlayer().GetHealth() - healthLeft);
+        _parkViewModel.GetPlayer().SetHunger(_parkViewModel.GetPlayer().GetHunger() - hungerLeft);
 
-        float Health = actualHealth - HealthLeft;
-        float Hunger = actualHunger - HungerLeft;
+        int playerHealthPercent = (int) (100 * _parkViewModel.GetPlayer().GetHealth() / 100);
+        int playerHungerPercent = (int) (100 * _parkViewModel.GetPlayer().GetHunger() / _parkViewModel.GetPlayer().GetHungerLimit());
 
-        if (Hunger <= 0) {
-            Hunger = 0;
+        if (playerHealthPercent <= 0) {
+            ImageIcon img = new ImageIcon("other/dead.png");
+            JOptionPane.showMessageDialog(null,
+                    "Perdu !",
+                    "LOSE",
+                    JOptionPane.ERROR_MESSAGE,
+                    img);
+        } else {
+            ImageIcon img = new ImageIcon("other/miam.png");
+            JOptionPane.showMessageDialog(null,
+                    "Il vous reste " + (int) _parkViewModel.GetPlayer().GetHealth() + " PV ! \n" +
+                            "Vous avez une faim de " + playerHungerPercent + " / 100!", "Town Party",
+                    JOptionPane.ERROR_MESSAGE,
+                    img);
         }
-
-        return new Object[]{Health, Hunger};
     }
 
 
