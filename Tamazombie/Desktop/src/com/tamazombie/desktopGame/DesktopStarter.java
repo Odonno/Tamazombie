@@ -1,5 +1,7 @@
 package com.tamazombie.desktopGame;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 import com.tamazombie.portableGame.MyLibgdxGame;
@@ -19,6 +21,17 @@ public class DesktopStarter {
         cfg.width = 1152;
         cfg.height = 648;
 
+
+
         new LwjglApplication(new MyLibgdxGame(), cfg);
+
+        Sound mSound;
+        mSound = Gdx.audio.newSound(Gdx.files.internal("C:/Users/Pierrick/Documents/GitHub/Tamazombie/Tamazombie/Android/assets/musics/campagne.mp3"));
+
+        //_buttonMusicTexture = new Texture(Gdx.files.internal("buttons/buttonMusic.png"));
+        mSound.play();
+        mSound.loop();
+
+
     }
 }

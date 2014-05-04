@@ -7,6 +7,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.tamazombie.abstractLogic.IParkViewModel;
 import com.tamazombie.abstractView.*;
 import com.tamazombie.portableServices.INavigationService;
+import com.tamazombie.abstractModel.IPlayer;
+import com.tamazombie.concreteModel.ZombiePlayer;
 
 
 /**
@@ -19,6 +21,8 @@ import com.tamazombie.portableServices.INavigationService;
 
 public final class ParkView implements IParkView {
     private IParkViewModel _parkViewModel;
+    private IPlayer _player;
+    private ZombiePlayer _zombieplayer;
 
     private INavigationService _navigationService;
 
@@ -27,6 +31,7 @@ public final class ParkView implements IParkView {
     private IButton _buttonFeed;
     private IButton _buttonAmuse;
     private IButton _buttonTown;
+    private IButton _buttonMusic;
 
     private ITextProgressBar _healthProgressBar;
     private ITextProgressBar _hungryProgressBar;
@@ -37,10 +42,11 @@ public final class ParkView implements IParkView {
     private Texture _buttonFeedTexture;
     private Texture _buttonAmuseTexture;
     private Texture _buttonTownTexture;
+    private Texture _buttonMusicTexture;
 
 
     public ParkView(IParkViewModel parkViewModel, IBackground background,
-                    IButton buttonFeed, IButton buttonAmuse, IButton buttonTown,
+                    IButton buttonFeed, IButton buttonAmuse, IButton buttonTown, IButton buttonMusic,
                     ITextProgressBar healthProgressBar, ITextProgressBar hungryProgressBar, ITextProgressBar mentalityProgressBar,
                     INavigationService navigationService) {
         _parkViewModel = parkViewModel;
@@ -49,6 +55,7 @@ public final class ParkView implements IParkView {
         _buttonFeed = buttonFeed;
         _buttonAmuse = buttonAmuse;
         _buttonTown = buttonTown;
+        _buttonMusic = buttonMusic;
         _healthProgressBar = healthProgressBar;
         _hungryProgressBar = hungryProgressBar;
         _mentalityProgressBar = mentalityProgressBar;
@@ -67,6 +74,7 @@ public final class ParkView implements IParkView {
         _buttonFeedTexture = new Texture(Gdx.files.internal("buttons/buttonFeed.png"));
         _buttonAmuseTexture = new Texture(Gdx.files.internal("buttons/buttonAmuse.png"));
         _buttonTownTexture = new Texture(Gdx.files.internal("buttons/buttonTown.png"));
+        _buttonMusicTexture = new Texture(Gdx.files.internal("buttons/buttonMusic.png"));
 
         // Set textures
 
@@ -90,6 +98,10 @@ public final class ParkView implements IParkView {
         _buttonTown.setScale(0.40f);
         _buttonTown.setPosition(240, 490);
 
+        _buttonMusic.setTexture(_buttonMusicTexture);
+        _buttonMusic.setScale(0.40f);
+        _buttonMusic.setPosition(1050, 540);
+
         // set text and position to progress bars
         _healthProgressBar.setText("Health : ");
         _healthProgressBar.setMin(0);
@@ -111,7 +123,7 @@ public final class ParkView implements IParkView {
     }
 
     @Override
-    public void Update() {
+    public void Update()  {
         // UPDATE logic
         float deltatime = Gdx.graphics.getDeltaTime();
 
@@ -129,21 +141,63 @@ public final class ParkView implements IParkView {
         _buttonFeed.Update(deltatime);
         _buttonAmuse.Update(deltatime);
         _buttonTown.Update(deltatime);
+        _buttonMusic.Update(deltatime);
 
         // Check the user click a button
-        if (_buttonFeed.IsHover(x, y)) {
-            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonFeed.Click(x, y)) {
+        if (_buttonFeed.IsHover(x, y))
+        {
+            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonFeed.Click(x, y))
+            {
                 // TODO : Update ViewModel
+                /*_player.SetHunger(_player.GetHunger()+ 20);
+                 if (_player.GetHunger() > 100)
+                 {
+                      _player.SetHunger(100);
+                 }*/
+
+
+
+                /*_zombieplayer.SetHunger(_zombieplayer.GetHunger()+ 20);
+                if (_zombieplayer.GetHunger() > 100)
+                {
+                    _zombieplayer.SetHunger(100);
+                }
+                _zombieplayer.SetHealth(_zombieplayer.GetHealth()+ 15);
+                if (_zombieplayer.GetHealth() > 100)
+                {
+                    _zombieplayer.SetHealth(100);
+                }*/
             }
         }
-        if (_buttonAmuse.IsHover(x, y)) {
-            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonAmuse.Click(x, y)) {
+        if (_buttonAmuse.IsHover(x, y))
+        {
+            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonAmuse.Click(x, y))
+            {
                 // TODO : Update ViewModel
+                /*_zombieplayer.SetMentality(_zombieplayer.GetMentality() + 20);
+                if (_zombieplayer.GetMentality() > 100)
+                {
+                    _zombieplayer.SetMentality(100);
+                }
+                _zombieplayer.SetHunger(_zombieplayer.GetHunger()- 8);
+                if (_zombieplayer.GetHunger() < 0)
+                {
+                    _zombieplayer.SetHunger(0);
+                }*/
             }
         }
-        if (_buttonTown.IsHover(x, y)) {
-            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonTown.Click(x, y)) {
+        if (_buttonTown.IsHover(x, y))
+        {
+            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonTown.Click(x, y))
+            {
                 _navigationService.Navigate(ITownView.class);
+            }
+        }
+        if (_buttonMusic.IsHover(x, y))
+        {
+            if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonMusic.Click(x, y))
+            {
+                //recuperer le msound qui est dans  DesktopStarter et faire msound.dispose();
             }
         }
 
@@ -161,6 +215,7 @@ public final class ParkView implements IParkView {
         _buttonFeed.draw(spriteBatch);
         _buttonAmuse.draw(spriteBatch);
         _buttonTown.draw(spriteBatch);
+        _buttonMusic.draw(spriteBatch);
 
         _healthProgressBar.Draw(spriteBatch);
         _hungryProgressBar.Draw(spriteBatch);
@@ -177,5 +232,6 @@ public final class ParkView implements IParkView {
         _buttonFeedTexture.dispose();
         _buttonAmuseTexture.dispose();
         _buttonTownTexture.dispose();
+        _buttonMusicTexture.dispose();
     }
 }
