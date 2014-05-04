@@ -77,11 +77,6 @@ public final class ParkViewModel implements IParkViewModel {
             _player.SetMentality(100);
     }
 
-    @Override
-    public void GoToTown() {
-        // TODO : Go to ITownView using Navigation Service
-    }
-
 
     private void CalculateNextTimeDirection() {
         // Give a new direction after each timer ended
