@@ -2,6 +2,7 @@ package com.tamazombie.concreteView;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.tamazombie.abstractLogic.IParkViewModel;
@@ -44,6 +45,9 @@ public final class ParkView implements IParkView {
     private Texture _buttonAmuseTexture;
     private Texture _buttonTownTexture;
     private Texture _buttonMusicTexture;
+
+    private Sound _mSound;
+    private boolean _isMusicPlaying;
 
 
     public ParkView(IParkViewModel parkViewModel, IBackground background,
@@ -124,6 +128,13 @@ public final class ParkView implements IParkView {
 
         _parkViewModel.GetPlayer().SetHealth(100);
         _parkViewModel.GetPlayer().SetMentality(100);
+
+        // Setup sound
+        _mSound = Gdx.audio.newSound(Gdx.files.internal("musics/campagne.mp3"));
+        _mSound.play();
+        _mSound.loop();
+
+        _isMusicPlaying = true;
     }
 
     @Override
@@ -183,7 +194,14 @@ public final class ParkView implements IParkView {
         }
         if (_buttonMusic.IsHover(x, y)) {
             if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonMusic.Click(x, y)) {
-                //recuperer le msound qui est dans  DesktopStarter et faire msound.dispose();
+                if (_isMusicPlaying)
+                    _mSound.pause();
+                else {
+                    _mSound.play();
+                    _mSound.loop();
+                }
+
+                _isMusicPlaying = !_isMusicPlaying;
             }
         }
 
@@ -212,7 +230,6 @@ public final class ParkView implements IParkView {
         }
 
         return new Object[]{Health, Hunger};
-
     }
 
 
@@ -242,5 +259,6 @@ public final class ParkView implements IParkView {
         _buttonAmuseTexture.dispose();
         _buttonTownTexture.dispose();
         _buttonMusicTexture.dispose();
+        _mSound.dispose();
     }
 }

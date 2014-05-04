@@ -2,7 +2,6 @@ package com.tamazombie.portableGame;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -37,11 +36,6 @@ public final class MyLibgdxGame extends Game {
         texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
 
         Font = new BitmapFont(Gdx.files.internal("fonts/segoe-ui-font.fnt"), new TextureRegion(texture), false);
-
-        // Setup sound
-        Sound mSound = Gdx.audio.newSound(Gdx.files.internal("musics/campagne.mp3"));
-        mSound.play();
-        mSound.loop();
 
         // Setup navigation
         _navigationService.Navigate(IParkView.class);
