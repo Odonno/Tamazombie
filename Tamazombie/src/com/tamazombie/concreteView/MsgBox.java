@@ -10,7 +10,7 @@ import com.tamazombie.abstractView.IMsgBox;
 public final class MsgBox extends SpriteBase implements IMsgBox{
 
     //Constructeur avec parametres (texte)
-    public MsgBox(String text){
+    /*public MsgBox(String text){
 
-    }
+    }*/
 }
