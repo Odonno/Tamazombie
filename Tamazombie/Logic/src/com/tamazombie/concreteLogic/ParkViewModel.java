@@ -18,7 +18,7 @@ public final class ParkViewModel implements IParkViewModel {
     private float _hungryByMeal = 50f;
     private float _healByMeal = 10f;
     private float _damagePerSecond = 1f;
-    private float _mentalityRatePerSecond = 0.6f;
+    private float _mentalityRatePerSecond = 0.2f;
     private float _activity = 20;
     private float _nextTimeDirection;
     private float _speed = 20f;
@@ -51,19 +51,28 @@ public final class ParkViewModel implements IParkViewModel {
     @Override
     public void PlayerHungry(float deltaTime) {
         if (_player.GetGameMode() == GameMode.ZombieMode)
-            _player.SetHunger(_player.GetHunger() + (deltaTime * _hungryRatePerSecond));
+            _player.SetHunger(_player.GetHunger() - (deltaTime * _hungryRatePerSecond));
         if (_player.GetGameMode() == GameMode.HumanMode)
             _player.SetHunger(_player.GetHunger() - (deltaTime * _hungryRatePerSecond));
+        if (_player.GetHunger()> 1000)
+        {
+            _player.SetHunger(1000);
+        }
     }
 
     @Override
     public void PlayerEat(float deltaTime) {
         if (_player.GetGameMode() == GameMode.ZombieMode)
-            _player.SetHunger(_player.GetHunger() - _hungryByMeal);
+            _player.SetHunger(_player.GetHunger() + _hungryByMeal);
+
         if (_player.GetGameMode() == GameMode.HumanMode)
             _player.SetHunger(_player.GetHunger() + _hungryByMeal);
 
         _player.SetHealth(_player.GetHealth() + _healByMeal);
+        if (_player.GetHealth()> 100)
+        {
+            _player.SetHealth(100);
+        }
     }
 
     public void PlayerMentality(float deltaTime) {

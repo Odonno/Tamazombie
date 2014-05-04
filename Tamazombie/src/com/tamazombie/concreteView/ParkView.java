@@ -32,6 +32,7 @@ public final class ParkView implements IParkView {
     private IButton _buttonAmuse;
     private IButton _buttonTown;
     private IButton _buttonMusic;
+    private IButton _buttonMusicOff;
 
     private ITextProgressBar _healthProgressBar;
     private ITextProgressBar _hungryProgressBar;
@@ -43,13 +44,15 @@ public final class ParkView implements IParkView {
     private Texture _buttonAmuseTexture;
     private Texture _buttonTownTexture;
     private Texture _buttonMusicTexture;
+    private Texture _buttonMusicOffTexture;
 
     private Sound _mSound;
+    private Sound _mSoundOrage;
     private boolean _isMusicPlaying;
 
 
     public ParkView(IParkViewModel parkViewModel, IBackground background,
-                    IButton buttonFeed, IButton buttonAmuse, IButton buttonTown, IButton buttonMusic,
+                    IButton buttonFeed, IButton buttonAmuse, IButton buttonTown, IButton buttonMusic, IButton buttonMusicOff,
                     ITextProgressBar healthProgressBar, ITextProgressBar hungryProgressBar, ITextProgressBar mentalityProgressBar,
                     INavigationService navigationService) {
         _parkViewModel = parkViewModel;
@@ -59,6 +62,7 @@ public final class ParkView implements IParkView {
         _buttonAmuse = buttonAmuse;
         _buttonTown = buttonTown;
         _buttonMusic = buttonMusic;
+        _buttonMusicOff = buttonMusicOff;
         _healthProgressBar = healthProgressBar;
         _hungryProgressBar = hungryProgressBar;
         _mentalityProgressBar = mentalityProgressBar;
@@ -78,6 +82,7 @@ public final class ParkView implements IParkView {
         _buttonAmuseTexture = new Texture(Gdx.files.internal("buttons/buttonAmuse.png"));
         _buttonTownTexture = new Texture(Gdx.files.internal("buttons/buttonTown.png"));
         _buttonMusicTexture = new Texture(Gdx.files.internal("buttons/buttonMusic.png"));
+        _buttonMusicOffTexture = new Texture(Gdx.files.internal("buttons/buttonMusicOff.png"));
 
         // Set textures
 
@@ -105,6 +110,11 @@ public final class ParkView implements IParkView {
         _buttonMusic.setScale(0.40f);
         _buttonMusic.setPosition(1050, 540);
 
+        /*_buttonMusicOff.setTexture(_buttonMusicOffTexture);
+        _buttonMusicOff.setScale(0.40f);
+        _buttonMusicOff.setPosition(1050, 540);*/
+
+
         // set text and position to progress bars
         _healthProgressBar.setText("Vie : ");
         _healthProgressBar.setMin(0);
@@ -129,8 +139,16 @@ public final class ParkView implements IParkView {
 
         // Setup sound
         _mSound = Gdx.audio.newSound(Gdx.files.internal("musics/campagne.mp3"));
+        _mSoundOrage = Gdx.audio.newSound(Gdx.files.internal("musics/orage.mp3"));
         _mSound.play();
         _mSound.loop();
+
+        int nb = (int) (Math.random() * 2 );
+        if (nb==0)
+        {
+         _mSoundOrage.play();
+        }
+
 
         _isMusicPlaying = true;
     }
@@ -155,6 +173,7 @@ public final class ParkView implements IParkView {
         _buttonAmuse.Update(deltatime);
         _buttonTown.Update(deltatime);
         _buttonMusic.Update(deltatime);
+        _buttonMusicOff.Update(deltatime);
 
         // Check the user click a button
         if (_buttonFeed.IsHover(x, y)) {
@@ -165,20 +184,32 @@ public final class ParkView implements IParkView {
         if (_buttonAmuse.IsHover(x, y)) {
             if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonAmuse.Click(x, y)) {
                 _parkViewModel.PlayerDivert(deltatime);
+
             }
         }
         if (_buttonTown.IsHover(x, y)) {
             if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonTown.Click(x, y)) {
                 //_navigationService.Navigate(ITownView.class);
+                if (_isMusicPlaying)
+                {
+                    _mSoundOrage.play();
+
+                }
                 GoToTown();
             }
         }
         if (_buttonMusic.IsHover(x, y)) {
             if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonMusic.Click(x, y)) {
                 if (_isMusicPlaying)
+                {
                     _mSound.pause();
-                else {
-                    _mSound.play();
+                    _mSoundOrage.pause();
+
+                }
+                else
+                {
+                    _mSound.resume();
+                    _mSoundOrage.resume();
                     _mSound.loop();
                 }
 
@@ -206,14 +237,18 @@ public final class ParkView implements IParkView {
         int playerHealthPercent = (int) (100 * _parkViewModel.GetPlayer().GetHealth() / 100);
         int playerHungerPercent = (int) (100 * _parkViewModel.GetPlayer().GetHunger() / _parkViewModel.GetPlayer().GetHungerLimit());
 
-        if (playerHealthPercent <= 0) {
+        if (playerHealthPercent <= 0)
+        {
             ImageIcon img = new ImageIcon("other/dead.png");
             JOptionPane.showMessageDialog(null,
                     "Perdu !",
-                    "LOSE",
+                    "LOOSE",
                     JOptionPane.ERROR_MESSAGE,
                     img);
-        } else {
+            _mSound.stop();
+        }
+        else
+        {
             ImageIcon img = new ImageIcon("other/miam.png");
             JOptionPane.showMessageDialog(null,
                     "Il vous reste " + (int) _parkViewModel.GetPlayer().GetHealth() + " PV ! \n" +
@@ -233,6 +268,8 @@ public final class ParkView implements IParkView {
         _buttonAmuse.draw(spriteBatch);
         _buttonTown.draw(spriteBatch);
         _buttonMusic.draw(spriteBatch);
+        //_buttonMusicOff.draw(spriteBatch);
+
 
         _healthProgressBar.Draw(spriteBatch);
         _hungryProgressBar.Draw(spriteBatch);
@@ -250,6 +287,8 @@ public final class ParkView implements IParkView {
         _buttonAmuseTexture.dispose();
         _buttonTownTexture.dispose();
         _buttonMusicTexture.dispose();
+        _buttonMusicOffTexture.dispose();
         _mSound.dispose();
+        _mSoundOrage.dispose();
     }
 }
