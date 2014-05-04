@@ -10,6 +10,9 @@ import com.tamazombie.portableServices.INavigationService;
 import com.tamazombie.abstractModel.IPlayer;
 import com.tamazombie.concreteModel.ZombiePlayer;
 
+import javax.swing.*;
+import java.util.Random;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -43,6 +46,7 @@ public final class ParkView implements IParkView {
     private Texture _buttonAmuseTexture;
     private Texture _buttonTownTexture;
     private Texture _buttonMusicTexture;
+
 
 
     public ParkView(IParkViewModel parkViewModel, IBackground background,
@@ -120,6 +124,9 @@ public final class ParkView implements IParkView {
         _mentalityProgressBar.setMax(100);
         _mentalityProgressBar.setValue(0);
         _mentalityProgressBar.setPosition(40, 10);
+
+        _parkViewModel.GetPlayer().SetHealth(100);
+        _parkViewModel.GetPlayer().SetMentality(100);
     }
 
     @Override
@@ -154,9 +161,6 @@ public final class ParkView implements IParkView {
                  {
                       _player.SetHunger(100);
                  }*/
-
-
-
                 /*_zombieplayer.SetHunger(_zombieplayer.GetHunger()+ 20);
                 if (_zombieplayer.GetHunger() > 100)
                 {
@@ -190,7 +194,13 @@ public final class ParkView implements IParkView {
         {
             if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonTown.Click(x, y))
             {
-                _navigationService.Navigate(ITownView.class);
+                //_navigationService.Navigate(ITownView.class);
+
+                // goTown(); // fonction aller en ville
+                //_parkViewModel.GetPlayer().SetHealth(Health); //->set la vie
+               // _parkViewModel.GetPlayer().SetHunger(Hunger); // ->set la faim
+
+
             }
         }
         if (_buttonMusic.IsHover(x, y))
@@ -206,6 +216,26 @@ public final class ParkView implements IParkView {
         _hungryProgressBar.setValue((int)(100 * _parkViewModel.GetPlayer().GetHunger() / _parkViewModel.GetPlayer().GetHungerLimit()));
         _mentalityProgressBar.setValue((int)(100 * _parkViewModel.GetPlayer().GetMentality() / 100));
     }
+
+    public Object[] goTown()
+    {
+        Random rand = new Random();
+        int maxHealthLeft = 30;
+        int HealthLeft = rand.nextInt(maxHealthLeft); // on soustraira ce resultat à la vie actuelle du zombie
+
+        int maxHungerLeft = 40;
+        int HungerLeft = rand.nextInt(maxHungerLeft);
+
+        float actualHealth = _parkViewModel.GetPlayer().GetHealth();
+        float actualHunger = _parkViewModel.GetPlayer().GetHunger();
+
+        float Health = actualHealth - HealthLeft;
+        float Hunger = actualHunger - HungerLeft;
+
+        return new Object[]{Health, Hunger};
+
+    }
+
 
     @Override
     public void Draw(SpriteBatch spriteBatch) {
