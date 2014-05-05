@@ -110,9 +110,9 @@ public final class ParkView implements IParkView {
         _buttonMusic.setScale(0.40f);
         _buttonMusic.setPosition(1050, 540);
 
-        /*_buttonMusicOff.setTexture(_buttonMusicOffTexture);
+        _buttonMusicOff.setTexture(_buttonMusicOffTexture);
         _buttonMusicOff.setScale(0.40f);
-        _buttonMusicOff.setPosition(1050, 540);*/
+        _buttonMusicOff.setPosition(1050, 540);
 
 
         // set text and position to progress bars
@@ -123,7 +123,7 @@ public final class ParkView implements IParkView {
         _healthProgressBar.setPosition(40, 70);
 
         _hungryProgressBar.setText("Faim : ");
-        _hungryProgressBar.setMin(-50);
+        _hungryProgressBar.setMin(0);
         _hungryProgressBar.setMax(100);
         _hungryProgressBar.setValue(0);
         _hungryProgressBar.setPosition(40, 40);
@@ -136,6 +136,7 @@ public final class ParkView implements IParkView {
 
         _parkViewModel.GetPlayer().SetHealth(100);
         _parkViewModel.GetPlayer().SetMentality(100);
+        _parkViewModel.GetPlayer().SetHunger(1000);
 
         // Setup sound
         _mSound = Gdx.audio.newSound(Gdx.files.internal("musics/campagne.mp3"));
@@ -146,10 +147,8 @@ public final class ParkView implements IParkView {
         int nb = (int) (Math.random() * 2 );
         if (nb==0)
         {
-         _mSoundOrage.play();
+            _mSoundOrage.play();
         }
-
-
         _isMusicPlaying = true;
     }
 
@@ -263,12 +262,11 @@ public final class ParkView implements IParkView {
     public void Draw(SpriteBatch spriteBatch) {
         // DRAW textures (images), play sound, ...
         _background.draw(spriteBatch);
-
         _buttonFeed.draw(spriteBatch);
         _buttonAmuse.draw(spriteBatch);
         _buttonTown.draw(spriteBatch);
         _buttonMusic.draw(spriteBatch);
-        //_buttonMusicOff.draw(spriteBatch);
+        _buttonMusicOff.draw(spriteBatch);
 
 
         _healthProgressBar.Draw(spriteBatch);
