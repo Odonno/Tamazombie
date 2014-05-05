@@ -144,9 +144,8 @@ public final class ParkView implements IParkView {
         _mSound.play();
         _mSound.loop();
 
-        int nb = (int) (Math.random() * 2 );
-        if (nb==0)
-        {
+        int nb = (int) (Math.random() * 2);
+        if (nb == 0) {
             _mSoundOrage.play();
         }
         _isMusicPlaying = true;
@@ -190,23 +189,16 @@ public final class ParkView implements IParkView {
             if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonTown.Click(x, y)) {
                 //_navigationService.Navigate(ITownView.class);
                 if (_isMusicPlaying)
-                {
                     _mSoundOrage.play();
-
-                }
                 GoToTown();
             }
         }
         if (_buttonMusic.IsHover(x, y)) {
             if (Gdx.input.isButtonPressed(Input.Buttons.LEFT) && _buttonMusic.Click(x, y)) {
-                if (_isMusicPlaying)
-                {
+                if (_isMusicPlaying) {
                     _mSound.pause();
                     _mSoundOrage.pause();
-
-                }
-                else
-                {
+                } else {
                     _mSound.resume();
                     _mSoundOrage.resume();
                     _mSound.loop();
@@ -236,8 +228,7 @@ public final class ParkView implements IParkView {
         int playerHealthPercent = (int) (100 * _parkViewModel.GetPlayer().GetHealth() / 100);
         int playerHungerPercent = (int) (100 * _parkViewModel.GetPlayer().GetHunger() / _parkViewModel.GetPlayer().GetHungerLimit());
 
-        if (playerHealthPercent <= 0)
-        {
+        if (playerHealthPercent <= 0) {
             ImageIcon img = new ImageIcon("other/dead.png");
             JOptionPane.showMessageDialog(null,
                     "Perdu !",
@@ -245,9 +236,7 @@ public final class ParkView implements IParkView {
                     JOptionPane.ERROR_MESSAGE,
                     img);
             _mSound.stop();
-        }
-        else
-        {
+        } else {
             ImageIcon img = new ImageIcon("other/miam.png");
             JOptionPane.showMessageDialog(null,
                     "Il vous reste " + (int) _parkViewModel.GetPlayer().GetHealth() + " PV ! \n" +
@@ -265,9 +254,11 @@ public final class ParkView implements IParkView {
         _buttonFeed.draw(spriteBatch);
         _buttonAmuse.draw(spriteBatch);
         _buttonTown.draw(spriteBatch);
-        _buttonMusic.draw(spriteBatch);
-        _buttonMusicOff.draw(spriteBatch);
 
+        if (_isMusicPlaying)
+            _buttonMusic.draw(spriteBatch);
+        else
+            _buttonMusicOff.draw(spriteBatch);
 
         _healthProgressBar.Draw(spriteBatch);
         _hungryProgressBar.Draw(spriteBatch);
