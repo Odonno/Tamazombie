@@ -75,6 +75,11 @@ public final class ZombiePlayer extends Player implements IZombiePlayer {
     }
 
     @Override
+    public void SetMentality(float mentality) {
+        _mentality = mentality;
+    }
+
+    @Override
     public void SetDirection(Direction direction) {
         _direction = direction;
     }
