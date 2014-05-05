@@ -18,7 +18,7 @@ public final class ParkViewModel implements IParkViewModel {
     private float _hungryByMeal = 50f;
     private float _healByMeal = 10f;
     private float _damagePerSecond = 1f;
-    private float _mentalityRatePerSecond = 0.6f;
+    private float _mentalityRatePerSecond = 0.2f;
     private float _activity = 20;
     private float _nextTimeDirection;
     private float _speed = 20f;
@@ -51,19 +51,28 @@ public final class ParkViewModel implements IParkViewModel {
     @Override
     public void PlayerHungry(float deltaTime) {
         if (_player.GetGameMode() == GameMode.ZombieMode)
-            _player.SetHunger(_player.GetHunger() + (deltaTime * _hungryRatePerSecond));
+            _player.SetHunger(_player.GetHunger() - (deltaTime * _hungryRatePerSecond));
         if (_player.GetGameMode() == GameMode.HumanMode)
             _player.SetHunger(_player.GetHunger() - (deltaTime * _hungryRatePerSecond));
+        if (_player.GetHunger()> 1000)
+        {
+            _player.SetHunger(1000);
+        }
     }
 
     @Override
     public void PlayerEat(float deltaTime) {
         if (_player.GetGameMode() == GameMode.ZombieMode)
-            _player.SetHunger(_player.GetHunger() - _hungryByMeal);
+            _player.SetHunger(_player.GetHunger() + _hungryByMeal);
+
         if (_player.GetGameMode() == GameMode.HumanMode)
             _player.SetHunger(_player.GetHunger() + _hungryByMeal);
 
         _player.SetHealth(_player.GetHealth() + _healByMeal);
+        if (_player.GetHealth()> 100)
+        {
+            _player.SetHealth(100);
+        }
     }
 
     public void PlayerMentality(float deltaTime) {
@@ -75,11 +84,6 @@ public final class ParkViewModel implements IParkViewModel {
         _player.SetMentality(_player.GetMentality() + _activity);
         if (_player.GetMentality() > 100)
             _player.SetMentality(100);
-    }
-
-    @Override
-    public void GoToTown() {
-        // TODO : Go to ITownView using Navigation Service
     }
 
 
@@ -103,5 +107,11 @@ public final class ParkViewModel implements IParkViewModel {
             _player.SetDirection(Direction.Left);
         if (_player.getY() >= 480)
             _player.SetDirection(Direction.Top);
+
+        // Change orientation of player
+        if (_player.GetDirection() == Direction.Left)
+            _player.setScale(-Math.abs(_player.getScaleX()), _player.getScaleY());
+        else if (_player.GetDirection() == Direction.Right)
+            _player.setScale(Math.abs(_player.getScaleX()), _player.getScaleY());
     }
 }
